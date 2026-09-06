@@ -1,184 +1,475 @@
-﻿{{Navbox
-| name      = Military historiography
-| title     = [[Military]] [[historiography]]
-| state     = {{{state<includeonly>|collapsed</includeonly>}}}
-| border = {{{border|}}}
-| listclass = hlist
-| selected = {{{1|}}}
+{{Navbox
+|name = إسبانيا الجديدة
 
-| above = {{flatlist|
-* '''[[Military history]]'''
-* '''[[List of military museums]]'''
-}}
+|title = [[إسبانيا الجديدة]] (1521–1821)
 
-| group1 = Pre-18th century<br/>conflict
-| list1  = 
-* [[Albigensian Crusade#Legacy|Albigensian Crusade]]
-** [[Catharism#Historical and current scholarship|Catharism debate]]
-* [[Historiography of the Crusades|Crusades]]
-** [[Islamic views on the crusades|Islamic views]]
-* [[Historiography of the Eighty Years' War|Eighty Years' War]]
-** [[Origins of the Eighty Years' War|Origins]]
-* [[Fall of Babylon#Historiography|Fall of Babylon]]
-* [[Gallic Wars#Historiography|Gallic Wars]]
-* [[Late Bronze Age collapse]]
-** [[Dorian invasion]]
-** [[Sea Peoples]]
-* [[History of the Peloponnesian War|Peloponnesian War]]
+|state = {{{state|{{{1<includeonly>|autocollapse</includeonly>}}}}}}
+|bodyclass = hlist
 
-| group2 = 18th and 19th<br/>century conflict
-| list2  = 
-{{Navbox|subgroup
-| group1 = [[French Revolutionary and Napoleonic Wars|Coalition Wars]]<br/>(1792–1815)
-| list1  = 
-* [[Historiography of the French Revolution|French Revolution]]
-** [[Causes of the French Revolution|Causes]]
-* [[War in the Vendée#Historiography|War in the Vendée]]
-* [[Napoleonic studies|Napoleonic era]]
-** [[French invasion of Russia#Historical assessment|Invasion of Russia]]
-** [[Battle of Waterloo#Historical importance|Waterloo]]
-}}
+|group1 = [[الاستعمار الإسباني للأمريكيتين|الصراعات]]
+|list1 =
+ {{شريط|subgroup
+ |list1 =
+* [[Spanish conquest of the Aztec Empire]] 
+* [[الغزو الإسباني لغواتيمالا]] 
+* [[Spanish conquest of Yucatán]] 
+* [[Anglo-Spanish War (1585–1604)]] 
+* [[Anglo-Spanish War (1625–1630)]] 
+* [[Dutch Revolt]] 
+* [[Anglo-Spanish War (1654–1660)]] 
+* [[القرصنة في الكاريبي]] 
+* [[Queen Anne's War]] 
+* [[War of Jenkins' Ear]] 
+* [[Anglo-Spanish War (1762–1763)|Seven Years' War]] 
+* [[Spain and the American Revolutionary War]]
 
-* [[Historiographic issues about the American Civil War|American Civil War]]
-** [[Origins of the American Civil War|Origins]]
-** [[Turning point of the American Civil War|Turning point]]
-* [[Franco-Prussian War]]
-** [[Causes of the Franco-Prussian War|Causes]]
-** [[Historiography of the Paris Commune|Paris Commune]]
-* [[Historiography of the Great Game|Great Game]]
-* [[Indian Rebellion of 1857#Historiography|Indian Rebellion of 1857]]
-** [[Causes of the Indian Rebellion of 1857|Causes]]
-* [[Historiography of the Paraguayan War|Paraguayan War]]
-* [[Historiography of the War of 1812|War of 1812]]
-** [[Origins of the War of 1812|Origins]]
-* [[War of the Pacific]]
-** [[Causes of the War of the Pacific|Causes]]
+ |group2 = الصراعات مع الشعوب الأصلية<br />خلال الحكم الاستعماري
 
-| group3 = [[Historiography of World War I|World War I]]
-| list3  =
-* [[Historiography of the causes of World War I|Causes]] ([[Color book]]s{{middot}} [[Fritz Fischer (historian)#Fischer thesis|Fischer thesis]])
-* [[Late Ottoman genocides]] ([[Causes of the Armenian genocide]])
-* [[Patriotic consent]]
-* [[Persian famine of 1917–1919]]
-* [[Powder keg of Europe]]
-* [[Schlieffen Plan#History|Schlieffen Plan]]
-* [[Spirit of 1914]]{{\}}[[Spirit of 1917|1917]]
-* [[Treaty of Brest-Litovsk]]
-{{Navbox|subgroup
-| group1 = [[Treaty of Versailles#Historical assessments|Treaty of Versailles]]
-| list1  = 
-* [[World War I reparations#Analysis|Reparations]]
-* [[War guilt question]]
-** [[Article 231 of the Treaty of Versailles|Article 231]]
-**[[Reichstag inquiry into guilt for World War I|Reichstag inquiry]]
+ |list2 =
+* [[Mixtón War]]
+* [[Yaqui Wars]]
+* [[Chichimeca War]] 
+* [[Philippine revolts against Spain]] 
+* [[Acaxee Rebellion]] 
+* [[Spanish–Moro conflict]] 
+* [[Acoma Massacre]] 
+* [[Tepehuán Revolt]]
+* [[Tzeltal Rebellion of 1712|Tzeltal Rebellion]]
+* [[Pueblo Revolt]]
+* [[Pima Revolt]]
+* [[Spanish American wars of independence]]
  }}
 
-| group4 = [[Interwar period]]
-| list4  = 
-* [[Responsibility for the burning of Smyrna|Burning of Smyrna]]
-* [[Polish–Soviet War#Aftermath and legacy|Polish–Soviet War]]
-** [[Causes of the Polish–Soviet War|Causes]]
-* [[Spanish Civil War]]
-** [[Background of the Spanish Civil War|Background]]
+|group2 = الحكومة<br />المركزية<br />والإدارة
+|list2 =
+ {{شريط|subgroup
+ |group1 = [[Habsburg Spain]]
+ |list1 =
+* [[Charles V, Holy Roman Emperor|Charles I]]
+* [[Joanna of Castile]]
+* [[فيليب الثاني ملك إسبانيا|فيليب الثاني]]
+* [[Philip III of Spain|Philp III]]
+* [[Philip IV of Spain|Philip IV]]
+* [[Charles II of Spain|Charles II]]
 
-| group5 = [[Historiography of World War II|World War II]]
-| list5  =
-* [[Causes of World War II|Causes]]
-* [[Blitzkrieg#Post-war controversy|"Blitzkrieg" concept]]
-* [[Broad front versus narrow front controversy in World War II|Broad vs. narrow front]]
-* [[Historiography of German resistance to Nazism|German resistance to Nazism]]
-* [[Nazi foreign policy debate]]
+ |group2 = [[Enlightenment in Spain|Bourbon Spain]]
+ |list2 =
+* [[Philip V of Spain|Philip V]] ({{صغير|كما حكم بعد لويس الأول}})
+* [[Louis I of Spain|Louis I]]
+* [[Ferdinand VI]]
+* [[كارلوس الثالث ملك إسبانيا|كارلوس الثالث]]
+* [[Charles IV of Spain|Charles IV]]
+* [[Ferdinand VII]] ({{صغير|also reigned after [[Joseph Bonaparte|Joseph I]]}})
 
-{{Navbox|subgroup
-| group1 = Eastern Front
-| list1  = 
-* [[Molotov–Ribbentrop Pact#Postwar commentary on motives of Stalin and Hitler|Molotov–Ribbentrop Pact]]
-* [[Soviet offensive plans controversy|Soviet offensive plans]]
-* [[Warsaw Uprising#Soviet stance|Soviets and the Warsaw Uprising]]
-* [[Historiography of the massacres of Poles in Volhynia and Eastern Galicia|Massacres of Poles in Volhynia and Eastern Galicia]]
-* [[Aftermath of the Winter War|Winter War]]
-** [[Background of the Winter War|Background]]
-** [[Spirit of the Winter War|Spirit]]
+ |group3 = نواب إسبانيا الجديدة
+ |list3 =
+* [[List of viceroys of New Spain]]
 
-| group2 = [[Holocaust studies|The Holocaust]]
-| list2  = 
-* [[Auschwitz bombing debate]]
-* [[Knowledge of the Holocaust in Nazi Germany and German-occupied Europe|Awareness in Nazi Germany and German-occupied Europe]]
-* [[Functionalism–intentionalism debate]]
-* Relation to 
-**[[Armenian genocide and the Holocaust|Armenian genocide]]
-**[[Herero and Nama genocide and the Holocaust|Herero and Nama genocide]]
-**[[The Holocaust and the Nakba|Nakba]]
-* [[Pope_Pius_XII_and_the_Holocaust#Historiography|Pope Pius XII]] 
-** [[Pius Wars]]
-* [["Polish death camp" controversy|"Polish death camp"]]
-* [[Responsibility for the Holocaust|Responsibility]]
-* [[Historiography of the Holocaust in Slovakia|Slovakia]]
-* [[Holocaust uniqueness debate|Uniqueness]]
+ |group4 = [[Real Audiencia|Audiencias]]
+ |list4 =
+* [[Royal Audiencia of Guadalajara|Guadalajara]]
+* [[Captaincy General of Guatemala]]
+* [[Real Audiencia of Manila|Manila]]
+* [[Real Audiencia of Mexico|Mexico]]
+* [[Real Audiencia of Santo Domingo|Santo Domingo]]
 
-| group3 = Pacific War
-| list3  = 
-* [[Debate over the atomic bombings of Hiroshima and Nagasaki|Atomic bombings of Hiroshima and Nagasaki]]
-* [[Battle for Australia|"Battle for Australia"]]
-* [[Bengal famine of 1943#Historiography|Bengal famine]]
-* Second Sino-Japanese War
-** [[Historiography of the Nanjing Massacre|Nanjing Massacre]]
+ |group5 = [[Captaincy General|Captancies General]]
+ |list5 =
+* [[Captaincy General of Cuba|Cuba]]
+* [[Captaincy General of Guatemala|Guatemala]]
+* [[Captaincy General of the Philippines|Philippines]]
+* [[Captaincy General of Puerto Rico|Puerto Rico]]
+* [[Captaincy General of Santo Domingo|Santo Domingo]]
+* [[Captaincy General of Yucatán|Yucatán]]
+* [[Provincias Internas]]
 
-| group4 = Western Front
-| list4  = 
-* [[Historiography of the Battle of France|Battle of France]]
-* ''[[Guilty Men]]''
-* ''[[Résistancialisme]]''
-* [[Historiography of Vichy France|Vichy France]]
+ |group6 = [[Indendancies of New Spain|Intendancy]]
+ |list6 =
+* [[Captaincy General of Cuba|Havana]]
+* [[Louisiana (New Spain)|New Orleans]]
+* [[State of Mexico]]
+* [[تشياباس]]
+* [[Comayagua]]
+* [[León, Nicaragua|Nicaragua]]
+* [[كاماغواي]]
+* [[سانتياغو دي كوبا (مدينة)|سانتياغو دي كوبا]]
+* [[Guanajuato]]
+* [[Michoacán|Valladolid]]
+* [[غوادالاخارا]]
+* [[Zacatecas]]
+* [[San Luis Potosí]]
+* [[ولاية فيراكروز|فيراكروز]]
+* [[Puebla]]
+* [[Oaxaca]]
+* [[Durango]]
+* [[Sonora]]
+* [[Mérida, Yucatán]]
+* [[فلوريدا الإسبانية|فلوريدا]]
+
+ |group7 = سياسة
+ |list7 =
+* [[Viceroy]]
+* [[Governorate|Gobernaciones]]
+* [[Adelantado]]
+* [[Captain general]]
+* [[Corregidor (position)]]
+* [[Cabildo (council)|Cabildo]]
+* [[Encomienda]]
+
+ |group8 = المعاهدات
+ |list8 =
+* [[Treaty of Tordesillas]]
+* [[Treaty of Zaragoza]]
+* [[صلح وستفاليا]]
+* [[Peace of Ryswick]]
+* [[Peace of Utrecht]]
+* [[Congress of Breda]]
+* [[Treaty of Fontainebleau (1762)]]
+* [[Treaty of Paris (1783)]]
+* [[Treaty of Córdoba]]
+* [[Adams–Onís Treaty]]
  }}
 
-| group6 = [[Historiography of the Cold War|Cold War]]
-| list6  =
-* [[Origins of the Cold War|Origins]]
-* [[1948 Palestine war#Historiography|1948 Palestine war]]
-** [[Causes of the 1948 Palestinian expulsion and flight|Palestinian expulsion and flight]]{{\}}[[Ongoing Nakba]]
-** [[Zionism as settler colonialism]]
-** [[New Historians]]
-* Malayan Emergency
-** [[Background and causes of the Malayan Emergency|Causes]]
-* [[Historiography of the Algerian War|Algerian War]]
-* Six-Day War
-** [[Origins of the Six-Day War|Origins]]
-* Iranian revolution
-** [[Background and causes of the Iranian revolution|Causes]]
-* [[Legacy and memory of the Iran–Iraq War|Iran–Iraq War]]
-* [[Aftermath of the Falklands War|Falklands War]]
-** [[Falkland Islands sovereignty dispute|Sovereignty dispute]]
-* Sri Lankan civil war
-** [[Origins of the Sri Lankan civil war|Origins]]
+|group3 =المدن والمقاطعات<br />والأقاليم البارزة
 
-| group7 = Post-Cold War
-| list7  =
-* Russo-Georgian War
-** [[Background of the Russo-Georgian War|Background]]
-** [[Responsibility for the Russo-Georgian War|Responsibility]]
-* Syrian revolution
-** [[Background and causes of the Syrian revolution|Causes]]
+|list3 =
+ {{شريط|subgroup
+ |group1 = المدن
+ |list1 =
+* [[History of Mexico City|Mexico City]]
+* [[History of Veracruz (city)|Veracruz]]
+* [[Xalapa]]
+* [[مدينة بويبلا|بويبلا]]
+* [[Toluca]]
+* [[Cuernavaca]]
+* [[Oaxaca City|Oaxaca]]
+* [[Morelia]]
+* [[Acapulco]]
+* [[Campeche (city)|Campeche]]
+* [[Mérida, Yucatán|Mérida]]
+* [[غوادالاخارا]]
+* [[Durango (city)|Durango]]
+* [[مونتيري]]
+* [[León, Guanajuato|León]]
+* [[Guanajuato City|Guanajuato]]
+* [[Zacatecas (city)|Zacatecas]]
+* [[Pachuca]]
+* [[Querétaro (city)|Querétaro]]
+* [[Saltillo]]
+* [[San Luis Potosí (city)|San Luis Potosí]]
+* [[Pueblo de Los Ángeles|Los Ángeles]]
+* [[Yerba Buena, California|Yerba Buena (San Francisco)]]
+* [[History of San Jose, California#First Spanish pueblo in California|San José]]
+* [[Presidio of San Diego|San Diego]]
+* [[سانتا فيه (نيومكسيكو)|سانتا فيه]]
+* [[ألبوكيركي]]
+* [[إل باسو (تكساس)|إل باسو]]
+* [[Los Adaes]]
+* [[History of San Antonio|San Antonio]]
+* [[توسان (أريزونا)|توسان]]
+* [[بينساكولا]]
+* [[St. Augustine, Florida|St. Augustine]]
+* [[History of Havana|Havana]]
+* [[History of Santo Domingo|Santo Domingo]]
+* [[سان خوان (بورتوريكو)|سان خوان]]
+* [[Antigua Guatemala]]
+* [[Cebu]]
+* [[History of Manila|Manila]]
 
-| group8 = Related
-| list8 =
-* [[Conflict thesis]]
-* [[Historiography of gunpowder and gun transmission|Gunpowder and gun transmission]]
-* [[War and genocide]]
+ |group2 = المقاطعات<br />والأقاليم
+ |list2 =
+* [[Louisiana_(New_Spain)|Louisiana]]
+* [[فلوريدا الإسبانية|فلوريدا]] ([[فلوريدا]])
+* [[Province of Las Californias|Las Californias]]
+** [[Alta California]] ([[كاليفورنيا]])
+** [[Baja California Province|Baja California]]
+* [[Santa Fe de Nuevo México]] ([[نيومكسيكو]])
+* [[Spanish Texas|Tejas]] ([[تكساس]])
+* [[Nueva Galicia]]
+* [[Nueva Vizcaya]]
+* [[Nueva Extremadura]]
+* [[New Kingdom of León]]
+* [[Cebu]]
+* [[بولاكان]]
+* [[بامبانغا]]
 
-|below ={{flatlist|
-* {{icon|category}} [[:Category:Military historiography|Category]]
-}}
+ |group3 = مناطق أخرى
+ |list3 =
+* [[Spanish Formosa]]
+ }}
 
+|group4 = المستكشفون<br />والمغامرون والغزاة
+|list4 =
+ {{شريط|subgroup
+ |group1 = مستكشفو<br />ما قبل إسبانيا الجديدة
+ |list1 =
+* [[كريستوفر كولومبوس]]
+* [[فرناندو ماجلان]]
+* [[خوان سباستيان إلكانو]]
+* [[فاسكو نونييث دي بالبوا]]
+* [[Diego Velázquez de Cuéllar]]
+
+ |group2 = Explorers and<br />[[conquistador]]s
+ |list2 =
+* [[إرنان كورتيس]]
+* [[خوان بونثي دي ليون]]
+* [[Nuño de Guzmán]]
+* [[برنال دياث ديل كاستييو]]
+* [[بيدرو دي ألفارادو]]
+* [[بانفيلو دي نارفاييث]]
+* [[إرناندو دي سوتو]]
+* [[فرانسيسكو فاسكويز دي كورونادو]]
+* [[جواو رودريغيز كابريلو]]
+* [[Miguel López de Legazpi]]
+* [[Ángel de Villafañe]]
+* [[ألفار نونييث كابيثا دي فاكا]]
+* [[بيدرو مينينديث دي أفيليس]]
+* [[Luis de Carvajal y de la Cueva]]
+* [[Juan de Oñate]]
+* [[خوان خوسيه بيريز هيرنانديز]]
+* [[Gaspar de Portolá]]
+* [[Manuel Quimper]]
+* [[Cristóbal de Oñate]]
+* [[أندريس دي أوردانيتا]]
+* [[Ruy López de Villalobos]]
+* [[Diego Velázquez de Cuéllar]]
+* [[فرانسيسكو هرنانديز دي كوردوبا (فاتح يوكاتان)]]
+* [[فرانسيسكو هرنانديز دي كوردوبا (مؤسس نيكارغوا)]]
+* [[جيل غونزاليس دافيلا]]
+* [[Francisco de Ulloa]]
+* [[Dionisio Alcalá Galiano]]
+* [[Bruno de Heceta]]
+* [[Juan Francisco de la Bodega y Quadra]]
+* [[Alonso de León]]
+* [[Ignacio de Arteaga y Bazán]]
+* [[خوسيه دي بوستامينت إي غيرا]]
+* [[José María Narváez]]
+* [[Pedro Sarmiento de Gamboa]]
+* [[Antonio Gil Y'Barbo]]
+* [[ألكسندر فون هومبولت]]
+* [[Thomas Gage (priest)|Thomas Gage]]
+ }}
+
+|group5 = [[الكنيسة الرومانية الكاثوليكية|الكنيسة الكاثوليكية]]<br />في إسبانيا الجديدة
+|list5 =
+ {{شريط|subgroup
+ |group1 = [[Spanish missions in the Americas|Spanish missions<br />in the Americas]]
+ |list1 =
+* [[Spanish missions in Arizona]]
+* [[Spanish missions in Baja California]]
+* [[Spanish missions in California]]
+* [[Spanish missions in the Carolinas]]
+* [[Spanish missions in Florida]]
+* [[Spanish missions in Georgia]]
+* [[Spanish missions in Louisiana]]
+* [[Spanish missions in Mexico]]
+* [[Spanish missions in New Mexico]]
+* [[Spanish missions in the Sonoran Desert]]
+* [[Spanish missions in Texas]]
+* [[Ajacán Mission|Spanish missions in Virginia]]
+* [[Spanish missions in Trinidad]]
+
+ |group2 = الرهبان والآباء<br />والقساوسة والأساقفة
+ |list2 =
+* [[Pedro de Gante]]
+* [[Gerónimo de Aguilar]]
+* [[Toribio de Benavente Motolinia]]
+* [[Bernardino de Sahagún]]
+* [[Juan de Zumárraga]]
+* [[Alonso de Montúfar]]
+* [[Vasco de Quiroga]]
+* [[بارتولومي دي لاس كاساس]]
+* [[Alonso de Molina]]
+* [[دييغو دوران]]
+* [[Diego de Landa]]
+* [[Gerónimo de Mendieta]]
+* [[Fray Juan de Torquemada|Juan de Torquemada]]
+* [[Juan de Palafox y Mendoza]]
+* [[Carlos de Sigüenza y Góngora]]
+* [[Eusebio Kino]]
+* [[Francisco Javier Clavijero]]
+* [[Junípero Serra]]
+* [[Francisco Palóu]]
+* [[Fermín de Lasuén]]
+* [[Esteban Tápis]]
+* [[José Francisco de Paula Señan]]
+* [[Marià Paieres i Borràs|Mariano Payeras]]
+* [[Sebastián Montero]]
+* [[ماركوس دي نيزا]]
+* [[Francisco de Ayeta]]
+* [[Antonio Margil]]
+* [[Francisco Marroquín]]
+* [[Manuel Abad y Queipo]]
+* [[Miguel Hidalgo y Costilla]]
+* [[خوسيه ماريا موريلوس]]
+
+ |group3 = فعاليات أخرى
+ |list3 =
+* [[Our Lady of Guadalupe]]
+* [[Suppression of the Society of Jesus|Suppression of the Jesuits]]
+* [[California mission clash of cultures]]
+* [[Cargo system]]
+* [[Indian Reductions]]
+ }}
+
+|group6 = المجتمع والثقافة
+|list6 =
+ {{شريط|subgroup
+ |group1 = [[الشعوب الأصلية في الأمريكتين|الشعوب<br />الأصلية]]
+ |list1 =
+  {{شريط|subgroup
+  |group1 = أمريكا الوسطى
+  |list1 =
+* [[Aztecs]]
+* [[Maya peoples|Maya]]
+* [[Huastec people|Huastec]]
+* [[Mixtec]]
+* [[Tarascan state|P'urhépecha]]
+* [[Totonac]]
+* [[Pipil people|Pipil]]
+* [[Kowoj]]
+* [[Kʼicheʼ people|Kʼicheʼ]]
+* [[Kaqchikel people|Kaqchikel]]
+* [[Zapotec peoples|Zapotec]]
+* [[Poqomam people|Poqomam]]
+* [[Mam people|Mam]]
+
+  |group2 = الكاريبي
+  |list2 =
+* [[Arawak]]
+* [[Ciboney]]
+* [[Guanahatabey]]
+
+  |group3 = [[Indigenous peoples of California|California]]
+  |list3 =
+* [[Mission Indians]]
+* [[Cahuilla]]
+* [[تشوماش]]
+* [[Cupeño]]
+* [[Juaneño]]
+* [[Kumeyaay]]
+* [[Luiseño]]
+* [[Miwok]]
+* [[Mohave people|Mohave]]
+* [[Ohlone]]
+* [[Serrano people|Serrano]]
+* [[Tongva]]
+
+  |group4 = [[Oasisamerica|Oasisamerica (Southwest US)]]
+  |list4 =
+* [[Akimel O'odham]]
+* [[أباتشي (شعب)|أباتشي]]
+* [[Hopi]]
+* [[Hualapai]]
+* [[Navajo]]
+* [[Puebloans|Pueblo peoples]]
+* [[Quechan]]
+* [[Solano people|Solano]]
+* [[Tohono O'odham]]
+* [[Zuni people|Zuni]]
+
+  |group5 = [[Aridoamerica]]
+  |list5 =
+* [[Acaxee]]
+* [[Chichimeca]]
+* [[Coahuiltecan]]
+* [[Cochimí]]
+* [[Cocopah]]
+* [[Kiliwa people|Kiliwa]]
+* [[La Junta Indians|La Junta]]
+* [[Opata people|Opata]]
+* [[Tepehuán]]
+* [[Yaqui]]
+
+  |group6 = [[Southern Plains]]
+  |list6 =
+* [[Caddo]]
+* [[Comanche]]
+* [[Lipan Apache]]
+* [[Plains Apache]]
+* [[Tonkawa]]
+* [[Wichita people|Wichita]]
+
+  |group7 = [[Indigenous peoples of the Southeastern Woodlands|Southeastern Woodlands]]
+  |list7 =
+* [[List of sites and peoples visited by the Hernando de Soto Expedition|Indigenous people during De Soto's travels]]
+* [[Apalachee]]
+* [[Calusa]]
+* [[Muscogee]]
+* [[Jororo]]
+* [[Pensacola people|Pensacola]]
+* [[Seminole]]
+* [[Timucua]]
+* [[Yustaga]]
+
+ |group8 = [[Filipinos]]
+ |list8 =
+* [[Negrito]]
+* [[Igorot people|Igorot]]
+* [[Mangyan]]
+* [[Peoples of Palawan]]
+* [[Ati people|Ati]]
+* [[Panay]]
+* [[Lumad]]
+* [[Bajau people|Bajau]]
+* [[Tagalog people|Tagalog]]
+* [[Cebuano people|Cebuano]]
+
+ |group9 = آحرون
+ |list9 =
+* [[Taiwanese indigenous peoples]]
+* [[Chamorro people]]
+  }}
+
+ |group2 = [[Spanish Colonial architecture|Architecture]]
+ |list2 =
+* [[Spanish Colonial architecture|Spanish Colonial style]]
+* {{ت|عمارة المستعمرات الإسبانية حسب البلد|حسب البلد}}
+* {{ت|Baroque architecture in the Spanish Empire|Colonial Baroque style}}
+* {{ت|Spanish colonial fortifications|Forts}}
+* {{ت|Spanish missions in the Americas|Missions}}
+
+ |group3 = التجارة والاقتصاد
+ |list3 =
+* [[Spanish colonial real|Real]]
+* [[Columbian exchange]]
+* [[Manila galleon]]
+* [[Triangular trade]]
+
+ |group4 = الناس والطبقات
+ |list4 =
+* [[Casta]]
+** [[Peninsulares]]
+* [[Criollo people|Criollo]]
+* [[الشعوب الأصلية في الأمريكتين|الهنود]]
+* [[Mestizo]]
+* [[Castizo]]
+* [[Cholo|Coyotes]]
+* [[Mulatto|Pardos]]
+* [[Zambo]]
+* [[عرق أسود|السود]]
+
+ |group5 = أشخاص
+ |list5 =
+* [[Juan Bautista de Anza]]
+* [[جواو رودريغيز كابريلو]]
+* [[فرنسيس دريك]]
+* [[Miguel Hidalgo y Costilla]]
+* [[Eusebio Kino]]
+* [[La Malinche]]
+* [[Fermín de Lasuén]]
+* [[Limahong]]
+* [[Moctezuma II]]
+* [[Junípero Serra]]
+* [[هاسيكورا تسونيناغا]]
+ }}
+
+|below =
+* {{أيقونة|Category}} [[:Category:إسبانيا الجديدة|Category]]
 }}<noinclude>
-{{doc|content=
-{{collapsible option}}
-
-== See also ==
-* {{tl|Historiography}}
-* {{tl|WikiProject Military history}}
-
-[[Category:Military historiography|*]]
-[[Category:Military history navigational boxes]]
-[[Category:War and conflict navigational boxes]]
-}}</noinclude>
+{{خيارات طي قالب تصفح}}
+[[تصنيف:صناديق تصفح الكاريبي]]
+[[تصنيف:قوالب دول أو أقاليم سابقة في أمريكا الشمالية]]
+[[تصنيف:صناديق تصفح تاريخ إسبانيا]]
+[[تصنيف:قوالب تصفح تاريخ الولايات المتحدة]]
+</noinclude>
