@@ -1,0 +1,17 @@
+# Secrets
+GEMINI_API_KEY.txt
+*.key
+.env
+
+# Local/generated output
+output.wiki
+source-info.txt
+untranslated-links.txt
+
+# PowerShell/editor artifacts
+*.bak
+*.tmp
+Thumbs.db
+
+# Local test artifacts
+*.log

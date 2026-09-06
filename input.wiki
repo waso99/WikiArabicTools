@@ -1,0 +1,184 @@
+﻿{{Navbox
+| name      = Military historiography
+| title     = [[Military]] [[historiography]]
+| state     = {{{state<includeonly>|collapsed</includeonly>}}}
+| border = {{{border|}}}
+| listclass = hlist
+| selected = {{{1|}}}
+
+| above = {{flatlist|
+* '''[[Military history]]'''
+* '''[[List of military museums]]'''
+}}
+
+| group1 = Pre-18th century<br/>conflict
+| list1  = 
+* [[Albigensian Crusade#Legacy|Albigensian Crusade]]
+** [[Catharism#Historical and current scholarship|Catharism debate]]
+* [[Historiography of the Crusades|Crusades]]
+** [[Islamic views on the crusades|Islamic views]]
+* [[Historiography of the Eighty Years' War|Eighty Years' War]]
+** [[Origins of the Eighty Years' War|Origins]]
+* [[Fall of Babylon#Historiography|Fall of Babylon]]
+* [[Gallic Wars#Historiography|Gallic Wars]]
+* [[Late Bronze Age collapse]]
+** [[Dorian invasion]]
+** [[Sea Peoples]]
+* [[History of the Peloponnesian War|Peloponnesian War]]
+
+| group2 = 18th and 19th<br/>century conflict
+| list2  = 
+{{Navbox|subgroup
+| group1 = [[French Revolutionary and Napoleonic Wars|Coalition Wars]]<br/>(1792–1815)
+| list1  = 
+* [[Historiography of the French Revolution|French Revolution]]
+** [[Causes of the French Revolution|Causes]]
+* [[War in the Vendée#Historiography|War in the Vendée]]
+* [[Napoleonic studies|Napoleonic era]]
+** [[French invasion of Russia#Historical assessment|Invasion of Russia]]
+** [[Battle of Waterloo#Historical importance|Waterloo]]
+}}
+
+* [[Historiographic issues about the American Civil War|American Civil War]]
+** [[Origins of the American Civil War|Origins]]
+** [[Turning point of the American Civil War|Turning point]]
+* [[Franco-Prussian War]]
+** [[Causes of the Franco-Prussian War|Causes]]
+** [[Historiography of the Paris Commune|Paris Commune]]
+* [[Historiography of the Great Game|Great Game]]
+* [[Indian Rebellion of 1857#Historiography|Indian Rebellion of 1857]]
+** [[Causes of the Indian Rebellion of 1857|Causes]]
+* [[Historiography of the Paraguayan War|Paraguayan War]]
+* [[Historiography of the War of 1812|War of 1812]]
+** [[Origins of the War of 1812|Origins]]
+* [[War of the Pacific]]
+** [[Causes of the War of the Pacific|Causes]]
+
+| group3 = [[Historiography of World War I|World War I]]
+| list3  =
+* [[Historiography of the causes of World War I|Causes]] ([[Color book]]s{{middot}} [[Fritz Fischer (historian)#Fischer thesis|Fischer thesis]])
+* [[Late Ottoman genocides]] ([[Causes of the Armenian genocide]])
+* [[Patriotic consent]]
+* [[Persian famine of 1917–1919]]
+* [[Powder keg of Europe]]
+* [[Schlieffen Plan#History|Schlieffen Plan]]
+* [[Spirit of 1914]]{{\}}[[Spirit of 1917|1917]]
+* [[Treaty of Brest-Litovsk]]
+{{Navbox|subgroup
+| group1 = [[Treaty of Versailles#Historical assessments|Treaty of Versailles]]
+| list1  = 
+* [[World War I reparations#Analysis|Reparations]]
+* [[War guilt question]]
+** [[Article 231 of the Treaty of Versailles|Article 231]]
+**[[Reichstag inquiry into guilt for World War I|Reichstag inquiry]]
+ }}
+
+| group4 = [[Interwar period]]
+| list4  = 
+* [[Responsibility for the burning of Smyrna|Burning of Smyrna]]
+* [[Polish–Soviet War#Aftermath and legacy|Polish–Soviet War]]
+** [[Causes of the Polish–Soviet War|Causes]]
+* [[Spanish Civil War]]
+** [[Background of the Spanish Civil War|Background]]
+
+| group5 = [[Historiography of World War II|World War II]]
+| list5  =
+* [[Causes of World War II|Causes]]
+* [[Blitzkrieg#Post-war controversy|"Blitzkrieg" concept]]
+* [[Broad front versus narrow front controversy in World War II|Broad vs. narrow front]]
+* [[Historiography of German resistance to Nazism|German resistance to Nazism]]
+* [[Nazi foreign policy debate]]
+
+{{Navbox|subgroup
+| group1 = Eastern Front
+| list1  = 
+* [[Molotov–Ribbentrop Pact#Postwar commentary on motives of Stalin and Hitler|Molotov–Ribbentrop Pact]]
+* [[Soviet offensive plans controversy|Soviet offensive plans]]
+* [[Warsaw Uprising#Soviet stance|Soviets and the Warsaw Uprising]]
+* [[Historiography of the massacres of Poles in Volhynia and Eastern Galicia|Massacres of Poles in Volhynia and Eastern Galicia]]
+* [[Aftermath of the Winter War|Winter War]]
+** [[Background of the Winter War|Background]]
+** [[Spirit of the Winter War|Spirit]]
+
+| group2 = [[Holocaust studies|The Holocaust]]
+| list2  = 
+* [[Auschwitz bombing debate]]
+* [[Knowledge of the Holocaust in Nazi Germany and German-occupied Europe|Awareness in Nazi Germany and German-occupied Europe]]
+* [[Functionalism–intentionalism debate]]
+* Relation to 
+**[[Armenian genocide and the Holocaust|Armenian genocide]]
+**[[Herero and Nama genocide and the Holocaust|Herero and Nama genocide]]
+**[[The Holocaust and the Nakba|Nakba]]
+* [[Pope_Pius_XII_and_the_Holocaust#Historiography|Pope Pius XII]] 
+** [[Pius Wars]]
+* [["Polish death camp" controversy|"Polish death camp"]]
+* [[Responsibility for the Holocaust|Responsibility]]
+* [[Historiography of the Holocaust in Slovakia|Slovakia]]
+* [[Holocaust uniqueness debate|Uniqueness]]
+
+| group3 = Pacific War
+| list3  = 
+* [[Debate over the atomic bombings of Hiroshima and Nagasaki|Atomic bombings of Hiroshima and Nagasaki]]
+* [[Battle for Australia|"Battle for Australia"]]
+* [[Bengal famine of 1943#Historiography|Bengal famine]]
+* Second Sino-Japanese War
+** [[Historiography of the Nanjing Massacre|Nanjing Massacre]]
+
+| group4 = Western Front
+| list4  = 
+* [[Historiography of the Battle of France|Battle of France]]
+* ''[[Guilty Men]]''
+* ''[[Résistancialisme]]''
+* [[Historiography of Vichy France|Vichy France]]
+ }}
+
+| group6 = [[Historiography of the Cold War|Cold War]]
+| list6  =
+* [[Origins of the Cold War|Origins]]
+* [[1948 Palestine war#Historiography|1948 Palestine war]]
+** [[Causes of the 1948 Palestinian expulsion and flight|Palestinian expulsion and flight]]{{\}}[[Ongoing Nakba]]
+** [[Zionism as settler colonialism]]
+** [[New Historians]]
+* Malayan Emergency
+** [[Background and causes of the Malayan Emergency|Causes]]
+* [[Historiography of the Algerian War|Algerian War]]
+* Six-Day War
+** [[Origins of the Six-Day War|Origins]]
+* Iranian revolution
+** [[Background and causes of the Iranian revolution|Causes]]
+* [[Legacy and memory of the Iran–Iraq War|Iran–Iraq War]]
+* [[Aftermath of the Falklands War|Falklands War]]
+** [[Falkland Islands sovereignty dispute|Sovereignty dispute]]
+* Sri Lankan civil war
+** [[Origins of the Sri Lankan civil war|Origins]]
+
+| group7 = Post-Cold War
+| list7  =
+* Russo-Georgian War
+** [[Background of the Russo-Georgian War|Background]]
+** [[Responsibility for the Russo-Georgian War|Responsibility]]
+* Syrian revolution
+** [[Background and causes of the Syrian revolution|Causes]]
+
+| group8 = Related
+| list8 =
+* [[Conflict thesis]]
+* [[Historiography of gunpowder and gun transmission|Gunpowder and gun transmission]]
+* [[War and genocide]]
+
+|below ={{flatlist|
+* {{icon|category}} [[:Category:Military historiography|Category]]
+}}
+
+}}<noinclude>
+{{doc|content=
+{{collapsible option}}
+
+== See also ==
+* {{tl|Historiography}}
+* {{tl|WikiProject Military history}}
+
+[[Category:Military historiography|*]]
+[[Category:Military history navigational boxes]]
+[[Category:War and conflict navigational boxes]]
+}}</noinclude>
