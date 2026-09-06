@@ -1,5 +1,12 @@
 ﻿# Changelog
 
+## 1.0.3
+
+- Fixed GitHub Actions result publishing by force-adding generated result files that are intentionally ignored by `.gitignore`.
+- Successful workflows now commit `output.wiki`, `untranslated-links.txt`, and `source-info.txt` directly to the repository.
+- Preserved the GitHub Actions artifact upload as a second copy of the results.
+- Updated GitHub Actions documentation and security notes.
+
 ## 1.0.2
 
 - Added automatic commit of successful processing results to `main`.

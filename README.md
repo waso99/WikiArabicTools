@@ -1,4 +1,4 @@
-﻿# WikiArabicTools
+# WikiArabicTools
 
 **الإصدار: 1.0.2**
 
@@ -210,18 +210,20 @@ GEMINI_API_KEY
 6. عند اختيار `title` أو `url` أدخل القيمة المطلوبة.
 7. اختر نموذج Gemini وحجم الدفعة عند الحاجة.
 
-بعد انتهاء التشغيل ستجد النتائج في **Artifacts** تحت اسم قريب من:
+بعد انتهاء التشغيل تُحفظ النتائج بطريقتين:
+
+1. **مباشرة في المستودع**:
+   - `output.wiki`
+   - `untranslated-links.txt`
+   - `source-info.txt`
+
+2. **في Artifacts** تحت اسم قريب من:
 
 ```text
 WikiArabicTools-results-<run-number>
 ```
 
-ويتضمن ذلك:
-
-- `output.wiki`
-- `untranslated-links.txt`
-- `source-info.txt`
-- ملفات `Cache/*.json`
+ويتضمن الـArtifact أيضًا ملفات `Cache/*.json`.
 
 ### التشغيل التلقائي
 
@@ -233,4 +235,6 @@ WikiArabicTools-results-<run-number>
 
 ### الأمان
 
-ملف Workflow يستخدم صلاحية قراءة المستودع فقط (`contents: read`) ولا يحتاج إلى كتابة ملفات داخل GitHub. مفتاح Gemini يمر إلى التشغيل من خلال GitHub Actions Secret ولا يُكتب في ملفات المشروع.
+يستخدم Workflow صلاحية `contents: write` لأن وظيفته نشر ملفات النتائج تلقائيًا داخل المستودع. ولا تُستخدم هذه الصلاحية إلا في هذا الـWorkflow. مفتاح Gemini يمر إلى التشغيل من خلال GitHub Actions Secret ولا يُكتب في ملفات المشروع.
+
+ملفات النتائج موجودة في `.gitignore` لمنع إضافتها بالخطأ أثناء العمل المحلي، ويستخدم Workflow الأمر `git add -f` فقط عند النشر الآلي للنتائج.
