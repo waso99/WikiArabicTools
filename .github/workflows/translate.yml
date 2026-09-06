@@ -38,7 +38,7 @@ on:
       - '.github/workflows/translate.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: wikiarabictools
@@ -118,6 +118,24 @@ jobs:
           if ($LASTEXITCODE -and $LASTEXITCODE -ne 0) {
             exit $LASTEXITCODE
           }
+
+      - name: Commit results to repository
+        if: success()
+        shell: bash
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add output.wiki untranslated-links.txt source-info.txt
+
+          if git diff --cached --quiet; then
+            echo "No result files changed; nothing to commit."
+            exit 0
+          fi
+
+          git commit -m "Update WikiArabicTools results"
+          git push
 
       - name: Upload results
         if: always()
