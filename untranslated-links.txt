@@ -1,120 +1,697 @@
-1. List of military museums
-   QID: Q108574945
+1. إسبانيا الجديدة
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-2. Historiography of the Crusades
-   QID: Q16843519
+2. الاستعمار الإسباني للأمريكيتين
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-3. Islamic views on the crusades
-   QID: Q28136592
+3. الغزو الإسباني لغواتيمالا
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-4. Napoleonic studies
-   QID: Q20949662
+4. القرصنة في الكاريبي
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-5. Historiography of the Paris Commune
-   QID: Q98404945
+5. Acaxee Rebellion
+   QID: Q16960172
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-6. Historiography of the Great Game
+6. Spanish–Moro conflict
+   QID: Q6355746
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-7. Historiography of the Paraguayan War
-   QID: Q10297345
+7. Acoma Massacre
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-8. Historiography of the War of 1812
-   QID: Q106202675
+8. Tepehuán Revolt
+   QID: Q7701256
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-9. Causes of the War of the Pacific
+9. Pima Revolt
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-10. Late Ottoman genocides
-   QID: Q104901608
+10. فيليب الثاني ملك إسبانيا
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-11. Patriotic consent
-   QID: Q2994430
+11. Enlightenment in Spain
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-12. Spirit of 1914
-   QID: Q315872
+12. كارلوس الثالث ملك إسبانيا
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-13. Spirit of 1917
-   QID: Q96406187
+13. Royal Audiencia of Guadalajara
+   QID: Q4233721
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-14. Reichstag inquiry into guilt for World War I
-   QID: Q79120752
+14. Real Audiencia of Manila
+   QID: Q3774484
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-15. Responsibility for the burning of Smyrna
-   QID: Q104870554
+15. Real Audiencia of Mexico
+   QID: Q1747501
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-16. Broad front versus narrow front controversy in World War II
-   QID: Q105760610
+16. Captaincy General
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-17. Historiography of German resistance to Nazism
-   QID: Q65061865
+17. Captaincy General of the Philippines
+   QID: Q2721139
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-18. Historiography of the massacres of Poles in Volhynia and Eastern Galicia
-   QID: Q16843530
+18. Captaincy General of Puerto Rico
+   QID: Q541745
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-19. Functionalism–intentionalism debate
-   QID: Q994570
+19. Captaincy General of Yucatán
+   QID: Q2556639
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-20. Herero and Nama genocide and the Holocaust
-   QID: Q137583876
+20. Indendancies of New Spain
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-21. Pope_Pius_XII_and_the_Holocaust
-   Section: #Historiography
+21. تشياباس
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-22. Historiography of the Holocaust in Slovakia
-   QID: Q104842996
+22. كاماغواي
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-23. Holocaust uniqueness debate
-   QID: Q111945429
+23. سانتياغو دي كوبا (مدينة)
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-24. Historiography of the Nanjing Massacre
-   QID: Q3138389
+24. غوادالاخارا
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-25. Guilty Men
-   QID: Q5616384
+25. ولاية فيراكروز
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-26. Résistancialisme
-   QID: Q3457845
+26. فلوريدا الإسبانية
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-27. Historiography of Vichy France
-   QID: Q3138386
+27. Cabildo (council)
+   QID: Q1024827
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-28. Background and causes of the Malayan Emergency
-   QID: Q5121766
+28. صلح وستفاليا
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-29. Historiography of the Algerian War
+29. Congress of Breda
+   QID: Q5160857
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-30. Origins of the Sri Lankan civil war
-   QID: Q7102646
+30. Treaty of Córdoba
+   QID: Q767450
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-31. :Category:Military historiography
+31. History of Veracruz (city)
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+32. مدينة بويبلا
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+33. غوادالاخارا
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+34. مونتيري
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+35. Guanajuato City
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+36. Pueblo de Los Ángeles
+   QID: Q3410547
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+37. History of San Jose, California
+   QID: Q5866351
+   Section: #First Spanish pueblo in California
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+38. Presidio of San Diego
+   QID: Q605760
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+39. سانتا فيه (نيومكسيكو)
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+40. ألبوكيركي
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+41. إل باسو (تكساس)
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+42. Los Adaes
+   QID: Q6681850
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+43. History of San Antonio
+   QID: Q4918759
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+44. توسان (أريزونا)
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+45. بينساكولا
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+46. History of Santo Domingo
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+47. سان خوان (بورتوريكو)
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+48. History of Manila
+   QID: Q3399362
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+49. Louisiana_(New_Spain)
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+50. فلوريدا الإسبانية
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+51. فلوريدا
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+52. Province of Las Californias
+   QID: Q108649758
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+53. كاليفورنيا
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+54. Baja California Province
+   QID: Q20506391
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+55. نيومكسيكو
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+56. تكساس
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+57. Nueva Galicia
+   QID: Q2437292
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+58. Nueva Extremadura
+   QID: Q677487
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+59. New Kingdom of León
+   QID: Q3823442
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+60. بولاكان
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+61. بامبانغا
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+62. Spanish Formosa
+   QID: Q74049
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+63. كريستوفر كولومبوس
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+64. فرناندو ماجلان
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+65. خوان سباستيان إلكانو
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+66. فاسكو نونييث دي بالبوا
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+67. إرنان كورتيس
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+68. خوان بونثي دي ليون
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+69. Nuño de Guzmán
+   QID: Q1333486
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+70. برنال دياث ديل كاستييو
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+71. بيدرو دي ألفارادو
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+72. بانفيلو دي نارفاييث
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+73. إرناندو دي سوتو
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+74. فرانسيسكو فاسكويز دي كورونادو
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+75. جواو رودريغيز كابريلو
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+76. Ángel de Villafañe
+   QID: Q1097583
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+77. ألفار نونييث كابيثا دي فاكا
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+78. بيدرو مينينديث دي أفيليس
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+79. خوان خوسيه بيريز هيرنانديز
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+80. Manuel Quimper
+   QID: Q548355
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+81. Cristóbal de Oñate
+   QID: Q920150
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+82. أندريس دي أوردانيتا
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+83. فرانسيسكو هرنانديز دي كوردوبا (فاتح يوكاتان)
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+84. فرانسيسكو هرنانديز دي كوردوبا (مؤسس نيكارغوا)
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+85. جيل غونزاليس دافيلا
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+86. Francisco de Ulloa
+   QID: Q715754
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+87. Dionisio Alcalá Galiano
+   QID: Q1626617
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+88. Bruno de Heceta
+   QID: Q2340694
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+89. Ignacio de Arteaga y Bazán
+   QID: Q5992483
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+90. خوسيه دي بوستامينت إي غيرا
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+91. José María Narváez
+   QID: Q628475
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+92. Antonio Gil Y'Barbo
+   QID: Q4776659
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+93. ألكسندر فون هومبولت
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+94. Thomas Gage (priest)
+   QID: Q504421
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+95. الكنيسة الرومانية الكاثوليكية
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+96. Spanish missions in Baja California
+   QID: Q551654
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+97. Spanish missions in Florida
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+98. Spanish missions in Louisiana
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+99. Spanish missions in Mexico
+   QID: Q7573422
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+100. Spanish missions in the Sonoran Desert
+   QID: Q3859282
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+101. Ajacán Mission
+   QID: Q4699492
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+102. Spanish missions in Trinidad
+   QID: Q7573425
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+103. Pedro de Gante
+   QID: Q450411
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+104. Toribio de Benavente Motolinia
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+105. Juan de Zumárraga
+   QID: Q442901
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+106. Alonso de Montúfar
+   QID: Q1807093
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+107. Vasco de Quiroga
+   QID: Q2990920
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+108. بارتولومي دي لاس كاساس
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+109. Alonso de Molina
+   QID: Q2839291
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+110. دييغو دوران
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+111. Diego de Landa
+   QID: Q379672
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+112. Gerónimo de Mendieta
+   QID: Q1381268
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+113. Juan de Palafox y Mendoza
+   QID: Q2448974
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+114. Francisco Javier Clavijero
+   QID: Q1442029
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+115. Francisco Palóu
+   QID: Q2636220
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+116. Fermín de Lasuén
+   QID: Q5444431
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+117. Esteban Tápis
+   QID: Q5400834
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+118. José Francisco de Paula Señan
+   QID: Q6292266
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+119. Marià Paieres i Borràs
+   QID: Q6766106
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+120. Sebastián Montero
+   QID: Q7442660
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+121. ماركوس دي نيزا
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+122. Francisco de Ayeta
+   QID: Q5484102
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+123. Antonio Margil
+   QID: Q4776777
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+124. Francisco Marroquín
+   QID: Q1373530
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+125. Manuel Abad y Queipo
+   QID: Q1891420
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+126. خوسيه ماريا موريلوس
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+127. California mission clash of cultures
+   QID: Q5021280
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+128. Cargo system
+   QID: Q3962158
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+129. Indian Reductions
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+130. الشعوب الأصلية في الأمريكتين
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+131. Huastec people
+   QID: Q1130354
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+132. Tarascan state
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+133. Totonac
+   QID: Q898658
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+134. Pipil people
+   QID: Q267410
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+135. Kaqchikel people
+   QID: Q1026107
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+136. Poqomam people
+   QID: Q3436900
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+137. Mam people
+   QID: Q2563726
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+138. Ciboney
+   QID: Q726722
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+139. Guanahatabey
+   QID: Q3118725
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+140. Mission Indians
+   QID: Q6878624
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+141. تشوماش
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+142. Cupeño
+   QID: Q1257154
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+143. Juaneño
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+144. Kumeyaay
+   QID: Q2143064
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+145. Luiseño
+   QID: Q3090691
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+146. Serrano people
+   QID: Q617532
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+147. Akimel O'odham
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+148. أباتشي (شعب)
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+149. Hualapai
+   QID: Q1936651
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+150. Puebloans
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+151. Quechan
+   QID: Q1754503
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+152. Solano people
+   QID: Q7555723
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+153. Tohono O'odham
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+154. Aridoamerica
+   QID: Q613648
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+155. Acaxee
+   QID: Q338230
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+156. Coahuiltecan
+   QID: Q1104182
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+157. Cochimí
+   QID: Q2661428
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+158. Cocopah
+   QID: Q165320
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+159. Kiliwa people
+   QID: Q2664567
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+160. La Junta Indians
+   QID: Q6463286
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+161. Opata people
+   QID: Q1550826
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+162. Yaqui
+   QID: Q428575
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+163. Southern Plains
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+164. Lipan Apache
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+165. Plains Apache
+   QID: Q1523166
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+166. Tonkawa
+   QID: Q1493185
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+167. Indigenous peoples of the Southeastern Woodlands
+   QID: Q905014
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+168. List of sites and peoples visited by the Hernando de Soto Expedition
+   QID: Q3833897
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+169. Calusa
+   QID: Q51782
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+170. Jororo
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+171. Pensacola people
+   QID: Q2807320
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+172. Timucua
+   QID: Q56168
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+173. Yustaga
+   QID: Q17108335
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+174. Mangyan
+   QID: Q2500209
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+175. Peoples of Palawan
+   QID: Q7166088
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+176. Ati people
+   QID: Q2714852
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+177. Lumad
+   QID: Q1585756
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+178. Bajau people
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+179. Cebuano people
+   QID: Q3567287
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+180. Spanish Colonial architecture
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+181. Spanish Colonial architecture
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+182. Spanish colonial real
+   QID: Q3931074
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+183. Casta
+   QID: Q1379243
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+184. الشعوب الأصلية في الأمريكتين
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+185. Castizo
+   QID: Q532932
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+186. Cholo
+   QID: Q1075969
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+187. عرق أسود
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+188. جواو رودريغيز كابريلو
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+189. فرنسيس دريك
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+190. Fermín de Lasuén
+   QID: Q5444431
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+191. Limahong
+   QID: Q706515
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+192. هاسيكورا تسونيناغا
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+193. :Category:إسبانيا الجديدة
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+194. تصنيف:صناديق تصفح الكاريبي
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+195. تصنيف:قوالب دول أو أقاليم سابقة في أمريكا الشمالية
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+196. تصنيف:صناديق تصفح تاريخ إسبانيا
+   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
+
+197. تصنيف:قوالب تصفح تاريخ الولايات المتحدة
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
