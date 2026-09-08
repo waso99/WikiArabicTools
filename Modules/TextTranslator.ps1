@@ -1,0 +1,216 @@
+﻿# ============================================
+# TextTranslator.ps1
+# ترجمة النصوص الظاهرة الآمنة في Wikitext
+# ============================================
+
+$script:TextStats = [ordered]@{
+    Candidates = 0
+    Changed = 0
+    GeminiRequests = 0
+    GeminiFailures = 0
+    CacheHits = 0
+    CacheMisses = 0
+}
+
+$script:TextTranslationCachePath = Join-Path $PSScriptRoot '..\Cache\TextTranslationCache.json'
+
+# Deterministic translations for established historical section labels.
+# These override Gemini output so terminology remains stable across runs.
+$script:DeterministicTextTranslations = @{
+    'Buccaneering Period' = 'فترة البوكانير'
+    'Pirate Round' = 'جولة القراصنة'
+    'Post-Spanish Succession' = 'ما بعد حرب الخلافة الإسبانية'
+}
+
+function Get-TextTranslationCache {
+    if (-not (Test-Path -LiteralPath $script:TextTranslationCachePath)) { return @{} }
+    try {
+        $obj = Get-Content -LiteralPath $script:TextTranslationCachePath -Raw -Encoding UTF8 | ConvertFrom-Json
+        $cache = @{}
+        foreach ($p in $obj.PSObject.Properties) { $cache[[string]$p.Name] = [string]$p.Value }
+        return $cache
+    } catch {
+        Write-Warning "تعذر قراءة TextTranslationCache.json: $($_.Exception.Message)"
+        return @{}
+    }
+}
+
+function Save-TextTranslationCache {
+    param([Parameter(Mandatory)][hashtable]$Cache)
+    try {
+        $dir = Split-Path -Parent $script:TextTranslationCachePath
+        if (-not (Test-Path $dir)) { New-Item -ItemType Directory -Path $dir -Force | Out-Null }
+        $Cache | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath $script:TextTranslationCachePath -Encoding UTF8
+    } catch {
+        Write-Warning "تعذر حفظ TextTranslationCache.json: $($_.Exception.Message)"
+    }
+}
+
+function Get-TextTranslatorSetting {
+    param([Parameter(Mandatory)][string]$Name,[string]$Default='')
+    $value = [Environment]::GetEnvironmentVariable($Name,'Process')
+    if ([string]::IsNullOrWhiteSpace($value)) { $value = [Environment]::GetEnvironmentVariable($Name,'User') }
+    if ([string]::IsNullOrWhiteSpace($value)) { $value = [Environment]::GetEnvironmentVariable($Name,'Machine') }
+    if ([string]::IsNullOrWhiteSpace($value)) { $value = $Default }
+    if ($null -ne $value) { $value = $value.Trim().Trim('"').Trim() }
+    return $value
+}
+
+function Invoke-GeminiPlainTextTranslations {
+    param([Parameter(Mandatory)][string[]]$Texts)
+
+    $apiKey = Get-TextTranslatorSetting -Name 'GEMINI_API_KEY'
+    if ([string]::IsNullOrWhiteSpace($apiKey)) { return @{} }
+
+    $model = Get-TextTranslatorSetting -Name 'GEMINI_MODEL' -Default 'gemini-3.5-flash'
+    $fallback = Get-TextTranslatorSetting -Name 'GEMINI_FALLBACK_MODEL' -Default 'gemini-3.5-flash-lite'
+    $batchSize = 10
+    $rawBatch = Get-TextTranslatorSetting -Name 'GEMINI_BATCH_SIZE' -Default '10'
+    $parsed = 0
+    if ([int]::TryParse($rawBatch,[ref]$parsed) -and $parsed -ge 1 -and $parsed -le 20) { $batchSize = $parsed }
+
+    $result = @{}
+    for ($offset = 0; $offset -lt $Texts.Count; $offset += $batchSize) {
+        $end = [Math]::Min($offset + $batchSize - 1, $Texts.Count - 1)
+        $batch = @($Texts[$offset..$end])
+        $items = for ($i = 0; $i -lt $batch.Count; $i++) { "{0}. {1}" -f ($i + 1), $batch[$i] }
+
+        $prompt = @"
+You are an English-to-Arabic translator for Arabic Wikipedia.
+
+Translate each English visible label below into concise, natural, formal Modern Standard Arabic.
+These strings are short Wikitext definition-list headings or labels.
+
+STRICT OUTPUT:
+- Return exactly one line for every numbered input.
+- Format: NUMBER<TAB>ARABIC TRANSLATION
+- Return only translations.
+- Do not repeat English.
+- Do not use Markdown or Wikitext.
+- Preserve proper names and established Arabic terminology when appropriate.
+
+$($items -join "`n")
+"@
+
+        $body = @{
+            contents = @(@{ parts = @(@{ text = $prompt }) })
+            generationConfig = @{ temperature = 0.1 }
+        } | ConvertTo-Json -Depth 10
+
+        $models = @($model)
+        if ($fallback -and $fallback -ne $model) { $models += $fallback }
+        $response = $null
+
+        foreach ($m in $models) {
+            try {
+                $uri = "https://generativelanguage.googleapis.com/v1beta/models/$m`:generateContent"
+                $script:TextStats.GeminiRequests++
+                $response = Invoke-RestMethod -Uri $uri -Method Post `
+                    -Headers @{'x-goog-api-key'=$apiKey;'Accept'='application/json'} `
+                    -ContentType 'application/json; charset=utf-8' `
+                    -Body $body -ErrorAction Stop
+                break
+            } catch {
+                if ($m -eq $models[-1]) {
+                    $script:TextStats.GeminiFailures++
+                    Write-Warning "فشل Gemini في ترجمة النصوص الظاهرة: $($_.Exception.Message)"
+                } else {
+                    Write-Warning "فشل النموذج الأساسي؛ ستتم تجربة النموذج البديل."
+                }
+            }
+        }
+
+        if ($null -eq $response -or $null -eq $response.candidates -or $response.candidates.Count -eq 0) { continue }
+        $raw = [string]$response.candidates[0].content.parts[0].text
+        foreach ($line in @($raw -split "`r?`n")) {
+            if ($line -match '^\s*(\d+)\s*[\.\)\-:]?\s*[\t ]+(.+?)\s*$') {
+                $num = [int]$Matches[1]
+                $translation = $Matches[2].Trim()
+                if ($num -ge 1 -and $num -le $batch.Count -and $translation -and $translation -notmatch '[{}\[\]]') {
+                    $result[$batch[$num - 1]] = $translation
+                }
+            }
+        }
+    }
+    return $result
+}
+
+function Convert-WikipediaVisibleText {
+    param([Parameter(Mandatory)][string]$Text)
+
+    $script:TextStats = [ordered]@{
+        Candidates = 0; Changed = 0; GeminiRequests = 0; GeminiFailures = 0; CacheHits = 0; CacheMisses = 0
+    }
+    if ([string]::IsNullOrWhiteSpace($Text)) { return $Text }
+
+    # Safe scope: only definition-list labels at the beginning of a line.
+    # We intentionally do not translate arbitrary prose here because Wikitext
+    # can contain syntax, names, parameters, tables, and code that must remain exact.
+    # Protected tags are masked with spaces first so even a line beginning with ';'
+    # inside <ref>, <nowiki>, <code>, etc. can never be translated.
+    $masked = $Text.ToCharArray()
+    $tokens = Get-WikitextTokens -Text $Text
+    foreach ($token in $tokens) {
+        if ($token.Type -eq 'Protected') {
+            $start = [int]$token.Start
+            $end = [int]$token.End
+            for ($i = $start; $i -lt $end -and $i -lt $masked.Length; $i++) { $masked[$i] = ' ' }
+        }
+    }
+    $maskedText = -join $masked
+    $pattern = '(?m)^(?<prefix>[ \t]*;)(?<value>[^\r\n]+)$'
+    $matches = [regex]::Matches($maskedText, $pattern)
+    if ($matches.Count -eq 0) { return $Text }
+
+    $cache = Get-TextTranslationCache
+    $pending = [System.Collections.Generic.List[string]]::new()
+    $seen = @{}
+    foreach ($m in $matches) {
+        $valueStart = $m.Groups['value'].Index
+        $valueLength = $m.Groups['value'].Length
+        $value = $Text.Substring($valueStart, $valueLength)
+        if ([string]::IsNullOrWhiteSpace($value)) { continue }
+        if ($value -match '[\u0600-\u06FF]' -and $value -notmatch '[A-Za-z]') { continue }
+        $script:TextStats.Candidates++
+
+        # Use deterministic terminology before consulting the cache/Gemini.
+        if ($script:DeterministicTextTranslations.ContainsKey($value)) {
+            $cache[$value] = [string]$script:DeterministicTextTranslations[$value]
+            $script:TextStats.CacheHits++
+            continue
+        }
+
+        if ($cache.ContainsKey($value)) { $script:TextStats.CacheHits++; continue }
+        $script:TextStats.CacheMisses++
+        if (-not $seen.ContainsKey($value)) {
+            $seen[$value] = $true
+            $pending.Add($value)
+        }
+    }
+
+    $translations = @{}
+    if ($pending.Count -gt 0) {
+        $translations = Invoke-GeminiPlainTextTranslations -Texts @($pending)
+        foreach ($key in $translations.Keys) { $cache[$key] = [string]$translations[$key] }
+        Save-TextTranslationCache -Cache $cache
+    }
+
+    if ($matches.Count -eq 0) { return $Text }
+    $sb = [System.Text.StringBuilder]::new()
+    $pos = 0
+    foreach ($m in $matches) {
+        $valueStart = $m.Groups['value'].Index
+        $valueEnd = $valueStart + $m.Groups['value'].Length
+        [void]$sb.Append($Text.Substring($pos, $valueStart - $pos))
+        $old = $m.Groups['value'].Value
+        $new = $old
+        if ($cache.ContainsKey($old) -and -not [string]::IsNullOrWhiteSpace([string]$cache[$old])) {
+            $new = [string]$cache[$old]
+        }
+        [void]$sb.Append($new)
+        if ($new -ne $old) { $script:TextStats.Changed++ }
+        $pos = $valueEnd
+    }
+    [void]$sb.Append($Text.Substring($pos))
+    return $sb.ToString()
+}

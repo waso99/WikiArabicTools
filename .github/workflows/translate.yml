@@ -1,0 +1,167 @@
+name: WikiArabicTools
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_type:
+        description: 'مصدر النص الذي تريد معالجته'
+        required: true
+        default: input
+        type: choice
+        options:
+          - input
+          - title
+          - url
+      title:
+        description: 'عنوان مقالة ويكيبيديا عند اختيار title'
+        required: false
+        type: string
+      url:
+        description: 'رابط مقالة ويكيبيديا عند اختيار url'
+        required: false
+        type: string
+      gemini_model:
+        description: 'نموذج Gemini'
+        required: false
+        default: gemini-3.5-flash
+        type: string
+      gemini_batch_size:
+        description: 'حجم دفعة Gemini (1-20)'
+        required: false
+        default: '10'
+        type: string
+
+  push:
+    paths:
+      - 'input.wiki'
+      - 'WikiArabicTools.ps1'
+      - 'Modules/**'
+      - 'Templates/**'
+      - 'Tests/**'
+      - '.github/workflows/translate.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: wikiarabictools
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run PowerShell syntax tests
+        shell: pwsh
+        run: ./Tests/Test-Syntax.ps1
+      - name: Run template tests
+        shell: pwsh
+        run: ./Tests/Test-TemplateTranslator.ps1
+      - name: Run link display tests
+        shell: pwsh
+        run: ./Tests/Test-LinkDisplayTranslator.ps1
+      - name: Run visible-text tests
+        shell: pwsh
+        run: ./Tests/Test-TextTranslator.ps1
+      - name: Test Arabic label cache
+        shell: pwsh
+        run: ./Tests/Test-ArabicLabelCache.ps1
+      - name: Run pipeline integration tests
+        shell: pwsh
+        run: ./Tests/Test-Pipeline.ps1
+
+  translate:
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_MODEL: ${{ inputs.gemini_model || 'gemini-3.5-flash' }}
+      GEMINI_FALLBACK_MODEL: gemini-3.5-flash-lite
+      GEMINI_BATCH_SIZE: ${{ inputs.gemini_batch_size || '10' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Restore WikiArabicTools cache
+        uses: actions/cache@v4
+        with:
+          path: Cache
+          key: wikiarabictools-cache-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: |
+            wikiarabictools-cache-${{ runner.os }}-
+
+      - name: Validate environment
+        shell: pwsh
+        env:
+          WIKI_SOURCE_TITLE: ${{ inputs.title }}
+          WIKI_SOURCE_URL: ${{ inputs.url }}
+          WIKI_SOURCE_TYPE: ${{ inputs.source_type || 'input' }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $batch = 0
+          if (-not [int]::TryParse($env:GEMINI_BATCH_SIZE, [ref]$batch) -or $batch -lt 1 -or $batch -gt 20) {
+            throw 'GEMINI_BATCH_SIZE must be an integer from 1 to 20.'
+          }
+          switch ($env:WIKI_SOURCE_TYPE) {
+            'title' { if ([string]::IsNullOrWhiteSpace($env:WIKI_SOURCE_TITLE)) { throw 'A title is required when source_type=title.' } }
+            'url' { if ([string]::IsNullOrWhiteSpace($env:WIKI_SOURCE_URL)) { throw 'A URL is required when source_type=url.' } }
+            'input' { }
+            default { throw "Unknown source_type: $env:WIKI_SOURCE_TYPE" }
+          }
+          Write-Host "PowerShell: $($PSVersionTable.PSVersion)"
+          Write-Host "WikiArabicTools: $((Get-Content VERSION.txt -Raw).Trim())"
+          Write-Host "Gemini model: $env:GEMINI_MODEL"
+          Write-Host "Gemini fallback: $env:GEMINI_FALLBACK_MODEL"
+          Write-Host "Gemini batch size: $env:GEMINI_BATCH_SIZE"
+          if ([string]::IsNullOrWhiteSpace($env:GEMINI_API_KEY)) {
+            Write-Warning 'GEMINI_API_KEY is not configured. Gemini translation will be skipped when not otherwise resolvable.'
+          }
+
+      - name: Run WikiArabicTools
+        shell: pwsh
+        env:
+          WIKI_SOURCE_TITLE: ${{ inputs.title }}
+          WIKI_SOURCE_URL: ${{ inputs.url }}
+          WIKI_SOURCE_TYPE: ${{ inputs.source_type || 'input' }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          switch ($env:WIKI_SOURCE_TYPE) {
+            'title' { & ./WikiArabicTools.ps1 -Title $env:WIKI_SOURCE_TITLE }
+            'url' { & ./WikiArabicTools.ps1 -Url $env:WIKI_SOURCE_URL }
+            default { & ./WikiArabicTools.ps1 }
+          }
+          if ($LASTEXITCODE -and $LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Commit results to repository
+        if: success()
+        shell: bash
+        run: |
+          set -e
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f output.wiki untranslated-links.txt source-info.txt
+          if git diff --cached --quiet; then
+            echo 'No result files changed; nothing to commit.'
+            exit 0
+          fi
+          git commit -m 'Update WikiArabicTools results'
+          git push
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: WikiArabicTools-results-${{ github.run_number }}
+          path: |
+            output.wiki
+            untranslated-links.txt
+            source-info.txt
+            Cache/*.json
+          if-no-files-found: warn
+          retention-days: 30
