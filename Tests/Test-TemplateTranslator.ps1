@@ -26,6 +26,12 @@ $input = @'
 }}
 }}
 <nowiki>{{Campaignbox Golden Age of Piracy}}</nowiki>
+{{convert|10|kg|lb}}
+{{cvt|5|ft|m}}
+{{convert|10|kg|lb|abbr=on}}
+{{convert|10|to|20|km|mi}}
+{{convert|{{formatnum:1000}}|kg|lb}}
+{{some_other|10|kg|lb}}
 '@
 
 $expected = @'
@@ -45,6 +51,12 @@ $expected = @'
 }}
 }}
 <nowiki>{{Campaignbox Golden Age of Piracy}}</nowiki>
+{{حول|10|kg|lb}}
+{{حول مختصرا|5|ft|m}}
+{{حول|10|kg|lb|abbr=on}}
+{{حول|10|to|20|km|mi}}
+{{حول|{{formatnum:1000}}|kg|lb}}
+{{some_other|10|kg|lb}}
 '@
 
 $output = Convert-WikipediaTemplates -Text $input -MapPath $map
@@ -58,8 +70,8 @@ if ($output -ne $expected) {
     exit 1
 }
 
-if ($TemplateStats.TemplatesFound -ne 5) { throw "Expected 5 templates, got $($TemplateStats.TemplatesFound)." }
-if ($TemplateStats.TemplateNamesChanged -ne 2) { throw "Expected 2 renamed template names, got $($TemplateStats.TemplateNamesChanged)." }
+if ($TemplateStats.TemplatesFound -ne 12) { throw "Expected 12 templates, got $($TemplateStats.TemplatesFound)." }
+if ($TemplateStats.TemplateNamesChanged -ne 7) { throw "Expected 7 renamed template names, got $($TemplateStats.TemplateNamesChanged)." }
 if ($TemplateStats.ParameterValuesChanged -ne 1) { throw "Expected 1 parameter value change, got $($TemplateStats.ParameterValuesChanged)." }
 
 Write-Host 'Template regression tests passed.' -ForegroundColor Green
