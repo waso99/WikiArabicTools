@@ -158,7 +158,7 @@ function Convert-WikipediaVisibleText {
         }
     }
     $maskedText = -join $masked
-    $pattern = '(?m)^(?<prefix>[ \t]*;)(?<value>[^\r\n]+)$'
+    $pattern = '(?m)^(?<prefix>[ \t]*;)(?<value>[^\r\n]+)\r?$'
     $matches = [regex]::Matches($maskedText, $pattern)
     if ($matches.Count -eq 0) { return $Text }
 
@@ -190,8 +190,97 @@ function Convert-WikipediaVisibleText {
 
     $translations = @{}
     if ($pending.Count -gt 0) {
-        $translations = Invoke-GeminiPlainTextTranslations -Texts @($pending)
-        foreach ($key in $translations.Keys) { $cache[$key] = [string]$translations[$key] }
+        $geminiInputs = [System.Collections.Generic.List[string]]::new()
+        $placeholderMaps = @{}
+        $originalToPlaceholderized = @{}
+        $hasFindTemplateEnd = [bool](Get-Command Find-TemplateEnd -ErrorAction SilentlyContinue)
+
+        foreach ($orig in $pending) {
+            $tokens = Get-WikitextTokens -Text $orig
+            $sbPh = [System.Text.StringBuilder]::new()
+            $map = [System.Collections.Generic.List[string]]::new()
+            $phId = 1
+
+            $i = 0
+            while ($i -lt $orig.Length) {
+                $t = $null
+                foreach ($tok in $tokens) {
+                    if ($tok.Start -eq $i -and $tok.Type -ne 'Text') {
+                        $t = $tok
+                        break
+                    }
+                }
+
+                if ($t) {
+                    $ph = "<WA_SAFE_$phId>"
+                    [void]$sbPh.Append($ph)
+                    $map.Add($orig.Substring($t.Start, $t.End - $t.Start))
+                    $phId++
+                    $i = $t.End
+                    continue
+                }
+
+                if ($hasFindTemplateEnd -and $i+1 -lt $orig.Length -and $orig[$i] -eq '{' -and $orig[$i+1] -eq '{') {
+                    $end = Find-TemplateEnd -Text $orig -Start $i
+                    if ($end -gt $i) {
+                        $ph = "<WA_SAFE_$phId>"
+                        [void]$sbPh.Append($ph)
+                        $map.Add($orig.Substring($i, $end - $i))
+                        $phId++
+                        $i = $end
+                        continue
+                    }
+                }
+
+                [void]$sbPh.Append($orig[$i])
+                $i++
+            }
+
+            $phStr = $sbPh.ToString()
+            $placeholderMaps[$orig] = $map
+            $originalToPlaceholderized[$orig] = $phStr
+            if (-not $geminiInputs.Contains($phStr)) {
+                $geminiInputs.Add($phStr)
+            }
+        }
+
+        $rawTranslations = Invoke-GeminiPlainTextTranslations -Texts @($geminiInputs)
+
+        foreach ($orig in $pending) {
+            if (-not $originalToPlaceholderized.ContainsKey($orig)) { continue }
+            $phStr = $originalToPlaceholderized[$orig]
+            if (-not $rawTranslations.ContainsKey($phStr)) { continue }
+
+            $trans = [string]$rawTranslations[$phStr]
+            $map = $placeholderMaps[$orig]
+
+            $valid = $true
+            $pidMatches = [regex]::Matches($trans, "<WA_SAFE_(\d+)>")
+            $foundPids = @{}
+            foreach ($m in $pidMatches) {
+                $foundPids[[int]$m.Groups[1].Value]++
+            }
+
+            if ($foundPids.Count -ne $map.Count) {
+                $valid = $false
+            } else {
+                for ($k = 1; $k -le $map.Count; $k++) {
+                    if (-not $foundPids.ContainsKey($k) -or $foundPids[$k] -ne 1) {
+                        $valid = $false
+                        break
+                    }
+                }
+            }
+
+            if ($valid) {
+                for ($k = 1; $k -le $map.Count; $k++) {
+                    $trans = $trans.Replace("<WA_SAFE_$k>", $map[$k-1])
+                }
+                $cache[$orig] = $trans
+            } else {
+                Write-Warning "Gemini translation rejected due to missing, duplicated, or unknown placeholders: $orig"
+            }
+        }
         Save-TextTranslationCache -Cache $cache
     }
 
@@ -202,7 +291,7 @@ function Convert-WikipediaVisibleText {
         $valueStart = $m.Groups['value'].Index
         $valueEnd = $valueStart + $m.Groups['value'].Length
         [void]$sb.Append($Text.Substring($pos, $valueStart - $pos))
-        $old = $m.Groups['value'].Value
+        $old = $Text.Substring($valueStart, $m.Groups['value'].Length)
         $new = $old
         if ($cache.ContainsKey($old) -and -not [string]::IsNullOrWhiteSpace([string]$cache[$old])) {
             $new = [string]$cache[$old]
