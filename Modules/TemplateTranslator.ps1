@@ -62,6 +62,33 @@ function Find-TemplateEnd {
     param([Parameter(Mandatory)][string]$Text,[Parameter(Mandatory)][int]$Start)
     $depth=0; $paramDepth=0; $i=$Start
     while ($i -lt $Text.Length-1) {
+        if ($i+3 -lt $Text.Length -and $Text[$i] -eq '<' -and $Text[$i+1] -eq '!' -and $Text[$i+2] -eq '-' -and $Text[$i+3] -eq '-') {
+            $endComment = $Text.IndexOf('-->', $i + 4, [System.StringComparison]::Ordinal)
+            if ($endComment -ge 0) { $i = $endComment + 3; continue }
+        }
+
+        if ($Text[$i] -eq '<') {
+            $protected = [regex]::Match(
+                $Text.Substring($i),
+                '^<\s*(nowiki|pre|code|syntaxhighlight|math|chem|score|timeline|gallery|ref)\b[^>]*>',
+                [System.Text.RegularExpressions.RegexOptions]::IgnoreCase
+            )
+            if ($protected.Success) {
+                $open = $protected.Value
+                $openEnd = $i + $protected.Length
+                if ($open -match '/\s*>$') {
+                    $i = $openEnd
+                    continue
+                }
+                $tagName = ([regex]::Match($open,'<\s*([A-Za-z0-9]+)')).Groups[1].Value
+                $closePattern = "</\s*$([regex]::Escape($tagName))\s*>"
+                $close = [regex]::Match($Text.Substring($openEnd), $closePattern, [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+                if ($close.Success) {
+                    $i = $openEnd + $close.Index + $close.Length
+                    continue
+                }
+            }
+        }
         if ($i+2 -lt $Text.Length -and $Text.Substring($i,3) -eq '{{{') { $paramDepth++; $i+=3; continue }
         if ($paramDepth -gt 0 -and $i+2 -lt $Text.Length -and $Text.Substring($i,3) -eq '}}}') { $paramDepth--; $i+=3; continue }
         if ($paramDepth -eq 0 -and $i+1 -lt $Text.Length -and $Text.Substring($i,2) -eq '{{') { $depth++; $i+=2; continue }

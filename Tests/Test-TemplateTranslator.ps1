@@ -32,6 +32,11 @@ $input = @'
 {{convert|10|to|20|km|mi}}
 {{convert|{{formatnum:1000}}|kg|lb}}
 {{some_other|10|kg|lb}}
+{{test|value=<!-- }} -->|second=value}}
+{{test|value=<nowiki>}}</nowiki>|second=value}}
+{{test|value=<ref>}}</ref>|second=value}}
+{{test|value={{inner|x=1}}|second=value}}
+{{test|value=[[A|B]]|second=value}}
 '@
 
 $expected = @'
@@ -57,6 +62,11 @@ $expected = @'
 {{حول|10|to|20|km|mi}}
 {{حول|{{formatnum:1000}}|kg|lb}}
 {{some_other|10|kg|lb}}
+{{test|value=<!-- }} -->|second=value}}
+{{test|value=<nowiki>}}</nowiki>|second=value}}
+{{test|value=<ref>}}</ref>|second=value}}
+{{test|value={{inner|x=1}}|second=value}}
+{{test|value=[[A|B]]|second=value}}
 '@
 
 $output = Convert-WikipediaTemplates -Text $input -MapPath $map
@@ -70,7 +80,7 @@ if ($output -ne $expected) {
     exit 1
 }
 
-if ($TemplateStats.TemplatesFound -ne 12) { throw "Expected 12 templates, got $($TemplateStats.TemplatesFound)." }
+if ($TemplateStats.TemplatesFound -ne 18) { throw "Expected 18 templates, got $($TemplateStats.TemplatesFound)." }
 if ($TemplateStats.TemplateNamesChanged -ne 7) { throw "Expected 7 renamed template names, got $($TemplateStats.TemplateNamesChanged)." }
 if ($TemplateStats.ParameterValuesChanged -ne 1) { throw "Expected 1 parameter value change, got $($TemplateStats.ParameterValuesChanged)." }
 
