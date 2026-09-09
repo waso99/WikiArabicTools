@@ -1,475 +1,284 @@
-{{Navbox
-|name = إسبانيا الجديدة
+{{#استدعاء:شريط|شريط
+ | name = حرب الثمانين عاما
+ | title = [[حرب الثمانين عاما]]
+ | state = {{{state<includeonly>|collapsed</includeonly>}}}
+ | bodyclass = hlist
+|above =
+[[جذور حرب الثمانين عاما|الأصول]] – [[قائمة معارك حرب الثمانين عاما|قائمة المعارك]]
 
-|title = [[إسبانيا الجديدة]] (1521–1821)
+| group1 = [[حرب الثمانين عاما (1566-1572)|1566-1572]]
+ | list1 ={{#استدعاء:شريط|شريط|child
+   | group1 ='''أوروبا الغربية'''
+   | list1 =
+* [[بيلدنستورم]]
+* {{Ill-WD2|حصار فالنسيان (1566–1567)|id=Q2775731}}
+* {{Ill-WD2|معركة واتريلوس|id=Q2789833}}
+* {{Ill-WD2|معركة لانوي|id=Q1965499}}
+* {{Ill-WD2|معركة أوسترويل|id=Q641757}}
+* [[Battle of Dahlen|Dahlen]]
+* {{Ill-WD2|معركة هيليجرلي (1568)|id=Q505699}}
+* {{Ill-WD2|معركة جيمينغن|id=Q701367}}
+* [[Battle of Jodoigne|Jodoigne]]
+* [[Battle of Le Quesnoy (1568)|Le Quesnoy]]
+}}
 
-|state = {{{state|{{{1<includeonly>|autocollapse</includeonly>}}}}}}
-|bodyclass = hlist
+| group2 = [[حرب الثمانين عاما (1572-1576)|1572-1576]]
+ | list2 ={{#استدعاء:شريط|شريط|child
 
-|group1 = [[الاستعمار الإسباني للأمريكيتين|الصراعات]]
-|list1 =
- {{شريط|subgroup
- |list1 =
-* [[Spanish conquest of the Aztec Empire]] 
-* [[الغزو الإسباني لغواتيمالا]] 
-* [[Spanish conquest of Yucatán]] 
-* [[Anglo-Spanish War (1585–1604)]] 
-* [[Anglo-Spanish War (1625–1630)]] 
-* [[Dutch Revolt]] 
-* [[Anglo-Spanish War (1654–1660)]] 
-* [[القرصنة في الكاريبي]] 
-* [[Queen Anne's War]] 
-* [[War of Jenkins' Ear]] 
-* [[Anglo-Spanish War (1762–1763)|Seven Years' War]] 
-* [[Spain and the American Revolutionary War]]
+   | group1 ='''أوروبا الغربية'''
+   | list1 =
+* [[الاستيلاء على برييل|Brielle]]
+* {{Ill-WD2|حصار مونس (1572)|id=Q971364}}
+* {{Ill-WD2|الغضب الإسباني في ميشيلين|id=Q2726440}}
+* [[Relief of Goes|Goes]]
+* {{Ill-WD2|مذبحة ناردن|id=Q2931482}}
+* {{Ill-WD2|حصار ميديلبورخ (1572-1574)|id=Q2585314}}
+* {{Ill-WD2|حصار هارلم|id=Q652271}}
+* [[Battle of IJsselmeer|IJsselmeer]]
+* {{Ill-WD2|حصار ألكمار|id=Q2350145}}
+* {{Ill-WD2|الاستيلاء على خيرتراودنبيرخ (1573)|id=Q13732826}}
+* {{Ill-WD2|حصار ليدن|id=Q694619}}
+* [[معركة دلفت (1573)|Delft]]
+* [[Capture of Valkenburg (1574)|Valkenburg]]
+* {{Ill-WD2|معركة موكرهيد|id=Q695732}}
+* {{Ill-WD2|حصار آودافاتر (1575)|id=Q2587413}}
+* {{Ill-WD2|حصار سخونهوفن (1575)|id=Q4587277}}
+* {{Ill-WD2|حصار زيريكزي|id=Q2139412}}
+   | group2 ='''المياه الأوروبية'''
+   | list2 =
+* [[Battle of Flushing|Flushing]]
+* {{Ill-WD2|معركة بورسيل|id=Q2259302}}
+* [[Battle of Haarlemmermeer|Haarlemmermeer]]
+* {{Ill-WD2|معركة زاوديرزي|id=Q2386251}}
+* {{Ill-WD2|معركة رايميرسفال|id=Q744588}}
+* [[Battle of Lillo|Lillo]]
+}}
+ | group3 = [[حرب الثمانين عاما (1576-1579)|1576-1579]]
+ | list3 ={{#استدعاء:شريط|شريط|child
 
- |group2 = الصراعات مع الشعوب الأصلية<br />خلال الحكم الاستعماري
+   | group1 ='''أوروبا الغربية'''
+   | list1 =
+* {{Ill-WD2|نهب أنتويرب|id=Q874235}}
+* {{Ill-WD2|معركة جمبلوكس (1578)|id=Q764819}}
+* {{Ill-WD2|معركة ريمنام (1578)|id=Q2936853}}
+* {{Ill-WD2|حصار ديفينتر (1578)|id=Q2231397}}
+* [[Battle of Borgerhout|Borgerhout]]
+}}
 
- |list2 =
-* [[Mixtón War]]
-* [[Yaqui Wars]]
-* [[Chichimeca War]] 
-* [[Philippine revolts against Spain]] 
-* [[Acaxee Rebellion]] 
-* [[Spanish–Moro conflict]] 
-* [[Acoma Massacre]] 
-* [[Tepehuán Revolt]]
-* [[Tzeltal Rebellion of 1712|Tzeltal Rebellion]]
-* [[Pueblo Revolt]]
-* [[Pima Revolt]]
-* [[Spanish American wars of independence]]
- }}
+ | group4 = [[حرب الثمانين عاما (1579-1588)|1579-1588]]
+ | list4 ={{#استدعاء:شريط|شريط|child
 
-|group2 = الحكومة<br />المركزية<br />والإدارة
-|list2 =
- {{شريط|subgroup
- |group1 = [[Habsburg Spain]]
- |list1 =
-* [[Charles V, Holy Roman Emperor|Charles I]]
-* [[Joanna of Castile]]
-* [[فيليب الثاني ملك إسبانيا|فيليب الثاني]]
-* [[Philip III of Spain|Philp III]]
-* [[Philip IV of Spain|Philip IV]]
-* [[Charles II of Spain|Charles II]]
+   | group1 ='''أوروبا الغربية'''
+   | list1 =
+* {{Ill-WD2|حصار ماستريخت (1579)|id=Q2758693}}
+* {{Ill-WD2|الغضب الإنجليزي في ميشيلين|id=Q2780616}}
+* [[Taking of Diest (1580)|Diest]]
+* {{Ill-WD2|حصار ستينويك (1580–1581)|id=Q2483221}}
+* [[Battle of Kollum|Kollum]]
+* [[Capture of Breda (1581)|1st Breda]]
+* {{Ill-WD2|معركة نوردورن|id=Q2444941}}
+* {{Ill-WD2|حصار نيزيل|id=Q2779261}}
+* {{Ill-WD2|حصار لوكيم (1582)|id=Q2621821}}
+* [[Siege of Lier (1582)|1st Lier]]
+* {{Ill-WD2|الغضب الفرنسي|id=Q2457514}}
+* [[Siege of Eindhoven (1583)|Eindhoven]]
+* {{Ill-WD2|معركة ستينبيرجين (1583)|id=Q3075969}}
+* [[Siege of Ghent (1583–1584)|Ghent]]
+* [[Capture of Aalst (1584)|Aalst]]
+* [[سقوط أنتويرب|3rd Antwerp]]
+* [[Siege of IJsseloord|1st IJsseloord]]
+* [[Battle of Empel|Empel]]
+* [[Battle of Boksum|Boksum]]
+* {{Ill-WD2|حصار غريف (1586)|id=Q13568719}}
+* [[Siege of Venlo (1586)|1st Venlo]]
+* {{Ill-WD2|الاستيلاء على أكسل|id=Q2854642}}
+* [[Destruction of Neuss|Neuss]]
+* [[Siege of Rheinberg (1586–1590)|1st Rheinberg]]
+* {{Ill-WD2|معركة زوتفن|id=Q2890458}}
+* {{Ill-WD2|حصار سلاوس (1587)|id=Q13538346}}
+   | group2 ='''المياه الأوروبية'''
+   | list2 =
+* [[معركة بونتا ديلغادا|Ponta Delgada]]
+}}
 
- |group2 = [[Enlightenment in Spain|Bourbon Spain]]
- |list2 =
-* [[Philip V of Spain|Philip V]] ({{صغير|كما حكم بعد لويس الأول}})
-* [[Louis I of Spain|Louis I]]
-* [[Ferdinand VI]]
-* [[كارلوس الثالث ملك إسبانيا|كارلوس الثالث]]
-* [[Charles IV of Spain|Charles IV]]
-* [[Ferdinand VII]] ({{صغير|also reigned after [[Joseph Bonaparte|Joseph I]]}})
+ | group5 = [[السنوات العشر (حرب الثمانين عاما)|السنوات العشر<br/>(1588–1598)]]
+ | list5 ={{#استدعاء:شريط|شريط|child
+   | group1 ='''أوروبا الغربية'''
+   | list1 =
+* {{Ill-WD2|حصار بيرخن أوب زووم (1588)|id=Q2050622}}
+* [[Capture of Geertruidenberg (1589)|2nd Geertruidenberg]]
+* {{Ill-WD2|الاستيلاء على بريدا (1590)|id=Q2220712}}
+* [[Maurice's campaign of 1591|Maurice's campaign]]
+** {{Ill-WD2|حصار زوتفن (1591)|id=Q13437124}}
+** {{Ill-WD2|حصار ديفينتر (1591)|id=Q2893211}}
+** [[Capture of Delfzijl|Delfzijl]]
+** {{Ill-WD2|حصار كنودسنبورغ|id=Q13490083}}
+** {{Ill-WD2|حصار هولست (1591)|id=Q2028290}}
+** {{Ill-WD2|حصار نايميخن (1591)|id=Q1949665}}
+* [[Siege of Rouen (1591–1592)|Rouen]]
+* [[Siege of Caudebec|Caudebec]]
+* {{Ill-WD2|حصار ستينويك (1592)|id=Q2188582}}
+* [[Siege of Coevorden (1592)|1st Coevorden]]
+* [[Luxemburg campaigns#First campaign|1st Luxemburg]]
+* [[Siege of Geertruidenberg (1593)|3rd Geertruidenberg]]
+* [[Siege of Coevorden (1593)|2nd Coevorden]]
+* [[Siege of Groningen (1594)|Groningen]]
+* [[Luxemburg campaigns#Second campaign|2nd Luxemburg]]
+* [[Siege of Huy (1595)|Huy]]
+* [[Siege of Groenlo (1595)|1st Groenlo]]
+* [[Battle of the Lippe|Lippe]]
+* [[Sack of Lier|2nd Lier]]
+* [[Siege of Hulst (1596)|2nd Hulst]]
+* [[Battle of Turnhout (1597)|Turnhout]]
+* [[Siege of Rheinberg (1597)|2nd Rheinberg]]
+* [[Siege of Meurs (1597)|1st Meurs]]
+* [[Siege of Groenlo (1597)|2nd Groenlo]]
+* [[Siege of Bredevoort (1597)|1st Bredevoort]]
+* [[Capture of Enschede (1597)|Enschede]]
+* [[Capture of Ootmarsum|Ootmarsum]]
+* [[Siege of Oldenzaal (1597)|1st Oldenzaal]]
+* [[Siege of Lingen (1597)|1st Lingen]]
 
- |group3 = نواب إسبانيا الجديدة
- |list3 =
-* [[List of viceroys of New Spain]]
+   | group2 ='''المياه الأوروبية'''
+   | list2 =
+* [[Spanish Armada|1st English Channel '''·''' Flanders]]
+** [[Battle of Gravelines (1588)|Gravelines]]
+* [[English Armada]]
+** [[Siege of Coruña|Coruña]]
+* [[Battle of Bayona Islands (1590)|Bayona Islands]]
+* [[Battle of the Gulf of Almería (1591)|Gulf of Almería]]
+* [[Capture of Cádiz|1st Cádiz]]
+* [[Islands Voyage|Azores]]
+}}
 
- |group4 = [[Real Audiencia|Audiencias]]
- |list4 =
-* [[Royal Audiencia of Guadalajara|Guadalajara]]
-* [[Captaincy General of Guatemala]]
-* [[Real Audiencia of Manila|Manila]]
-* [[Real Audiencia of Mexico|Mexico]]
-* [[Real Audiencia of Santo Domingo|Santo Domingo]]
+ | group6 = [[حرب الثمانين عاما (1599-1609)|1599-1609]]
+ | list6 ={{#استدعاء:شريط|شريط|child
+   | group1 ='''أوروبا الغربية'''
+   | list1 =
+* [[Siege of Schenckenschans (1599)|1st Schenckenschans]]
+* [[Siege of Zaltbommel|Zaltbommel]]
+* [[Siege of Rees (1599)|Rees]]
+* [[Siege of San Andreas (1600)|San Andreas]]
+* [[Battle of Lekkerbeetje|Lekkerbeetje]]
+* [[Battle of Nieuwpoort|Nieuwpoort]]
+* [[Siege of Rheinberg (1601)|3rd Rheinberg]]
+* [[Siege of Ostend|Ostend]]
+* [[Siege of 's-Hertogenbosch (1601)|1st 's-Hertogenbosch]]
+* [[Siege of Grave (1602)|2nd Grave]]
+* [[Mutiny of Hoogstraten|Hoogstraaten]]
+* [[Siege of Sluis (1604)|3rd Sluis]]
+* [[Spinola's campaign of 1605–1606|Spinola's campaign]]
+** [[Spinola's campaign of 1605-1606#Capture of Oldenzaal|2nd Oldenzaal]]
+** [[Siege of Lingen (1605)|2nd Lingen]]
+** [[Spinola's campaign of 1605-1606#Attacks on Bergen op Zoom|2nd Bergen op Zoom]]
+** [[Spinola's campaign of 1605-1606#Battle of Mülheim|Mülheim]]
+** [[Spinola's campaign of 1605-1606#Siege of Wachtendonk|Wachtendonk]]
+** [[Spinola's campaign of 1605-1606#Siege of Krakau Castke|Krakau Castle]]
+** [[Spinola's campaign of 1605-1606#Siege of Bredevoort|2nd Bredevoort]]
+** [[Spinola's campaign of 1605-1606#Battle of the Berkumerbridge|Berkumerbridge]]
+** [[Spinola's campaign of 1605-1606#Siege of Lochem|2nd Lochem]]
+** [[Siege of Groenlo (1606)|3rd Groenlo]]
+** [[Spinola's campaign of 1605-1606#Siege of Rheinberg|4th Rheinberg]]
+   | group2 ='''المياه الأوروبية'''
+   | list2 =
+* [[Battle of the Narrow Seas|Dover Strait]]
+* [[Battle of Sluis (1603)|2nd Sluis]]
+* [[Battle of the Channel|2nd English Channel]]
+* [[Battle of Cape St. Vincent (1606)|1st Cape St. Vincent]]
+* [[Battle of Gibraltar (1607)|1st Gibraltar]]
+}}
 
- |group5 = [[Captaincy General|Captancies General]]
- |list5 =
-* [[Captaincy General of Cuba|Cuba]]
-* [[Captaincy General of Guatemala|Guatemala]]
-* [[Captaincy General of the Philippines|Philippines]]
-* [[Captaincy General of Puerto Rico|Puerto Rico]]
-* [[Captaincy General of Santo Domingo|Santo Domingo]]
-* [[Captaincy General of Yucatán|Yucatán]]
-* [[Provincias Internas]]
+ | group7 = [[هدنة الاثني عشر عاما]]<br/>(1609–1621)
+ | list7 ={{#استدعاء:شريط|شريط|child
+   | group1 ='''أوروبا الغربية'''
+   | list1 =
+* [[Siege of Aachen (1614)|Aachen]]
+   | group2 ='''الهند الشرقية'''
+   | list2 =
+* [[Spanish conquest of the Moluccas|Ternate]]
+* [[Battle of Playa Honda|Playa Honda]]
+}}
 
- |group6 = [[Indendancies of New Spain|Intendancy]]
- |list6 =
-* [[Captaincy General of Cuba|Havana]]
-* [[Louisiana (New Spain)|New Orleans]]
-* [[State of Mexico]]
-* [[تشياباس]]
-* [[Comayagua]]
-* [[León, Nicaragua|Nicaragua]]
-* [[كاماغواي]]
-* [[سانتياغو دي كوبا (مدينة)|سانتياغو دي كوبا]]
-* [[Guanajuato]]
-* [[Michoacán|Valladolid]]
-* [[غوادالاخارا]]
-* [[Zacatecas]]
-* [[San Luis Potosí]]
-* [[ولاية فيراكروز|فيراكروز]]
-* [[Puebla]]
-* [[Oaxaca]]
-* [[Durango]]
-* [[Sonora]]
-* [[Mérida, Yucatán]]
-* [[فلوريدا الإسبانية|فلوريدا]]
+ | group8 =[[حرب الثمانين عاما (1621-1648)|1621-1648]]
+ | list8 = {{#استدعاء:شريط|شريط|child
+   | group1 ='''أوروبا الغربية'''
+   | list1 =
+* [[Siege of Jülich (1621–1622)|Jülich]]
+* [[Siege of Bergen op Zoom (1622)|3rd Bergen op Zoom]]
+* [[Battle of Fleurus (1622)|Fleurus]]
+* [[Invasion of the Veluwe (1624)|1st Veluwe]]
+* [[Siege of Breda (1624)|3rd Breda]]
+* [[Siege of Oldenzaal (1626)|3rd Oldenzaal]]
+* [[Siege of Groenlo (1627)|4th Groenlo]]
+* [[Siege of 's-Hertogenbosch|2nd 's-Hertogenbosch]]
+* [[Invasion of the Veluwe (1629)|2nd Veluwe]]
+** [[Battle of IJsseloord|2nd IJsseloord]]
+* [[Frederick Henry's Meuse campaign|Meuse]]
+** [[Capture of Maastricht|2nd Maastricht]]
+** [[Siege of Venlo (1632)|2nd Venlo]]
+** [[Siege of Roermond (1632)|1st Roermond]]
+* [[Siege of Rheinberg (1633)|5th Rheinberg]]
+* [[Siege of Philippine|Philippine]]
+* [[Sack of Tienen|Tienen]]
+* [[Siege of Leuven|Leuven]]
+* [[Siege of Schenkenschans|2nd Schenkenschans]]
+* [[Siege of Breda (1637)|4th Breda]]
+* [[Siege of Venlo (1637)|3rd Venlo]]
+* [[Capture of Roermond|2nd Roermond]]
+* [[Battle of Kallo|Kallo]]
+* [[Siege of Hulst (1640)|3rd Hulst]]
+* [[Siege of Gennep (1641)|Gennep]]
+* [[Siege of Sas van Gent|Sas van Gent]]
+* [[Siege of Hulst (1645)|4th Hulst]]
+* [[Siege of Mardyck (1646)|Mardyck]]
+* [[Siege of Dunkirk (1646)|Dunkirk]]
+* [[Siege of Antwerp (1646)|4th Antwerp]]
+* [[Siege of Venlo (1646)|4th Venlo]]
 
- |group7 = سياسة
- |list7 =
-* [[Viceroy]]
-* [[Governorate|Gobernaciones]]
-* [[Adelantado]]
-* [[Captain general]]
-* [[Corregidor (position)]]
-* [[Cabildo (council)|Cabildo]]
-* [[Encomienda]]
+   | group2 ='''المياه الأوروبية'''
+   | list2 =
+* [[Battle of Gibraltar (1621)|2nd Gibraltar]]
+* [[Cádiz expedition (1625)|2nd Cádiz]]
+* [[Battle of the Slaak|Slaak]]
+* [[Battle off Lizard Point|Lizard Point]]
+* [[Action of 18 February 1639|Dunkirk]]
+* [[Fight in the Channel|3rd English Channel]]
+* [[Battle of the Downs|The Downs]]
+* [[Battle of Cape St. Vincent (1641)|2nd Cape St. Vincent]]
 
- |group8 = المعاهدات
- |list8 =
-* [[Treaty of Tordesillas]]
-* [[Treaty of Zaragoza]]
-* [[صلح وستفاليا]]
-* [[Peace of Ryswick]]
-* [[Peace of Utrecht]]
-* [[Congress of Breda]]
-* [[Treaty of Fontainebleau (1762)]]
-* [[Treaty of Paris (1783)]]
-* [[Treaty of Córdoba]]
-* [[Adams–Onís Treaty]]
- }}
+   | group3 ='''[[حرب الثلاثين عاما خارج أوروبا|الأمريكتان]]'''
+   | list3 =
+* [[Recapture of Bahia|1st Salvador]]
+* [[Battle of San Juan (1625)|Puerto Rico]]
+* [[Battle in the Bay of Matanzas|Bay of Matanzas]]
+* [[Battle of Abrolhos|Abrolhos]]
+* [[Jan Janszoon van Hoorn's expedition of 1633|Trujillo '''·''' Campeche]]
+* [[Capture of Saint Martin (1633)|1st Saint Martin]]
+* [[Expedition to the Unare|1st Unare]]
+* [[Siege of Salvador (1638)|2nd Salvador]]
+* [[Battle of Cabañas|Cabañas]]
+* [[Action of 12–17 January 1640|Itamaracá]]
+* [[Dutch expedition to Valdivia|Southern Chile]]
+* [[Attack on Saint Martin|2nd Saint Martin]]
 
-|group3 =المدن والمقاطعات<br />والأقاليم البارزة
+   | group4 ='''[[حرب الثلاثين عاما خارج أوروبا|الهند الشرقية]]'''
+   | list4 =
 
-|list3 =
- {{شريط|subgroup
- |group1 = المدن
- |list1 =
-* [[History of Mexico City|Mexico City]]
-* [[History of Veracruz (city)|Veracruz]]
-* [[Xalapa]]
-* [[مدينة بويبلا|بويبلا]]
-* [[Toluca]]
-* [[Cuernavaca]]
-* [[Oaxaca City|Oaxaca]]
-* [[Morelia]]
-* [[Acapulco]]
-* [[Campeche (city)|Campeche]]
-* [[Mérida, Yucatán|Mérida]]
-* [[غوادالاخارا]]
-* [[Durango (city)|Durango]]
-* [[مونتيري]]
-* [[León, Guanajuato|León]]
-* [[Guanajuato City|Guanajuato]]
-* [[Zacatecas (city)|Zacatecas]]
-* [[Pachuca]]
-* [[Querétaro (city)|Querétaro]]
-* [[Saltillo]]
-* [[San Luis Potosí (city)|San Luis Potosí]]
-* [[Pueblo de Los Ángeles|Los Ángeles]]
-* [[Yerba Buena, California|Yerba Buena (San Francisco)]]
-* [[History of San Jose, California#First Spanish pueblo in California|San José]]
-* [[Presidio of San Diego|San Diego]]
-* [[سانتا فيه (نيومكسيكو)|سانتا فيه]]
-* [[ألبوكيركي]]
-* [[إل باسو (تكساس)|إل باسو]]
-* [[Los Adaes]]
-* [[History of San Antonio|San Antonio]]
-* [[توسان (أريزونا)|توسان]]
-* [[بينساكولا]]
-* [[St. Augustine, Florida|St. Augustine]]
-* [[History of Havana|Havana]]
-* [[History of Santo Domingo|Santo Domingo]]
-* [[سان خوان (بورتوريكو)|سان خوان]]
-* [[Antigua Guatemala]]
-* [[Cebu]]
-* [[History of Manila|Manila]]
+* [[Battle of Macau|Macau]]
+* [[Action of 30 September 1639|Mormugão]]
+* [[Siege of Galle (1640)|Galle]]
+* [[Siege of Malacca (1641)|Malacca]]
+* [[Battle of San Salvador (1641)|1st San Salvador]]
+* [[Battle of San Salvador (1642)|2nd San Salvador]]
+* [[Battles of La Naval de Manila|Manila]]
+* [[Battle of Puerto de Cavite|Cavite]]
+}}
 
- |group2 = المقاطعات<br />والأقاليم
- |list2 =
-* [[Louisiana_(New_Spain)|Louisiana]]
-* [[فلوريدا الإسبانية|فلوريدا]] ([[فلوريدا]])
-* [[Province of Las Californias|Las Californias]]
-** [[Alta California]] ([[كاليفورنيا]])
-** [[Baja California Province|Baja California]]
-* [[Santa Fe de Nuevo México]] ([[نيومكسيكو]])
-* [[Spanish Texas|Tejas]] ([[تكساس]])
-* [[Nueva Galicia]]
-* [[Nueva Vizcaya]]
-* [[Nueva Extremadura]]
-* [[New Kingdom of León]]
-* [[Cebu]]
-* [[بولاكان]]
-* [[بامبانغا]]
-
- |group3 = مناطق أخرى
- |list3 =
-* [[Spanish Formosa]]
- }}
-
-|group4 = المستكشفون<br />والمغامرون والغزاة
-|list4 =
- {{شريط|subgroup
- |group1 = مستكشفو<br />ما قبل إسبانيا الجديدة
- |list1 =
-* [[كريستوفر كولومبوس]]
-* [[فرناندو ماجلان]]
-* [[خوان سباستيان إلكانو]]
-* [[فاسكو نونييث دي بالبوا]]
-* [[Diego Velázquez de Cuéllar]]
-
- |group2 = Explorers and<br />[[conquistador]]s
- |list2 =
-* [[إرنان كورتيس]]
-* [[خوان بونثي دي ليون]]
-* [[Nuño de Guzmán]]
-* [[برنال دياث ديل كاستييو]]
-* [[بيدرو دي ألفارادو]]
-* [[بانفيلو دي نارفاييث]]
-* [[إرناندو دي سوتو]]
-* [[فرانسيسكو فاسكويز دي كورونادو]]
-* [[جواو رودريغيز كابريلو]]
-* [[Miguel López de Legazpi]]
-* [[Ángel de Villafañe]]
-* [[ألفار نونييث كابيثا دي فاكا]]
-* [[بيدرو مينينديث دي أفيليس]]
-* [[Luis de Carvajal y de la Cueva]]
-* [[Juan de Oñate]]
-* [[خوان خوسيه بيريز هيرنانديز]]
-* [[Gaspar de Portolá]]
-* [[Manuel Quimper]]
-* [[Cristóbal de Oñate]]
-* [[أندريس دي أوردانيتا]]
-* [[Ruy López de Villalobos]]
-* [[Diego Velázquez de Cuéllar]]
-* [[فرانسيسكو هرنانديز دي كوردوبا (فاتح يوكاتان)]]
-* [[فرانسيسكو هرنانديز دي كوردوبا (مؤسس نيكارغوا)]]
-* [[جيل غونزاليس دافيلا]]
-* [[Francisco de Ulloa]]
-* [[Dionisio Alcalá Galiano]]
-* [[Bruno de Heceta]]
-* [[Juan Francisco de la Bodega y Quadra]]
-* [[Alonso de León]]
-* [[Ignacio de Arteaga y Bazán]]
-* [[خوسيه دي بوستامينت إي غيرا]]
-* [[José María Narváez]]
-* [[Pedro Sarmiento de Gamboa]]
-* [[Antonio Gil Y'Barbo]]
-* [[ألكسندر فون هومبولت]]
-* [[Thomas Gage (priest)|Thomas Gage]]
- }}
-
-|group5 = [[الكنيسة الرومانية الكاثوليكية|الكنيسة الكاثوليكية]]<br />في إسبانيا الجديدة
-|list5 =
- {{شريط|subgroup
- |group1 = [[Spanish missions in the Americas|Spanish missions<br />in the Americas]]
- |list1 =
-* [[Spanish missions in Arizona]]
-* [[Spanish missions in Baja California]]
-* [[Spanish missions in California]]
-* [[Spanish missions in the Carolinas]]
-* [[Spanish missions in Florida]]
-* [[Spanish missions in Georgia]]
-* [[Spanish missions in Louisiana]]
-* [[Spanish missions in Mexico]]
-* [[Spanish missions in New Mexico]]
-* [[Spanish missions in the Sonoran Desert]]
-* [[Spanish missions in Texas]]
-* [[Ajacán Mission|Spanish missions in Virginia]]
-* [[Spanish missions in Trinidad]]
-
- |group2 = الرهبان والآباء<br />والقساوسة والأساقفة
- |list2 =
-* [[Pedro de Gante]]
-* [[Gerónimo de Aguilar]]
-* [[Toribio de Benavente Motolinia]]
-* [[Bernardino de Sahagún]]
-* [[Juan de Zumárraga]]
-* [[Alonso de Montúfar]]
-* [[Vasco de Quiroga]]
-* [[بارتولومي دي لاس كاساس]]
-* [[Alonso de Molina]]
-* [[دييغو دوران]]
-* [[Diego de Landa]]
-* [[Gerónimo de Mendieta]]
-* [[Fray Juan de Torquemada|Juan de Torquemada]]
-* [[Juan de Palafox y Mendoza]]
-* [[Carlos de Sigüenza y Góngora]]
-* [[Eusebio Kino]]
-* [[Francisco Javier Clavijero]]
-* [[Junípero Serra]]
-* [[Francisco Palóu]]
-* [[Fermín de Lasuén]]
-* [[Esteban Tápis]]
-* [[José Francisco de Paula Señan]]
-* [[Marià Paieres i Borràs|Mariano Payeras]]
-* [[Sebastián Montero]]
-* [[ماركوس دي نيزا]]
-* [[Francisco de Ayeta]]
-* [[Antonio Margil]]
-* [[Francisco Marroquín]]
-* [[Manuel Abad y Queipo]]
-* [[Miguel Hidalgo y Costilla]]
-* [[خوسيه ماريا موريلوس]]
-
- |group3 = فعاليات أخرى
- |list3 =
-* [[Our Lady of Guadalupe]]
-* [[Suppression of the Society of Jesus|Suppression of the Jesuits]]
-* [[California mission clash of cultures]]
-* [[Cargo system]]
-* [[Indian Reductions]]
- }}
-
-|group6 = المجتمع والثقافة
-|list6 =
- {{شريط|subgroup
- |group1 = [[الشعوب الأصلية في الأمريكتين|الشعوب<br />الأصلية]]
- |list1 =
-  {{شريط|subgroup
-  |group1 = أمريكا الوسطى
-  |list1 =
-* [[Aztecs]]
-* [[Maya peoples|Maya]]
-* [[Huastec people|Huastec]]
-* [[Mixtec]]
-* [[Tarascan state|P'urhépecha]]
-* [[Totonac]]
-* [[Pipil people|Pipil]]
-* [[Kowoj]]
-* [[Kʼicheʼ people|Kʼicheʼ]]
-* [[Kaqchikel people|Kaqchikel]]
-* [[Zapotec peoples|Zapotec]]
-* [[Poqomam people|Poqomam]]
-* [[Mam people|Mam]]
-
-  |group2 = الكاريبي
-  |list2 =
-* [[Arawak]]
-* [[Ciboney]]
-* [[Guanahatabey]]
-
-  |group3 = [[Indigenous peoples of California|California]]
-  |list3 =
-* [[Mission Indians]]
-* [[Cahuilla]]
-* [[تشوماش]]
-* [[Cupeño]]
-* [[Juaneño]]
-* [[Kumeyaay]]
-* [[Luiseño]]
-* [[Miwok]]
-* [[Mohave people|Mohave]]
-* [[Ohlone]]
-* [[Serrano people|Serrano]]
-* [[Tongva]]
-
-  |group4 = [[Oasisamerica|Oasisamerica (Southwest US)]]
-  |list4 =
-* [[Akimel O'odham]]
-* [[أباتشي (شعب)|أباتشي]]
-* [[Hopi]]
-* [[Hualapai]]
-* [[Navajo]]
-* [[Puebloans|Pueblo peoples]]
-* [[Quechan]]
-* [[Solano people|Solano]]
-* [[Tohono O'odham]]
-* [[Zuni people|Zuni]]
-
-  |group5 = [[Aridoamerica]]
-  |list5 =
-* [[Acaxee]]
-* [[Chichimeca]]
-* [[Coahuiltecan]]
-* [[Cochimí]]
-* [[Cocopah]]
-* [[Kiliwa people|Kiliwa]]
-* [[La Junta Indians|La Junta]]
-* [[Opata people|Opata]]
-* [[Tepehuán]]
-* [[Yaqui]]
-
-  |group6 = [[Southern Plains]]
-  |list6 =
-* [[Caddo]]
-* [[Comanche]]
-* [[Lipan Apache]]
-* [[Plains Apache]]
-* [[Tonkawa]]
-* [[Wichita people|Wichita]]
-
-  |group7 = [[Indigenous peoples of the Southeastern Woodlands|Southeastern Woodlands]]
-  |list7 =
-* [[List of sites and peoples visited by the Hernando de Soto Expedition|Indigenous people during De Soto's travels]]
-* [[Apalachee]]
-* [[Calusa]]
-* [[Muscogee]]
-* [[Jororo]]
-* [[Pensacola people|Pensacola]]
-* [[Seminole]]
-* [[Timucua]]
-* [[Yustaga]]
-
- |group8 = [[Filipinos]]
- |list8 =
-* [[Negrito]]
-* [[Igorot people|Igorot]]
-* [[Mangyan]]
-* [[Peoples of Palawan]]
-* [[Ati people|Ati]]
-* [[Panay]]
-* [[Lumad]]
-* [[Bajau people|Bajau]]
-* [[Tagalog people|Tagalog]]
-* [[Cebuano people|Cebuano]]
-
- |group9 = آحرون
- |list9 =
-* [[Taiwanese indigenous peoples]]
-* [[Chamorro people]]
-  }}
-
- |group2 = [[Spanish Colonial architecture|Architecture]]
- |list2 =
-* [[Spanish Colonial architecture|Spanish Colonial style]]
-* {{ت|عمارة المستعمرات الإسبانية حسب البلد|حسب البلد}}
-* {{ت|Baroque architecture in the Spanish Empire|Colonial Baroque style}}
-* {{ت|Spanish colonial fortifications|Forts}}
-* {{ت|Spanish missions in the Americas|Missions}}
-
- |group3 = التجارة والاقتصاد
- |list3 =
-* [[Spanish colonial real|Real]]
-* [[Columbian exchange]]
-* [[Manila galleon]]
-* [[Triangular trade]]
-
- |group4 = الناس والطبقات
- |list4 =
-* [[Casta]]
-** [[Peninsulares]]
-* [[Criollo people|Criollo]]
-* [[الشعوب الأصلية في الأمريكتين|الهنود]]
-* [[Mestizo]]
-* [[Castizo]]
-* [[Cholo|Coyotes]]
-* [[Mulatto|Pardos]]
-* [[Zambo]]
-* [[عرق أسود|السود]]
-
- |group5 = أشخاص
- |list5 =
-* [[Juan Bautista de Anza]]
-* [[جواو رودريغيز كابريلو]]
-* [[فرنسيس دريك]]
-* [[Miguel Hidalgo y Costilla]]
-* [[Eusebio Kino]]
-* [[La Malinche]]
-* [[Fermín de Lasuén]]
-* [[Limahong]]
-* [[Moctezuma II]]
-* [[Junípero Serra]]
-* [[هاسيكورا تسونيناغا]]
- }}
-
-|below =
-* {{أيقونة|Category}} [[:Category:إسبانيا الجديدة|Category]]
+| below=
+[[معاهدة سلام مونستر|السلام]] – [[تبعات حرب الثمانين عاما|التبعات]] – [[تأريخ حرب الثمانين عاما]] – {{إيقونة|Commons}} [[commons:Eighty Years' War|Commons]]
 }}<noinclude>
-{{خيارات طي قالب تصفح}}
-[[تصنيف:صناديق تصفح الكاريبي]]
-[[تصنيف:قوالب دول أو أقاليم سابقة في أمريكا الشمالية]]
-[[تصنيف:صناديق تصفح تاريخ إسبانيا]]
-[[تصنيف:قوالب تصفح تاريخ الولايات المتحدة]]
+[[تصنيف:قوالب حروب وصراعات]]
+[[تصنيف:قوالب إسبانيا]]
+[[تصنيف:قوالب صندوق حملة]]
+[[تصنيف:قوالب صندوق حملات إسبانية]]
 </noinclude>
