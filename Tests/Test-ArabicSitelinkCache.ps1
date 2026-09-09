@@ -1,4 +1,4 @@
-# ============================================
+﻿# ============================================
 # Test-ArabicSitelinkCache.ps1
 # Regression test: legacy empty arwiki cache entries are refreshed.
 # ============================================

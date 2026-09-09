@@ -1,4 +1,4 @@
-$ErrorActionPreference='Stop'
+﻿$ErrorActionPreference='Stop'
 $root=Split-Path $PSScriptRoot -Parent
 . (Join-Path $root 'Modules\WikitextParser.ps1')
 . (Join-Path $root 'Modules\Wikidata.ps1')

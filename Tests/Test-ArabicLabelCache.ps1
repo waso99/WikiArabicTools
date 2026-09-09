@@ -1,4 +1,4 @@
-# ============================================
+﻿# ============================================
 # Test-ArabicLabelCache.ps1
 # Regression test: non-Arabic values in ArabicLabelCache.json are treated as stale.
 # ============================================

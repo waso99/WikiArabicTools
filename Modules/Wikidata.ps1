@@ -1,4 +1,4 @@
-# ============================================
+﻿# ============================================
 # Wikidata.ps1
 # Wikidata / Wikipedia API
 # Batch + Cache + Error Handling

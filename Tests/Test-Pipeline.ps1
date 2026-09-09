@@ -1,4 +1,4 @@
-# ============================================
+﻿# ============================================
 # Test-Pipeline.ps1
 # Integration test: verify that the processing pipeline chains
 # template → link → visible-text stages correctly, and that
