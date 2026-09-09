@@ -67,6 +67,30 @@ try {
     # Missing placeholder must fallback to original english string
     if($out -notmatch '; FAIL_MISSING_PLACEHOLDER \[\[Test\]\]'){throw 'Failed case 9: Validation fallback on missing placeholder'}
 
+    # BUG #5: $matches must not collide with PowerShell's automatic $Matches variable
+    $bug5Input = @(
+        ';English term'
+        ';مصطلح عربي'
+        ';English term (مصطلح عربي)'
+        ';English term — مصطلح عربي'
+        ';English term [[Article]]'
+        ';مصطلح عربي [[Article]]'
+    ) -join "`n"
+
+    $bug5Out = Convert-WikipediaVisibleText -Text $bug5Input
+
+    if($bug5Out -match '\r?\n\r?\n'){
+        throw 'Failed BUG #5: unexpected blank line introduced.'
+    }
+    if(($bug5Out -split "`r?`n").Count -ne 6){
+        throw 'Failed BUG #5: definition-list lines were not preserved.'
+    }
+    if($bug5Out -match ';;'){
+        throw 'Failed BUG #5: duplicated definition-list marker detected.'
+    }
+
+    Write-Host 'BUG #5 regression test passed.' -ForegroundColor Green
+
     Write-Host 'Visible-text regression tests passed.' -ForegroundColor Green
 }
 finally {

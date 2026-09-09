@@ -159,13 +159,13 @@ function Convert-WikipediaVisibleText {
     }
     $maskedText = -join $masked
     $pattern = '(?m)^(?<prefix>[ \t]*;)(?<value>[^\r\n]+)\r?$'
-    $matches = [regex]::Matches($maskedText, $pattern)
-    if ($matches.Count -eq 0) { return $Text }
+    $definitionMatches = [regex]::Matches($maskedText, $pattern)
+    if ($definitionMatches.Count -eq 0) { return $Text }
 
     $cache = Get-TextTranslationCache
     $pending = [System.Collections.Generic.List[string]]::new()
     $seen = @{}
-    foreach ($m in $matches) {
+    foreach ($m in $definitionMatches) {
         $valueStart = $m.Groups['value'].Index
         $valueLength = $m.Groups['value'].Length
         $value = $Text.Substring($valueStart, $valueLength)
@@ -284,10 +284,10 @@ function Convert-WikipediaVisibleText {
         Save-TextTranslationCache -Cache $cache
     }
 
-    if ($matches.Count -eq 0) { return $Text }
+    if ($definitionMatches.Count -eq 0) { return $Text }
     $sb = [System.Text.StringBuilder]::new()
     $pos = 0
-    foreach ($m in $matches) {
+    foreach ($m in $definitionMatches) {
         $valueStart = $m.Groups['value'].Index
         $valueEnd = $valueStart + $m.Groups['value'].Length
         [void]$sb.Append($Text.Substring($pos, $valueStart - $pos))
