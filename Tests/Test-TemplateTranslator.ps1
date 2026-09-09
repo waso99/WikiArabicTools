@@ -57,7 +57,7 @@ $expected = @'
 }}
 <nowiki>{{Campaignbox Golden Age of Piracy}}</nowiki>
 {{حول|10|kg|lb}}
-{{حول مختصرا|5|ft|m}}
+{{حول مختصر|5|ft|m}}
 {{حول|10|kg|lb|abbr=on}}
 {{حول|10|to|20|km|mi}}
 {{حول|{{formatnum:1000}}|kg|lb}}
