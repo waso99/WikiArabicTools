@@ -1,1 +1,285 @@
+{{#استدعاء:شريط|شريط
+ | name = حرب الثمانين عاما
+ | title = [[حرب الثمانين عاما]]
+ | state = {{{state<includeonly>|collapsed</includeonly>}}}
+ | bodyclass = hlist
+|above =
+[[جذور حرب الثمانين عاما|الأصول]] – [[قائمة معارك حرب الثمانين عاما|قائمة المعارك]]
+
+| group1 = [[حرب الثمانين عاما (1566-1572)|1566-1572]]
+ | list1 ={{#استدعاء:شريط|شريط|child
+   | group1 ='''أوروبا الغربية'''
+   | list1 =
+* [[بيلدنستورم]]
+* {{Ill-WD2|حصار فالنسيان (1566–1567)|id=Q2775731}}
+* {{Ill-WD2|معركة واتريلوس|id=Q2789833}}
+* {{Ill-WD2|معركة لانوي|id=Q1965499}}
+* {{Ill-WD2|معركة أوسترويل|id=Q641757}}
+* [[Battle of Dahlen|Dahlen]]
+* {{Ill-WD2|معركة هيليجرلي (1568)|id=Q505699}}
+* {{Ill-WD2|معركة جيمينغن|id=Q701367}}
+* [[Battle of Jodoigne|Jodoigne]]
+* [[Battle of Le Quesnoy (1568)|Le Quesnoy]]
+}}
+
+| group2 = [[حرب الثمانين عاما (1572-1576)|1572-1576]]
+ | list2 ={{#استدعاء:شريط|شريط|child
+
+   | group1 ='''أوروبا الغربية'''
+   | list1 =
+* [[الاستيلاء على برييل|Brielle]]
+* {{Ill-WD2|حصار مونس (1572)|id=Q971364}}
+* {{Ill-WD2|الغضب الإسباني في ميشيلين|id=Q2726440}}
+* [[Relief of Goes|Goes]]
+* {{Ill-WD2|مذبحة ناردن|id=Q2931482}}
+* {{Ill-WD2|حصار ميديلبورخ (1572-1574)|id=Q2585314}}
+* {{Ill-WD2|حصار هارلم|id=Q652271}}
+* [[Battle of IJsselmeer|IJsselmeer]]
+* {{Ill-WD2|حصار ألكمار|id=Q2350145}}
+* {{Ill-WD2|الاستيلاء على خيرتراودنبيرخ (1573)|id=Q13732826}}
+* {{Ill-WD2|حصار ليدن|id=Q694619}}
+* [[معركة دلفت (1573)|Delft]]
+* [[Capture of Valkenburg (1574)|Valkenburg]]
+* {{Ill-WD2|معركة موكرهيد|id=Q695732}}
+* {{Ill-WD2|حصار آودافاتر (1575)|id=Q2587413}}
+* {{Ill-WD2|حصار سخونهوفن (1575)|id=Q4587277}}
+* {{Ill-WD2|حصار زيريكزي|id=Q2139412}}
+   | group2 ='''المياه الأوروبية'''
+   | list2 =
+* [[Battle of Flushing|Flushing]]
+* {{Ill-WD2|معركة بورسيل|id=Q2259302}}
+* [[Battle of Haarlemmermeer|Haarlemmermeer]]
+* {{Ill-WD2|معركة زاوديرزي|id=Q2386251}}
+* {{Ill-WD2|معركة رايميرسفال|id=Q744588}}
+* [[Battle of Lillo|Lillo]]
+}}
+ | group3 = [[حرب الثمانين عاما (1576-1579)|1576-1579]]
+ | list3 ={{#استدعاء:شريط|شريط|child
+
+   | group1 ='''أوروبا الغربية'''
+   | list1 =
+* {{Ill-WD2|نهب أنتويرب|id=Q874235}}
+* {{Ill-WD2|معركة جمبلوكس (1578)|id=Q764819}}
+* {{Ill-WD2|معركة ريمنام (1578)|id=Q2936853}}
+* {{Ill-WD2|حصار ديفينتر (1578)|id=Q2231397}}
+* [[Battle of Borgerhout|Borgerhout]]
+}}
+
+ | group4 = [[حرب الثمانين عاما (1579-1588)|1579-1588]]
+ | list4 ={{#استدعاء:شريط|شريط|child
+
+   | group1 ='''أوروبا الغربية'''
+   | list1 =
+* {{Ill-WD2|حصار ماستريخت (1579)|id=Q2758693}}
+* {{Ill-WD2|الغضب الإنجليزي في ميشيلين|id=Q2780616}}
+* [[Taking of Diest (1580)|Diest]]
+* {{Ill-WD2|حصار ستينويك (1580–1581)|id=Q2483221}}
+* [[Battle of Kollum|Kollum]]
+* [[Capture of Breda (1581)|1st Breda]]
+* {{Ill-WD2|معركة نوردورن|id=Q2444941}}
+* {{Ill-WD2|حصار نيزيل|id=Q2779261}}
+* {{Ill-WD2|حصار لوكيم (1582)|id=Q2621821}}
+* [[Siege of Lier (1582)|1st Lier]]
+* {{Ill-WD2|الغضب الفرنسي|id=Q2457514}}
+* [[Siege of Eindhoven (1583)|Eindhoven]]
+* {{Ill-WD2|معركة ستينبيرجين (1583)|id=Q3075969}}
+* [[Siege of Ghent (1583–1584)|Ghent]]
+* [[Capture of Aalst (1584)|Aalst]]
+* [[سقوط أنتويرب|3rd Antwerp]]
+* [[Siege of IJsseloord|1st IJsseloord]]
+* [[Battle of Empel|Empel]]
+* [[Battle of Boksum|Boksum]]
+* {{Ill-WD2|حصار غريف (1586)|id=Q13568719}}
+* [[Siege of Venlo (1586)|1st Venlo]]
+* {{Ill-WD2|الاستيلاء على أكسل|id=Q2854642}}
+* [[Destruction of Neuss|Neuss]]
+* {{Ill-WD2|حصار راينبرغ (1586-1590)|id=Q2043762|نص=راينبرغ الأولى}}
+* {{Ill-WD2|معركة زوتفن|id=Q2890458}}
+* {{Ill-WD2|حصار سلاوس (1587)|id=Q13538346}}
+   | group2 ='''المياه الأوروبية'''
+   | list2 =
+* [[معركة بونتا ديلغادا|Ponta Delgada]]
+}}
+
+ | group5 = [[السنوات العشر (حرب الثمانين عاما)|السنوات العشر<br/>(1588–1598)]]
+ | list5 ={{#استدعاء:شريط|شريط|child
+   | group1 ='''أوروبا الغربية'''
+   | list1 =
+* {{Ill-WD2|حصار بيرخن أوب زووم (1588)|id=Q2050622}}
+* [[Capture of Geertruidenberg (1589)|2nd Geertruidenberg]]
+* {{Ill-WD2|الاستيلاء على بريدا (1590)|id=Q2220712}}
+* [[Maurice's campaign of 1591|Maurice's campaign]]
+** {{Ill-WD2|حصار زوتفن (1591)|id=Q13437124}}
+** {{Ill-WD2|حصار ديفينتر (1591)|id=Q2893211}}
+** [[Capture of Delfzijl|Delfzijl]]
+** {{Ill-WD2|حصار كنودسنبورغ|id=Q13490083}}
+** {{Ill-WD2|حصار هولست (1591)|id=Q2028290}}
+** {{Ill-WD2|حصار نايميخن (1591)|id=Q1949665}}
+* [[Siege of Rouen (1591–1592)|Rouen]]
+* [[Siege of Caudebec|Caudebec]]
+* {{Ill-WD2|حصار ستينويك (1592)|id=Q2188582}}
+* {{Ill-WD2|حصار كوفردن (1592)|id=Q1871186|نص=كوفردن الأولى}}
+* [[Luxemburg campaigns#First campaign|1st Luxemburg]]
+* {{Ill-WD2|حصار خيرتراودنبيرخ (1593)|id=Q2594176|نص=خيرترايدنبرخ الثالثة}}
+* [[Siege of Coevorden (1593)|2nd Coevorden]]
+* {{Ill-WD2|حصار خرونينغن (1594)|id=Q2544586|نص=خرونينغن}}
+* [[Luxemburg campaigns#Second campaign|2nd Luxemburg]]
+* {{Ill-WD2|حصار هوي (1595)|id=Q14632126|نص=هوي}}
+* [[Siege of Groenlo (1595)|1st Groenlo]]
+* [[Battle of the Lippe|Lippe]]
+* [[Sack of Lier|2nd Lier]]
+* {{Ill-WD2|حصار هولست (1596)|id=Q2143007|نص=هولست الثانية}}
+* {{Ill-WD2|معركة تورنهاوت (1597)|id=Q646525|نص=تورنهوت}}
+* {{Ill-WD2|حصار راينبرغ (1597)|id=Q815194|نص=راينبرغ الثانية}}
+* [[Siege of Meurs (1597)|1st Meurs]]
+* {{Ill-WD2|حصار غرونلو (1597)|id=Q666407|نص=خرونلو الثانية}}
+* [[Siege of Bredevoort (1597)|1st Bredevoort]]
+* {{Ill-WD2|الاستيلاء على أنسخديه (1597)|id=Q1986792|نص=أنشخيده}}
+* [[Capture of Ootmarsum|Ootmarsum]]
+* {{Ill-WD2|حصار أولدنزال (1597)|id=Q2618828|نص=أولدنزايل الأولى}}
+* {{Ill-WD2|حصار لينغن (1597)|id=Q4825573|نص=لينغن الأولى}}
+
+   | group2 ='''المياه الأوروبية'''
+   | list2 =
+* [[الأرمادا الإسبانية|القناة الإنجليزية الأولى · فلاندرز]]
+** [[Battle of Gravelines (1588)|Gravelines]]
+* [[الأرمادا الإنجليزية]]
+** {{Ill-WD2|حصار لا كورونيا|id=Q55635543|نص=كورونيا}}
+* [[Battle of Bayona Islands (1590)|Bayona Islands]]
+* [[Battle of the Gulf of Almería (1591)|Gulf of Almería]]
+* [[غزوة قادس|قادس الأولى]]
+* {{Ill-WD2|رحلة الجزر|id=Q16848812|نص=الأزور}}
+}}
+
+ | group6 = [[حرب الثمانين عاما (1599-1609)|1599-1609]]
+ | list6 ={{#استدعاء:شريط|شريط|child
+   | group1 ='''أوروبا الغربية'''
+   | list1 =
+* {{Ill-WD2|حصار شينكينشانز (1599)|id=Q30608727|نص=شنكنشانس الأولى}}
+* {{Ill-WD2|حصار زالتبومل|id=Q2374971|نص=زالتبومل}}
+* [[Siege of Rees (1599)|Rees]]
+* {{Ill-WD2|حصار سان أندرياس (1600)|id=Q48804665|نص=سان أندرياس}}
+* [[Battle of Lekkerbeetje|Lekkerbeetje]]
+* {{Ill-WD2|معركة نيوبورت|id=Q1392|نص=نيوبورت}}
+* {{Ill-WD2|حصار راينبرغ (1601)|id=Q2738414|نص=راينبرغ الثالثة}}
+* [[حصار أوستند|أوستند]]
+* [[Siege of 's-Hertogenbosch (1601)|1st 's-Hertogenbosch]]
+* {{Ill-WD2|حصار غراف (1602)|id=Q2127633|نص=غراف الثانية}}
+* [[Mutiny of Hoogstraten|Hoogstraaten]]
+* {{Ill-WD2|حصار سلاوس (1604)|id=Q3342826|نص=سلايس الثالثة}}
+* {{Ill-WD2|حملة سبينولا (1605–1606)|id=Q14942533|نص=حملة سبينولا}}
+** [[Spinola's campaign of 1605-1606#Capture of Oldenzaal|2nd Oldenzaal]]
+** [[Siege of Lingen (1605)|2nd Lingen]]
+** [[Spinola's campaign of 1605-1606#Attacks on Bergen op Zoom|2nd Bergen op Zoom]]
+** [[Spinola's campaign of 1605-1606#Battle of Mülheim|Mülheim]]
+** [[Spinola's campaign of 1605-1606#Siege of Wachtendonk|Wachtendonk]]
+** [[Spinola's campaign of 1605-1606#Siege of Krakau Castke|Krakau Castle]]
+** [[Spinola's campaign of 1605-1606#Siege of Bredevoort|2nd Bredevoort]]
+** [[Spinola's campaign of 1605-1606#Battle of the Berkumerbridge|Berkumerbridge]]
+** [[Spinola's campaign of 1605-1606#Siege of Lochem|2nd Lochem]]
+** [[Siege of Groenlo (1606)|3rd Groenlo]]
+** [[Spinola's campaign of 1605-1606#Siege of Rheinberg|4th Rheinberg]]
+   | group2 ='''المياه الأوروبية'''
+   | list2 =
+* {{Ill-WD2|معركة البحار الضيقة|id=Q16822746|نص=مضيق دوفر}}
+* [[Battle of Sluis (1603)|2nd Sluis]]
+* {{Ill-WD2|معركة القناة الإنجليزية|id=Q113493304|نص=القناة الإنجليزية الثانية}}
+* [[Battle of Cape St. Vincent (1606)|1st Cape St. Vincent]]
+* {{Ill-WD2|معركة جبل طارق (1607)|id=Q667179|نص=جبل طارق الأولى}}
+}}
+
+ | group7 = [[هدنة الاثني عشر عاما]]<br/>(1609–1621)
+ | list7 ={{#استدعاء:شريط|شريط|child
+   | group1 ='''أوروبا الغربية'''
+   | list1 =
+* [[Siege of Aachen (1614)|Aachen]]
+   | group2 ='''الهند الشرقية'''
+   | list2 =
+* [[Spanish conquest of the Moluccas|Ternate]]
+* [[Battle of Playa Honda|Playa Honda]]
+}}
+
+ | group8 =[[حرب الثمانين عاما (1621-1648)|1621-1648]]
+ | list8 = {{#استدعاء:شريط|شريط|child
+   | group1 ='''أوروبا الغربية'''
+   | list1 =
+* [[Siege of Jülich (1621–1622)|Jülich]]
+* {{Ill-WD2|حصار بيرخين أوب زووم (1622)|id=Q1838038|نص=بيرغن أوب زووم الثالثة}}
+* {{Ill-WD2|معركة فلورو (1622)|id=Q1642290|نص=فلوروس}}
+* [[Invasion of the Veluwe (1624)|1st Veluwe]]
+* {{Ill-WD2|حصار بريدا (1624)|id=Q431488|نص=حصار بريدا الثالث}}
+* {{Ill-WD2|حصار أولدنزال (1626)|id=Q2182866|نص=حصار أولدنزال الثالث}}
+* {{Ill-WD2|حصار خرونلو (1627)|id=Q371252|نص=حصار غرونلو الرابع}}
+* {{Ill-WD2|حصار سيرتوخيمبوس|id=Q387040|نص=حصار سيرتوخيمبوس الثاني}}
+* [[Invasion of the Veluwe (1629)|2nd Veluwe]]
+** [[Battle of IJsseloord|2nd IJsseloord]]
+* {{Ill-WD2|حملة الميز لفريدريك هنري|id=Q125843671|نص=الميز}}
+** {{Ill-WD2|الاستيلاء على ماستريخت|id=Q2056637|نص=حصار ماستريخت الثاني}}
+** [[Siege of Venlo (1632)|2nd Venlo]]
+** [[Siege of Roermond (1632)|1st Roermond]]
+* [[Siege of Rheinberg (1633)|5th Rheinberg]]
+* [[Siege of Philippine|Philippine]]
+* [[Sack of Tienen|Tienen]]
+* {{Ill-WD2|حصار لوفين|id=Q3485930|نص=لوفن}}
+* {{Ill-WD2|حصار شينكينشانس|id=Q7510387|نص=حصار شنكنشانس الثاني}}
+* {{Ill-WD2|حصار بريدا (1637)|id=Q2330975|نص=حصار بريدا الرابع}}
+* [[Siege of Venlo (1637)|3rd Venlo]]
+* [[Capture of Roermond|2nd Roermond]]
+* {{Ill-WD2|معركة كالو|id=Q2888890|نص=كالو}}
+* [[Siege of Hulst (1640)|3rd Hulst]]
+* [[Siege of Gennep (1641)|Gennep]]
+* [[Siege of Sas van Gent|Sas van Gent]]
+* [[Siege of Hulst (1645)|4th Hulst]]
+* [[Siege of Mardyck (1646)|Mardyck]]
+* [[Siege of Dunkirk (1646)|Dunkirk]]
+* [[Siege of Antwerp (1646)|4th Antwerp]]
+* [[Siege of Venlo (1646)|4th Venlo]]
+
+   | group2 ='''المياه الأوروبية'''
+   | list2 =
+* [[Battle of Gibraltar (1621)|2nd Gibraltar]]
+* [[Cádiz expedition (1625)|2nd Cádiz]]
+* {{Ill-WD2|معركة سلاك|id=Q672218|نص=سلاك}}
+* [[Battle off Lizard Point|Lizard Point]]
+* [[Action of 18 February 1639|Dunkirk]]
+* [[Fight in the Channel|3rd English Channel]]
+* {{Ill-WD2|معركة داونز|id=Q675999|نص=الداونز}}
+* [[Battle of Cape St. Vincent (1641)|2nd Cape St. Vincent]]
+
+   | group3 ='''[[حرب الثلاثين عاما خارج أوروبا|الأمريكتان]]'''
+   | list3 =
+* [[Recapture of Bahia|1st Salvador]]
+* [[Battle of San Juan (1625)|Puerto Rico]]
+* {{Ill-WD2|معركة خليج ماتانزاس|id=Q2610822|نص=خليج ماتانزاس}}
+* [[Battle of Abrolhos|Abrolhos]]
+* [[Jan Janszoon van Hoorn's expedition of 1633|Trujillo '''·''' Campeche]]
+* {{Ill-WD2|الاستيلاء على سانت مارتن (1633)|id=Q5037054|نص=سانت مارتن الأولى}}
+* [[Expedition to the Unare|1st Unare]]
+* [[حصار سالفادور (1638)|سلفادور الثانية]]
+* [[Battle of Cabañas|Cabañas]]
+* [[Action of 12–17 January 1640|Itamaracá]]
+* [[الحملة الهولندية إلى فالديفيا|جنوب تشيلي]]
+* [[Attack on Saint Martin|2nd Saint Martin]]
+
+   | group4 ='''[[حرب الثلاثين عاما خارج أوروبا|الهند الشرقية]]'''
+   | list4 =
+
+* [[Battle of Macau|Macau]]
+* [[Action of 30 September 1639|Mormugão]]
+* [[Siege of Galle (1640)|Galle]]
+* [[Siege of Malacca (1641)|Malacca]]
+* [[Battle of San Salvador (1641)|1st San Salvador]]
+* [[Battle of San Salvador (1642)|2nd San Salvador]]
+* [[Battles of La Naval de Manila|Manila]]
+* [[Battle of Puerto de Cavite|Cavite]]
+}}
+
+| below=
+[[معاهدة سلام مونستر|السلام]] – [[تبعات حرب الثمانين عاما|التبعات]] – [[تأريخ حرب الثمانين عاما]] – {{إيقونة|Commons}} [[commons:Eighty Years' War|Commons]]
+}}<noinclude>
+[[تصنيف:قوالب حروب وصراعات]]
+[[تصنيف:قوالب إسبانيا]]
+[[تصنيف:قوالب صندوق حملة]]
+[[تصنيف:قوالب صندوق حملات إسبانية]]
+</noinclude>
 

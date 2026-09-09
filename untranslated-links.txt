@@ -1,697 +1,467 @@
-1. إسبانيا الجديدة
+1. حرب الثمانين عاما
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-2. الاستعمار الإسباني للأمريكيتين
+2. جذور حرب الثمانين عاما
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-3. الغزو الإسباني لغواتيمالا
+3. قائمة معارك حرب الثمانين عاما
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-4. القرصنة في الكاريبي
+4. حرب الثمانين عاما (1566-1572)
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-5. Acaxee Rebellion
-   QID: Q16960172
+5. بيلدنستورم
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-6. Spanish–Moro conflict
-   QID: Q6355746
+6. Battle of Dahlen
+   QID: Q679858
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-7. Acoma Massacre
+7. Battle of Jodoigne
+   QID: Q930521
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-8. Tepehuán Revolt
-   QID: Q7701256
+8. Battle of Le Quesnoy (1568)
+   QID: Q55605033
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-9. Pima Revolt
+9. حرب الثمانين عاما (1572-1576)
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-10. فيليب الثاني ملك إسبانيا
+10. الاستيلاء على برييل
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-11. Enlightenment in Spain
+11. Relief of Goes
+   QID: Q2231652
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-12. كارلوس الثالث ملك إسبانيا
+12. Battle of IJsselmeer
+   QID: Q122226880
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-13. Royal Audiencia of Guadalajara
-   QID: Q4233721
+13. معركة دلفت (1573)
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-14. Real Audiencia of Manila
-   QID: Q3774484
+14. Capture of Valkenburg (1574)
+   QID: Q20638909
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-15. Real Audiencia of Mexico
-   QID: Q1747501
+15. Battle of Flushing
+   QID: Q679831
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-16. Captaincy General
+16. Battle of Haarlemmermeer
+   QID: Q1814248
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-17. Captaincy General of the Philippines
-   QID: Q2721139
+17. Battle of Lillo
+   QID: Q2890949
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-18. Captaincy General of Puerto Rico
-   QID: Q541745
+18. حرب الثمانين عاما (1576-1579)
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-19. Captaincy General of Yucatán
-   QID: Q2556639
+19. Battle of Borgerhout
+   QID: Q14855684
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-20. Indendancies of New Spain
+20. حرب الثمانين عاما (1579-1588)
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-21. تشياباس
+21. Taking of Diest (1580)
+   QID: Q19996396
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-22. كاماغواي
+22. Battle of Kollum
+   QID: Q18649016
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-23. سانتياغو دي كوبا (مدينة)
+23. Capture of Breda (1581)
+   QID: Q631709
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-24. غوادالاخارا
+24. Siege of Lier (1582)
+   QID: Q21187145
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-25. ولاية فيراكروز
+25. Siege of Eindhoven (1583)
+   QID: Q2330922
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-26. فلوريدا الإسبانية
+26. Siege of Ghent (1583–1584)
+   QID: Q2202319
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-27. Cabildo (council)
-   QID: Q1024827
+27. Capture of Aalst (1584)
+   QID: Q14632124
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-28. صلح وستفاليا
+28. سقوط أنتويرب
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-29. Congress of Breda
-   QID: Q5160857
+29. Siege of IJsseloord
+   QID: Q2649702
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-30. Treaty of Córdoba
-   QID: Q767450
+30. Battle of Empel
+   QID: Q4870969
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-31. History of Veracruz (city)
+31. Battle of Boksum
+   QID: Q2888174
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-32. مدينة بويبلا
+32. Siege of Venlo (1586)
+   QID: Q2069820
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-33. غوادالاخارا
+33. Destruction of Neuss
+   QID: Q2213756
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-34. مونتيري
+34. معركة بونتا ديلغادا
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-35. Guanajuato City
+35. السنوات العشر (حرب الثمانين عاما)
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-36. Pueblo de Los Ángeles
-   QID: Q3410547
+36. Capture of Geertruidenberg (1589)
+   QID: Q20020507
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-37. History of San Jose, California
-   QID: Q5866351
-   Section: #First Spanish pueblo in California
+37. Maurice's campaign of 1591
+   QID: Q2236255
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-38. Presidio of San Diego
-   QID: Q605760
+38. Capture of Delfzijl
+   QID: Q27628425
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-39. سانتا فيه (نيومكسيكو)
+39. Siege of Rouen (1591–1592)
+   QID: Q7510351
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-40. ألبوكيركي
+40. Siege of Caudebec
+   QID: Q24971262
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-41. إل باسو (تكساس)
+41. Luxemburg campaigns
+   Section: #First campaign
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-42. Los Adaes
-   QID: Q6681850
+42. Siege of Coevorden (1593)
+   QID: Q48779654
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-43. History of San Antonio
-   QID: Q4918759
+43. Luxemburg campaigns
+   Section: #Second campaign
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-44. توسان (أريزونا)
+44. Siege of Groenlo (1595)
+   QID: Q699917
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-45. بينساكولا
+45. Battle of the Lippe
+   QID: Q16253803
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-46. History of Santo Domingo
+46. Sack of Lier
+   QID: Q112228395
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-47. سان خوان (بورتوريكو)
+47. Siege of Meurs (1597)
+   QID: Q815178
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-48. History of Manila
-   QID: Q3399362
+48. Siege of Bredevoort (1597)
+   QID: Q2499253
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-49. Louisiana_(New_Spain)
+49. Capture of Ootmarsum
+   QID: Q2335434
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-50. فلوريدا الإسبانية
+50. Battle of Gravelines (1588)
+   QID: Q2400227
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-51. فلوريدا
+51. Battle of Bayona Islands (1590)
+   QID: Q19901912
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-52. Province of Las Californias
-   QID: Q108649758
+52. Battle of the Gulf of Almería (1591)
+   QID: Q15531357
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-53. كاليفورنيا
+53. حرب الثمانين عاما (1599-1609)
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-54. Baja California Province
-   QID: Q20506391
+54. Siege of Rees (1599)
+   QID: Q2384299
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-55. نيومكسيكو
+55. Battle of Lekkerbeetje
+   QID: Q22097614
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-56. تكساس
+56. Siege of 's-Hertogenbosch (1601)
+   QID: Q20638664
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-57. Nueva Galicia
-   QID: Q2437292
+57. Mutiny of Hoogstraten
+   QID: Q19897846
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-58. Nueva Extremadura
-   QID: Q677487
+58. Spinola's campaign of 1605-1606
+   Section: #Capture of Oldenzaal
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-59. New Kingdom of León
-   QID: Q3823442
+59. Siege of Lingen (1605)
+   QID: Q7510198
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-60. بولاكان
+60. Spinola's campaign of 1605-1606
+   Section: #Attacks on Bergen op Zoom
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-61. بامبانغا
+61. Spinola's campaign of 1605-1606
+   Section: #Battle of Mülheim
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-62. Spanish Formosa
-   QID: Q74049
+62. Spinola's campaign of 1605-1606
+   Section: #Siege of Wachtendonk
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-63. كريستوفر كولومبوس
+63. Spinola's campaign of 1605-1606
+   Section: #Siege of Krakau Castke
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-64. فرناندو ماجلان
+64. Spinola's campaign of 1605-1606
+   Section: #Siege of Bredevoort
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-65. خوان سباستيان إلكانو
+65. Spinola's campaign of 1605-1606
+   Section: #Battle of the Berkumerbridge
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-66. فاسكو نونييث دي بالبوا
+66. Spinola's campaign of 1605-1606
+   Section: #Siege of Lochem
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-67. إرنان كورتيس
+67. Siege of Groenlo (1606)
+   QID: Q679843
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-68. خوان بونثي دي ليون
+68. Spinola's campaign of 1605-1606
+   Section: #Siege of Rheinberg
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-69. Nuño de Guzmán
-   QID: Q1333486
+69. Battle of Sluis (1603)
+   QID: Q2114424
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-70. برنال دياث ديل كاستييو
+70. Battle of Cape St. Vincent (1606)
+   QID: Q67212705
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-71. بيدرو دي ألفارادو
+71. هدنة الاثني عشر عاما
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-72. بانفيلو دي نارفاييث
+72. Siege of Aachen (1614)
+   QID: Q16931376
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-73. إرناندو دي سوتو
+73. Spanish conquest of the Moluccas
+   QID: Q130520222
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-74. فرانسيسكو فاسكويز دي كورونادو
+74. Battle of Playa Honda
+   QID: Q1933282
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-75. جواو رودريغيز كابريلو
+75. حرب الثمانين عاما (1621-1648)
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-76. Ángel de Villafañe
-   QID: Q1097583
+76. Siege of Jülich (1621–1622)
+   QID: Q17122425
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-77. ألفار نونييث كابيثا دي فاكا
+77. Invasion of the Veluwe (1624)
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-78. بيدرو مينينديث دي أفيليس
+78. Invasion of the Veluwe (1629)
+   QID: Q13733352
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-79. خوان خوسيه بيريز هيرنانديز
+79. Battle of IJsseloord
+   QID: Q137639834
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-80. Manuel Quimper
-   QID: Q548355
+80. Siege of Venlo (1632)
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-81. Cristóbal de Oñate
-   QID: Q920150
+81. Siege of Roermond (1632)
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-82. أندريس دي أوردانيتا
+82. Siege of Rheinberg (1633)
+   QID: Q13437114
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-83. فرانسيسكو هرنانديز دي كوردوبا (فاتح يوكاتان)
+83. Siege of Philippine
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-84. فرانسيسكو هرنانديز دي كوردوبا (مؤسس نيكارغوا)
+84. Sack of Tienen
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-85. جيل غونزاليس دافيلا
+85. Siege of Venlo (1637)
+   QID: Q2377749
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-86. Francisco de Ulloa
-   QID: Q715754
+86. Capture of Roermond
+   QID: Q124625188
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-87. Dionisio Alcalá Galiano
-   QID: Q1626617
+87. Siege of Hulst (1640)
+   QID: Q126164296
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-88. Bruno de Heceta
-   QID: Q2340694
+88. Siege of Gennep (1641)
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-89. Ignacio de Arteaga y Bazán
-   QID: Q5992483
+89. Siege of Sas van Gent
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-90. خوسيه دي بوستامينت إي غيرا
+90. Siege of Hulst (1645)
+   QID: Q2013484
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-91. José María Narváez
-   QID: Q628475
+91. Siege of Mardyck (1646)
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-92. Antonio Gil Y'Barbo
-   QID: Q4776659
+92. Siege of Dunkirk (1646)
+   QID: Q3485880
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-93. ألكسندر فون هومبولت
+93. Siege of Antwerp (1646)
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-94. Thomas Gage (priest)
-   QID: Q504421
+94. Siege of Venlo (1646)
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-95. الكنيسة الرومانية الكاثوليكية
+95. Battle of Gibraltar (1621)
+   QID: Q2890865
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-96. Spanish missions in Baja California
-   QID: Q551654
+96. Cádiz expedition (1625)
+   QID: Q2167774
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-97. Spanish missions in Florida
+97. Battle off Lizard Point
+   QID: Q2589203
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-98. Spanish missions in Louisiana
+98. Action of 18 February 1639
+   QID: Q2594731
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-99. Spanish missions in Mexico
-   QID: Q7573422
+99. Fight in the Channel
+   QID: Q4677287
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-100. Spanish missions in the Sonoran Desert
-   QID: Q3859282
+100. Battle of Cape St. Vincent (1641)
+   QID: Q2890861
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-101. Ajacán Mission
-   QID: Q4699492
+101. حرب الثلاثين عاما خارج أوروبا
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-102. Spanish missions in Trinidad
-   QID: Q7573425
+102. Recapture of Bahia
+   QID: Q3286392
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-103. Pedro de Gante
-   QID: Q450411
+103. Battle of San Juan (1625)
+   QID: Q4872279
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-104. Toribio de Benavente Motolinia
+104. Battle of Abrolhos
+   QID: Q2890640
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-105. Juan de Zumárraga
-   QID: Q442901
+105. Jan Janszoon van Hoorn's expedition of 1633
+   QID: Q112136746
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-106. Alonso de Montúfar
-   QID: Q1807093
+106. Expedition to the Unare
+   QID: Q130467182
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-107. Vasco de Quiroga
-   QID: Q2990920
+107. Battle of Cabañas
+   QID: Q2888219
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-108. بارتولومي دي لاس كاساس
+108. Action of 12–17 January 1640
+   QID: Q4677243
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-109. Alonso de Molina
-   QID: Q2839291
+109. Attack on Saint Martin
+   QID: Q4818004
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-110. دييغو دوران
+110. حرب الثلاثين عاما خارج أوروبا
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-111. Diego de Landa
-   QID: Q379672
+111. Battle of Macau
+   QID: Q704333
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-112. Gerónimo de Mendieta
-   QID: Q1381268
+112. Action of 30 September 1639
+   QID: Q4677351
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-113. Juan de Palafox y Mendoza
-   QID: Q2448974
+113. Siege of Galle (1640)
+   QID: Q15277679
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-114. Francisco Javier Clavijero
-   QID: Q1442029
+114. Siege of Malacca (1641)
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-115. Francisco Palóu
-   QID: Q2636220
+115. Battle of San Salvador (1641)
+   QID: Q24839239
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-116. Fermín de Lasuén
-   QID: Q5444431
+116. Battle of San Salvador (1642)
+   QID: Q15904347
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-117. Esteban Tápis
-   QID: Q5400834
+117. Battles of La Naval de Manila
+   QID: Q2265603
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-118. José Francisco de Paula Señan
-   QID: Q6292266
+118. Battle of Puerto de Cavite
+   QID: Q2890933
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-119. Marià Paieres i Borràs
-   QID: Q6766106
+119. معاهدة سلام مونستر
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-120. Sebastián Montero
-   QID: Q7442660
+120. تبعات حرب الثمانين عاما
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-121. ماركوس دي نيزا
+121. تأريخ حرب الثمانين عاما
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-122. Francisco de Ayeta
-   QID: Q5484102
+122. commons:Eighty Years' War
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-123. Antonio Margil
-   QID: Q4776777
+123. تصنيف:قوالب حروب وصراعات
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-124. Francisco Marroquín
-   QID: Q1373530
+124. تصنيف:قوالب إسبانيا
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-125. Manuel Abad y Queipo
-   QID: Q1891420
+125. تصنيف:قوالب صندوق حملة
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
-126. خوسيه ماريا موريلوس
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-127. California mission clash of cultures
-   QID: Q5021280
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-128. Cargo system
-   QID: Q3962158
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-129. Indian Reductions
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-130. الشعوب الأصلية في الأمريكتين
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-131. Huastec people
-   QID: Q1130354
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-132. Tarascan state
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-133. Totonac
-   QID: Q898658
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-134. Pipil people
-   QID: Q267410
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-135. Kaqchikel people
-   QID: Q1026107
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-136. Poqomam people
-   QID: Q3436900
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-137. Mam people
-   QID: Q2563726
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-138. Ciboney
-   QID: Q726722
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-139. Guanahatabey
-   QID: Q3118725
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-140. Mission Indians
-   QID: Q6878624
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-141. تشوماش
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-142. Cupeño
-   QID: Q1257154
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-143. Juaneño
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-144. Kumeyaay
-   QID: Q2143064
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-145. Luiseño
-   QID: Q3090691
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-146. Serrano people
-   QID: Q617532
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-147. Akimel O'odham
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-148. أباتشي (شعب)
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-149. Hualapai
-   QID: Q1936651
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-150. Puebloans
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-151. Quechan
-   QID: Q1754503
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-152. Solano people
-   QID: Q7555723
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-153. Tohono O'odham
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-154. Aridoamerica
-   QID: Q613648
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-155. Acaxee
-   QID: Q338230
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-156. Coahuiltecan
-   QID: Q1104182
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-157. Cochimí
-   QID: Q2661428
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-158. Cocopah
-   QID: Q165320
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-159. Kiliwa people
-   QID: Q2664567
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-160. La Junta Indians
-   QID: Q6463286
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-161. Opata people
-   QID: Q1550826
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-162. Yaqui
-   QID: Q428575
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-163. Southern Plains
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-164. Lipan Apache
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-165. Plains Apache
-   QID: Q1523166
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-166. Tonkawa
-   QID: Q1493185
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-167. Indigenous peoples of the Southeastern Woodlands
-   QID: Q905014
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-168. List of sites and peoples visited by the Hernando de Soto Expedition
-   QID: Q3833897
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-169. Calusa
-   QID: Q51782
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-170. Jororo
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-171. Pensacola people
-   QID: Q2807320
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-172. Timucua
-   QID: Q56168
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-173. Yustaga
-   QID: Q17108335
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-174. Mangyan
-   QID: Q2500209
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-175. Peoples of Palawan
-   QID: Q7166088
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-176. Ati people
-   QID: Q2714852
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-177. Lumad
-   QID: Q1585756
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-178. Bajau people
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-179. Cebuano people
-   QID: Q3567287
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-180. Spanish Colonial architecture
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-181. Spanish Colonial architecture
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-182. Spanish colonial real
-   QID: Q3931074
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-183. Casta
-   QID: Q1379243
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-184. الشعوب الأصلية في الأمريكتين
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-185. Castizo
-   QID: Q532932
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-186. Cholo
-   QID: Q1075969
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-187. عرق أسود
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-188. جواو رودريغيز كابريلو
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-189. فرنسيس دريك
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-190. Fermín de Lasuén
-   QID: Q5444431
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-191. Limahong
-   QID: Q706515
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-192. هاسيكورا تسونيناغا
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-193. :Category:إسبانيا الجديدة
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-194. تصنيف:صناديق تصفح الكاريبي
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-195. تصنيف:قوالب دول أو أقاليم سابقة في أمريكا الشمالية
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-196. تصنيف:صناديق تصفح تاريخ إسبانيا
-   Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
-
-197. تصنيف:قوالب تصفح تاريخ الولايات المتحدة
+126. تصنيف:قوالب صندوق حملات إسبانية
    Reason: No Arabic Wikipedia page and no Arabic Wikidata label.
 
