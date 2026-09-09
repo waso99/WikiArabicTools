@@ -56,16 +56,44 @@ function Get-DeterministicArabicDisplay {
         return [string]$map[$displayTrimmed]
     }
 
-    # If visible text exactly matches the English source title,
+    # If visible text exactly matches the English source title or a disambiguation base,
     # use the resolved Arabic page title or Arabic Wikidata label.
-    if (-not [string]::IsNullOrWhiteSpace($EnglishTitle) -and
-        [string]::Equals($displayTrimmed, $EnglishTitle.Trim(), [StringComparison]::OrdinalIgnoreCase)) {
-        if (-not [string]::IsNullOrWhiteSpace($ArabicTitle)) { return $ArabicTitle.Trim() }
-        if (-not [string]::IsNullOrWhiteSpace($ArabicWikidataLabel) -and $ArabicWikidataLabel -match '[\u0600-\u06FF]') {
-            return $ArabicWikidataLabel.Trim()
+    if (-not [string]::IsNullOrWhiteSpace($EnglishTitle)) {
+        $engTrim = $EnglishTitle.Trim()
+
+        # Exact match
+        if ([string]::Equals($displayTrimmed, $engTrim, [StringComparison]::OrdinalIgnoreCase)) {
+            if (-not [string]::IsNullOrWhiteSpace($ArabicTitle)) { return $ArabicTitle.Trim() }
+            if (-not [string]::IsNullOrWhiteSpace($ArabicWikidataLabel) -and $ArabicWikidataLabel -match '[\u0600-\u06FF]') {
+                return $ArabicWikidataLabel.Trim()
+            }
+        }
+
+        # Disambiguation stripping match
+        $engParenIndex = $engTrim.IndexOf(' (')
+        if ($engParenIndex -gt 0) {
+            $engBase = $engTrim.Substring(0, $engParenIndex)
+            if ([string]::Equals($displayTrimmed, $engBase, [StringComparison]::OrdinalIgnoreCase)) {
+                if (-not [string]::IsNullOrWhiteSpace($ArabicTitle)) {
+                    $arParenIndex = $ArabicTitle.IndexOf(' (')
+                    if ($arParenIndex -gt 0) {
+                        return $ArabicTitle.Substring(0, $arParenIndex).Trim()
+                    }
+                    return $ArabicTitle.Trim()
+                }
+                if (-not [string]::IsNullOrWhiteSpace($ArabicWikidataLabel) -and $ArabicWikidataLabel -match '[\u0600-\u06FF]') {
+                    $wdParenIndex = $ArabicWikidataLabel.IndexOf(' (')
+                    if ($wdParenIndex -gt 0) {
+                        return $ArabicWikidataLabel.Substring(0, $wdParenIndex).Trim()
+                    }
+                    return $ArabicWikidataLabel.Trim()
+                }
+            }
         }
     }
-    return $null
+
+    # By default, preserve the original author's display text to avoid data loss.
+    return $displayTrimmed
 }
 
 function Convert-WikipediaLinks {

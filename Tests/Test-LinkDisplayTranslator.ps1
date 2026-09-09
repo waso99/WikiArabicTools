@@ -15,6 +15,8 @@ function Resolve-WikipediaLinksBatch {
             'Panama' {$ar='بنما';$qid='Q-PANAMA'}
             'Joseph Bannister' {$qid='Q-RANGER'}
             'Charles Town' {$ar='شارلستون (توضيح)';$qid='Q-CHARLESTON'}
+            'Target' {$ar='الهدف';$qid='Q-TARGET'}
+            'plasma (physics)' {$ar='بلازما (فيزياء)';$qid='Q-PLASMA'}
         }
         $result[$title]=[PSCustomObject]@{QID=$qid;ArabicTitle=$ar}
     }
@@ -30,6 +32,14 @@ $input=@'
 * [[Capture of John Rackham|Capture of ''William'']]
 * [[Joseph Bannister|Samaná Bay]]
 * [[Blackbeard#Blockade of Charles Town|Charles Town]]
+* [[Target|Custom label]]
+* [[Target|عربي]]
+* [[Target#History|Early history]]
+* [[Target|Label, with punct!]]
+* [[plasma (physics)|plasma]]
+* [[Target|Target]]
+* [[Target|{{lang|en|X}}]]
+* [[Target]]
 '@
 $output=Convert-WikipediaLinks -Text $input
 $expected=@'
@@ -40,9 +50,17 @@ $expected=@'
 * [[Capture of John Rackham|Capture of ''William'']]
 * {{Ill-WD2|جوزيف بانيستر|id=Q-RANGER|نص=خليج سامانا}}
 * [[Blackbeard#Blockade of Charles Town|Charles Town]]
+* [[الهدف|Custom label]]
+* [[الهدف|عربي]]
+* [[الهدف#History|Early history]]
+* [[الهدف|Label, with punct!]]
+* [[بلازما (فيزياء)|بلازما]]
+* [[الهدف|الهدف]]
+* [[الهدف|{{lang|en|X}}]]
+* [[الهدف]]
 '@
 if($output -ne $expected){Write-Host 'Link display test FAILED.' -ForegroundColor Red;Write-Host 'Expected:';Write-Host $expected;Write-Host 'Actual:';Write-Host $output;exit 1}
 if($LinkStats.IllWD2 -ne 1){throw "Expected 1 Ill-WD2 link, got $($LinkStats.IllWD2)."}
-if($LinkStats.Converted -ne 5){throw "Expected 5 converted links, got $($LinkStats.Converted)."}
+if($LinkStats.Converted -ne 13){throw "Expected 13 converted links, got $($LinkStats.Converted)."}
 
 Write-Host 'Link display regression tests passed.' -ForegroundColor Green
