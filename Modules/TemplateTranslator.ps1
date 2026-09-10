@@ -60,7 +60,7 @@ function Get-TrailingWhitespace {
 
 function Find-TemplateEnd {
     param([Parameter(Mandatory)][string]$Text,[Parameter(Mandatory)][int]$Start)
-    $depth=0; $paramDepth=0; $i=$Start
+    $depth=0; $paramDepth=0; $nestedTemplateDepth=0; $i=$Start
     while ($i -lt $Text.Length-1) {
         if ($i+3 -lt $Text.Length -and $Text[$i] -eq '<' -and $Text[$i+1] -eq '!' -and $Text[$i+2] -eq '-' -and $Text[$i+3] -eq '-') {
             $endComment = $Text.IndexOf('-->', $i + 4, [System.StringComparison]::Ordinal)
@@ -90,7 +90,38 @@ function Find-TemplateEnd {
             }
         }
         if ($i+2 -lt $Text.Length -and $Text.Substring($i,3) -eq '{{{') { $paramDepth++; $i+=3; continue }
-        if ($paramDepth -gt 0 -and $i+2 -lt $Text.Length -and $Text.Substring($i,3) -eq '}}}') { $paramDepth--; $i+=3; continue }
+        if ($paramDepth -gt 0 -and
+            $i+1 -lt $Text.Length -and
+            $Text.Substring($i,2) -eq '{{') {
+
+            # A normal template may be nested inside a triple-brace
+            # parameter, for example:
+            # {{{parameter|{{Default}}}}}
+            #
+            # It must be tracked separately so its }} does not affect
+            # the outer template depth.
+
+            $nestedTemplateDepth++
+            $i += 2
+            continue
+        }
+        if ($paramDepth -gt 0 -and
+            $nestedTemplateDepth -gt 0 -and
+            $i+1 -lt $Text.Length -and
+            $Text.Substring($i,2) -eq '}}') {
+
+            $nestedTemplateDepth--
+            $i += 2
+            continue
+        }
+        if ($paramDepth -gt 0 -and
+            $i+2 -lt $Text.Length -and
+            $Text.Substring($i,3) -eq '}}}') {
+
+            $paramDepth--
+            $i += 3
+            continue
+        }
         if ($paramDepth -eq 0 -and $i+1 -lt $Text.Length -and $Text.Substring($i,2) -eq '{{') { $depth++; $i+=2; continue }
         if ($paramDepth -eq 0 -and $i+1 -lt $Text.Length -and $Text.Substring($i,2) -eq '}}') {
             $depth--; $i+=2

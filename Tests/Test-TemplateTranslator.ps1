@@ -88,3 +88,21 @@ Write-Host 'Template regression tests passed.' -ForegroundColor Green
 Write-Host "Templates found: $($TemplateStats.TemplatesFound)"
 Write-Host "Template names changed: $($TemplateStats.TemplateNamesChanged)"
 Write-Host "Parameter values changed: $($TemplateStats.ParameterValuesChanged)"
+
+# BUG #8: A triple-brace parameter may contain a nested template.
+$bug8Input = '{{Template|value={{{parameter|{{Default}}}}}|second=value}}'
+
+$bug8Start = $bug8Input.IndexOf('{{')
+$bug8End = Find-TemplateEnd -Text $bug8Input -Start $bug8Start
+
+if ($bug8End -ne $bug8Input.Length) {
+    throw "BUG #8 regression: expected template end $($bug8Input.Length), got $bug8End."
+}
+
+$bug8Extracted = $bug8Input.Substring(0, $bug8End)
+
+if ($bug8Extracted -ne $bug8Input) {
+    throw "BUG #8 regression: template was truncated. Extracted: [$bug8Extracted]"
+}
+
+Write-Host 'BUG #8 regression test passed.' -ForegroundColor Green
