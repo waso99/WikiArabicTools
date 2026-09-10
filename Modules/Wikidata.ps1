@@ -407,9 +407,18 @@ function Get-ArabicWikipediaTitlesBatch {
         $url = "https://www.wikidata.org/w/api.php?action=wbgetentities&ids=$encoded&props=sitelinks&sitefilter=arwiki&format=json&formatversion=2&maxlag=5"
         try {
             $response = Invoke-WikiApiRequest -Uri $url -ApiName Wikidata
-            foreach ($qid in $batch) { $script:LastArabicSitelinkSuccess[[string]$qid] = $true }
+
+            if ($null -eq $response) {
+                continue
+            }
+
+            foreach ($qid in $batch) {
+                $script:LastArabicSitelinkSuccess[[string]$qid] = $true
+            }
+
             foreach ($entity in (Get-WikidataEntitiesCollection -Entities $response.entities)) {
                 if ($null -eq $entity) { continue }
+
                 if ($null -ne $entity.sitelinks -and
                     $null -ne $entity.sitelinks.arwiki -and
                     -not [string]::IsNullOrWhiteSpace([string]$entity.sitelinks.arwiki.title)) {

@@ -28,4 +28,37 @@ foreach($shape in @($arrayMock, $objectMock)) {
     if(-not $found){ throw 'Arabic sitelink response parsing regression test failed for one of the supported response shapes.' }
 }
 
+# BUG #7: A failed Wikidata API request must not mark QIDs as successful.
+$originalInvoke = ${function:Invoke-WikiApiRequest}
+
+try {
+    function Invoke-WikiApiRequest {
+        param(
+            [Parameter(Mandatory)][string]$Uri,
+            [Parameter(Mandatory)]
+            [ValidateSet("Wikipedia","Wikidata")]
+            [string]$ApiName
+        )
+
+        return $null
+    }
+
+    $script:LastArabicSitelinkSuccess = @{}
+
+    $null = Get-ArabicWikipediaTitlesBatch -WikidataIds @(
+        'Q12345'
+        'Q67890'
+    )
+
+    if ($script:LastArabicSitelinkSuccess.ContainsKey('Q12345') -or
+        $script:LastArabicSitelinkSuccess.ContainsKey('Q67890')) {
+        throw 'BUG #7 regression: failed Wikidata API request was marked as successful.'
+    }
+
+    Write-Host 'BUG #7 regression test passed.' -ForegroundColor Green
+}
+finally {
+    ${function:Invoke-WikiApiRequest} = $originalInvoke
+}
+
 Write-Host 'Arabic sitelink response regression tests passed.'
