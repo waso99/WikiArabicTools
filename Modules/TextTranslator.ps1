@@ -135,6 +135,69 @@ $($items -join "`n")
     return $result
 }
 
+function Find-WikitextParameterEnd {
+    param(
+        [Parameter(Mandatory)][string]$Text,
+        [Parameter(Mandatory)][int]$Start
+    )
+
+    if ($Start + 2 -ge $Text.Length -or
+        $Text[$Start] -ne '{' -or
+        $Text[$Start + 1] -ne '{' -or
+        $Text[$Start + 2] -ne '{') {
+        return -1
+    }
+
+    $parameterDepth = 1
+    $templateDepth = 0
+    $i = $Start + 3
+
+    while ($i -lt $Text.Length) {
+        if ($i + 2 -lt $Text.Length -and
+            $Text[$i] -eq '{' -and
+            $Text[$i + 1] -eq '{' -and
+            $Text[$i + 2] -eq '{') {
+            $parameterDepth++
+            $i += 3
+            continue
+        }
+
+        if ($i + 1 -lt $Text.Length -and
+            $Text[$i] -eq '{' -and
+            $Text[$i + 1] -eq '{') {
+            $templateDepth++
+            $i += 2
+            continue
+        }
+
+        if ($templateDepth -gt 0 -and
+            $i + 1 -lt $Text.Length -and
+            $Text[$i] -eq '}' -and
+            $Text[$i + 1] -eq '}') {
+            $templateDepth--
+            $i += 2
+            continue
+        }
+
+        if ($templateDepth -eq 0 -and
+            $i + 2 -lt $Text.Length -and
+            $Text[$i] -eq '}' -and
+            $Text[$i + 1] -eq '}' -and
+            $Text[$i + 2] -eq '}') {
+            $parameterDepth--
+            $i += 3
+            if ($parameterDepth -eq 0) {
+                return $i
+            }
+            continue
+        }
+
+        $i++
+    }
+
+    return -1
+}
+
 function Convert-WikipediaVisibleText {
     param([Parameter(Mandatory)][string]$Text)
 
@@ -218,6 +281,24 @@ function Convert-WikipediaVisibleText {
                     $phId++
                     $i = $t.End
                     continue
+                }
+
+                # Triple-brace template parameters must be protected before
+                # ordinary double-brace templates. Otherwise {{{parameter}}}
+                # would become {<WA_SAFE_1>}, leaving one Wikitext brace exposed.
+                if ($i + 2 -lt $orig.Length -and
+                    $orig[$i] -eq '{' -and
+                    $orig[$i + 1] -eq '{' -and
+                    $orig[$i + 2] -eq '{') {
+                    $end = Find-WikitextParameterEnd -Text $orig -Start $i
+                    if ($end -gt $i) {
+                        $ph = "<WA_SAFE_$phId>"
+                        [void]$sbPh.Append($ph)
+                        $map.Add($orig.Substring($i, $end - $i))
+                        $phId++
+                        $i = $end
+                        continue
+                    }
                 }
 
                 if ($hasFindTemplateEnd -and $i+1 -lt $orig.Length -and $orig[$i] -eq '{' -and $orig[$i+1] -eq '{') {

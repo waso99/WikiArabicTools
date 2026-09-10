@@ -90,6 +90,36 @@ try {
     }
 
     Write-Host 'BUG #5 regression test passed.' -ForegroundColor Green
+    # BUG #6: Triple-brace template parameters must be protected
+    # as complete Wikitext tokens before visible-text translation.
+    $bug6Input = @(
+        ';AuditBug6 {{{parameter}}}'
+        ';AuditBug6 {{{parameter}}} and {{{another}}}'
+        ';AuditBug6 {{{parameter|default={{Template}}}}}'
+        ';AuditBug6 {{Template|value=test}}'
+    ) -join "`n"
+
+    $bug6Out = Convert-WikipediaVisibleText -Text $bug6Input
+
+    # The mock Gemini translator returns the input prefixed with "ARABIC ".
+    # Therefore the original Wikitext must reappear exactly in the output.
+    if($bug6Out -notmatch ';ARABIC AuditBug6 \{\{\{parameter\}\}\}'){
+        throw 'Failed BUG #6.1: Single triple-brace parameter was not preserved.'
+    }
+
+    if($bug6Out -notmatch ';ARABIC AuditBug6 \{\{\{parameter\}\}\} and \{\{\{another\}\}\}'){
+        throw 'Failed BUG #6.2: Multiple triple-brace parameters were not preserved.'
+    }
+
+    if($bug6Out -notmatch ';ARABIC AuditBug6 \{\{\{parameter\|default=\{\{Template\}\}\}\}\}'){
+        throw 'Failed BUG #6.3: Triple-brace parameter with nested template was not preserved.'
+    }
+
+    if($bug6Out -notmatch ';ARABIC AuditBug6 \{\{Template\|value=test\}\}'){
+        throw 'Failed BUG #6.4: Ordinary template protection was regressed.'
+    }
+
+    Write-Host 'BUG #6 regression test passed.' -ForegroundColor Green
 
     Write-Host 'Visible-text regression tests passed.' -ForegroundColor Green
 }
