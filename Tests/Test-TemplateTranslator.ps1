@@ -106,3 +106,31 @@ if ($bug8Extracted -ne $bug8Input) {
 }
 
 Write-Host 'BUG #8 regression test passed.' -ForegroundColor Green
+# BUG #9: Triple-brace parameters may contain pipes, links,
+# nested templates, and nested triple-brace parameters.
+$bug9Cases = @(
+    '{{Template|value={{{p|a=b}}}|second=value}}'
+    '{{Template|value={{{p|a|b}}}|second=value}}'
+    '{{Template|value={{{p|[[A|B]]}}}|second=value}}'
+    '{{Template|value={{{p|{{Inner|x=y}}}}}|second=value}}'
+    '{{Template|value={{{p|{{A|x={{B|y}}}}}}}|second=value}}'
+    '{{Template|value={{{p|{{A|x=1}} text {{B|y=2}}}}}|second=value}}'
+    '{{Template|value={{{p|{{{inner|{{A|x}}}}}}}}|second=value}}'
+    '{{Template|value={{{p|{{A|x={{{q|{{B}}}}}}}}}}|second=value}}'
+    '{{T|x={{{p|{{A}}}}}}}'
+    '{{T|x={{{p|{{A|x=1}}}}}|y=2}}'
+    '{{T|x={{{p|{{A|x={{B}}}}}}}|y=2}}'
+    '{{T|x={{{p|{{A}}}}}|y={{B}}}}'
+    '{{T|x={{{p|{{A|x={{{q|v}}}}}}}}|y=2}}'
+)
+
+foreach ($bug9Case in $bug9Cases) {
+    $start = $bug9Case.IndexOf('{{')
+    $end = Find-TemplateEnd -Text $bug9Case -Start $start
+
+    if ($end -ne $bug9Case.Length) {
+        throw "BUG #9 regression: expected template end $($bug9Case.Length), got $end. Input: [$bug9Case]"
+    }
+}
+
+Write-Host "BUG #9 regression tests passed: $($bug9Cases.Count) cases." -ForegroundColor Green
