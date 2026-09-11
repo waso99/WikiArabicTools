@@ -134,3 +134,28 @@ foreach ($bug9Case in $bug9Cases) {
 }
 
 Write-Host "BUG #9 regression tests passed: $($bug9Cases.Count) cases." -ForegroundColor Green
+
+# BUG #10: Protected blocks inside templates must not affect
+# template boundary detection.
+$bug10Cases = @(
+    '{{T|x=<!-- {{Inner|a=1}} -->|y=2}}'
+    '{{T|x=<!-- }} -->|y=2}}'
+    '{{T|x=<nowiki>{{Inner|a=1}}</nowiki>|y=2}}'
+    '{{T|x=<nowiki>}}</nowiki>|y=2}}'
+    '{{T|x=<ref>{{Inner|a=1}}</ref>|y=2}}'
+    '{{T|x=<ref>}}</ref>|y=2}}'
+    '{{T|x=<math>{{Inner}}</math>|y=2}}'
+    '{{T|x=<code>{{Inner}}</code>|y=2}}'
+    '{{T|x=<pre>{{Inner}}</pre>|y=2}}'
+)
+
+foreach ($bug10Case in $bug10Cases) {
+    $start = $bug10Case.IndexOf('{{')
+    $end = Find-TemplateEnd -Text $bug10Case -Start $start
+
+    if ($end -ne $bug10Case.Length) {
+        throw "BUG #10 regression: expected template end $($bug10Case.Length), got $end. Input: [$bug10Case]"
+    }
+}
+
+Write-Host "BUG #10 regression tests passed: $($bug10Cases.Count) cases." -ForegroundColor Green
