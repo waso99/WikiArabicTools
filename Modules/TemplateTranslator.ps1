@@ -59,77 +59,176 @@ function Get-TrailingWhitespace {
 }
 
 function Find-TemplateEnd {
-    param([Parameter(Mandatory)][string]$Text,[Parameter(Mandatory)][int]$Start)
-    $depth=0; $paramDepth=0; $nestedTemplateDepth=0; $i=$Start
-    while ($i -lt $Text.Length-1) {
-        if ($i+3 -lt $Text.Length -and $Text[$i] -eq '<' -and $Text[$i+1] -eq '!' -and $Text[$i+2] -eq '-' -and $Text[$i+3] -eq '-') {
-            $endComment = $Text.IndexOf('-->', $i + 4, [System.StringComparison]::Ordinal)
-            if ($endComment -ge 0) { $i = $endComment + 3; continue }
+
+    param(
+        [Parameter(Mandatory)][string]$Text,
+        [Parameter(Mandatory)][int]$Start
+    )
+
+    # Stack entries:
+    #   T = normal template {{ ... }}
+    #   P = triple-brace parameter {{{ ... }}}
+    #
+    # The stack is deliberately used instead of separate counters.
+    # This is important when a normal template occurs inside a
+    # triple-brace parameter:
+    #
+    #   {{{parameter|{{Default}}}}}
+    #
+    # In that case the }} belonging to {{Default}} must close only
+    # the nested template, while }}} closes the parameter.
+
+    $stack = [System.Collections.Generic.Stack[string]]::new()
+    $i = $Start
+
+    while ($i -lt $Text.Length - 1) {
+
+        # ------------------------------------------------------------
+        # HTML comments are opaque.
+        # ------------------------------------------------------------
+        if (
+            $i + 3 -lt $Text.Length -and
+            $Text[$i] -eq '<' -and
+            $Text[$i + 1] -eq '!' -and
+            $Text[$i + 2] -eq '-' -and
+            $Text[$i + 3] -eq '-'
+        ) {
+            $endComment = $Text.IndexOf(
+                '-->',
+                $i + 4,
+                [System.StringComparison]::Ordinal
+            )
+
+            if ($endComment -ge 0) {
+                $i = $endComment + 3
+                continue
+            }
         }
 
+        # ------------------------------------------------------------
+        # Protected Wikitext blocks are opaque.
+        # ------------------------------------------------------------
         if ($Text[$i] -eq '<') {
+
             $protected = [regex]::Match(
                 $Text.Substring($i),
                 '^<\s*(nowiki|pre|code|syntaxhighlight|math|chem|score|timeline|gallery|ref)\b[^>]*>',
                 [System.Text.RegularExpressions.RegexOptions]::IgnoreCase
             )
+
             if ($protected.Success) {
+
                 $open = $protected.Value
                 $openEnd = $i + $protected.Length
+
+                # Self-closing protected tag.
                 if ($open -match '/\s*>$') {
                     $i = $openEnd
                     continue
                 }
-                $tagName = ([regex]::Match($open,'<\s*([A-Za-z0-9]+)')).Groups[1].Value
-                $closePattern = "</\s*$([regex]::Escape($tagName))\s*>"
-                $close = [regex]::Match($Text.Substring($openEnd), $closePattern, [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+
+                $tagName = (
+                    [regex]::Match(
+                        $open,
+                        '<\s*([A-Za-z0-9]+)'
+                    )
+                ).Groups[1].Value
+
+                $closePattern = (
+                    '</\s*' +
+                    [regex]::Escape($tagName) +
+                    '\s*>'
+                )
+
+                $close = [regex]::Match(
+                    $Text.Substring($openEnd),
+                    $closePattern,
+                    [System.Text.RegularExpressions.RegexOptions]::IgnoreCase
+                )
+
                 if ($close.Success) {
                     $i = $openEnd + $close.Index + $close.Length
                     continue
                 }
             }
         }
-        if ($i+2 -lt $Text.Length -and $Text.Substring($i,3) -eq '{{{') { $paramDepth++; $i+=3; continue }
-        if ($paramDepth -gt 0 -and
-            $i+1 -lt $Text.Length -and
-            $Text.Substring($i,2) -eq '{{') {
 
-            # A normal template may be nested inside a triple-brace
-            # parameter, for example:
-            # {{{parameter|{{Default}}}}}
-            #
-            # It must be tracked separately so its }} does not affect
-            # the outer template depth.
-
-            $nestedTemplateDepth++
-            $i += 2
-            continue
-        }
-        if ($paramDepth -gt 0 -and
-            $nestedTemplateDepth -gt 0 -and
-            $i+1 -lt $Text.Length -and
-            $Text.Substring($i,2) -eq '}}') {
-
-            $nestedTemplateDepth--
-            $i += 2
-            continue
-        }
-        if ($paramDepth -gt 0 -and
-            $i+2 -lt $Text.Length -and
-            $Text.Substring($i,3) -eq '}}}') {
-
-            $paramDepth--
+        # ------------------------------------------------------------
+        # Open triple-brace parameter.
+        #
+        # Check this BEFORE normal {{ so {{{ is never interpreted
+        # as a normal template followed by another construct.
+        # ------------------------------------------------------------
+        if (
+            $i + 2 -lt $Text.Length -and
+            $Text.Substring($i, 3) -eq '{{{'
+        ) {
+            $stack.Push('P')
             $i += 3
             continue
         }
-        if ($paramDepth -eq 0 -and $i+1 -lt $Text.Length -and $Text.Substring($i,2) -eq '{{') { $depth++; $i+=2; continue }
-        if ($paramDepth -eq 0 -and $i+1 -lt $Text.Length -and $Text.Substring($i,2) -eq '}}') {
-            $depth--; $i+=2
-            if ($depth -eq 0) { return $i }
+
+        # ------------------------------------------------------------
+        # Open normal template.
+        # ------------------------------------------------------------
+        if (
+            $i + 1 -lt $Text.Length -and
+            $Text.Substring($i, 2) -eq '{{'
+        ) {
+            $stack.Push('T')
+            $i += 2
             continue
         }
+
+        # ------------------------------------------------------------
+        # Close triple-brace parameter.
+        #
+        # A }}} is valid only when P is currently on top of the stack.
+        # This prevents a parameter from closing while a nested template
+        # inside that parameter is still open.
+        # ------------------------------------------------------------
+        if (
+            $i + 2 -lt $Text.Length -and
+            $Text.Substring($i, 3) -eq '}}}'
+        ) {
+            if ($stack.Count -gt 0 -and $stack.Peek() -eq 'P') {
+                [void]$stack.Pop()
+                $i += 3
+
+                if ($stack.Count -eq 0) {
+                    return $i
+                }
+
+                continue
+            }
+        }
+
+        # ------------------------------------------------------------
+        # Close normal template.
+        #
+        # A }} is valid only when T is currently on top of the stack.
+        # ------------------------------------------------------------
+        if (
+            $i + 1 -lt $Text.Length -and
+            $Text.Substring($i, 2) -eq '}}'
+        ) {
+            if ($stack.Count -gt 0 -and $stack.Peek() -eq 'T') {
+                [void]$stack.Pop()
+                $i += 2
+
+                if ($stack.Count -eq 0) {
+                    return $i
+                }
+
+                continue
+            }
+        }
+
         $i++
     }
+
+    # -1 means that the Wikitext started at $Start but never reached
+    # a balanced closing construct.
     return -1
 }
 
