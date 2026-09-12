@@ -17,6 +17,7 @@ function Resolve-WikipediaLinksBatch {
             'Charles Town' {$ar='شارلستون (توضيح)';$qid='Q-CHARLESTON'}
             'Target' {$ar='الهدف';$qid='Q-TARGET'}
             'plasma (physics)' {$ar='بلازما (فيزياء)';$qid='Q-PLASMA'}
+            'Ottoman Turks' {$ar='أتراك عثمانيون';$qid='QOTTOMAN'}
         }
         $result[$title]=[PSCustomObject]@{QID=$qid;ArabicTitle=$ar}
     }
@@ -39,6 +40,7 @@ $input=@'
 * [[plasma (physics)|plasma]]
 * [[Target|Target]]
 * [[Target|{{lang|en|X}}]]
+* [[Ottoman Turks|Ottomans]]
 * [[Target]]
 '@
 $output=Convert-WikipediaLinks -Text $input
@@ -57,10 +59,22 @@ $expected=@'
 * [[بلازما (فيزياء)|بلازما]]
 * [[الهدف|الهدف]]
 * [[الهدف|{{lang|en|X}}]]
+* [[أتراك عثمانيون|عثمانيون]]
 * [[الهدف]]
 '@
-if($output -ne $expected){Write-Host 'Link display test FAILED.' -ForegroundColor Red;Write-Host 'Expected:';Write-Host $expected;Write-Host 'Actual:';Write-Host $output;exit 1}
+# Normalize line endings so the regression test is platform-independent.
+$expectedNormalized = $expected -replace "`r`n", "`n"
+$outputNormalized   = $output   -replace "`r`n", "`n"
+
+if($outputNormalized -ne $expectedNormalized){
+    Write-Host 'Link display test FAILED.' -ForegroundColor Red
+    Write-Host 'Expected:'
+    Write-Host $expected
+    Write-Host 'Actual:'
+    Write-Host $output
+    exit 1
+}
 if($LinkStats.IllWD2 -ne 1){throw "Expected 1 Ill-WD2 link, got $($LinkStats.IllWD2)."}
-if($LinkStats.Converted -ne 13){throw "Expected 13 converted links, got $($LinkStats.Converted)."}
+if($LinkStats.Converted -ne 14){throw "Expected 14 converted links, got $($LinkStats.Converted)."}
 
 Write-Host 'Link display regression tests passed.' -ForegroundColor Green
