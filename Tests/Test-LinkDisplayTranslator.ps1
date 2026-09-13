@@ -12,6 +12,7 @@ function Resolve-WikipediaLinksBatch {
     foreach($title in $EnglishTitles){
         $ar=''; $qid='QTEST'
         switch($title){
+            'United Provinces' {$ar='جمهورية هولندا';$qid='Q-UP'}
             "Henry Morgan's raid on Porto Bello" {$ar='غارة هنري مورغان على بورتوبيلو'}
             "Henry Morgan's raid on Lake Maracaibo" {$ar='غارة هنري مورغان على بحيرة ماراكايبو'}
             'Lake Nicaragua' {$ar='بحيرة نيكاراغوا';$qid='Q-LAKE'}
@@ -36,7 +37,10 @@ function Invoke-GeminiLinkDisplayTranslations {
     param([Parameter(Mandatory)][array]$Contexts)
     $result = @{}
     foreach ($ctx in $Contexts) {
-        if ($ctx.EnglishTitle -eq 'Spanish Empire' -and $ctx.EnglishDisplay -eq 'Spanish') {
+        if ($ctx.EnglishTitle -eq 'United Provinces' -and $ctx.EnglishDisplay -eq 'United Provinces') {
+            $result[$ctx.CacheKey] = 'المقاطعات المتحدة'
+        }
+        elseif ($ctx.EnglishTitle -eq 'Spanish Empire' -and $ctx.EnglishDisplay -eq 'Spanish') {
             $result[$ctx.CacheKey] = 'الإسبانية'
         }
         elseif ($ctx.EnglishTitle -eq 'Spanish Language' -and $ctx.EnglishDisplay -eq 'Spanish') {
@@ -62,6 +66,7 @@ function Invoke-GeminiLinkDisplayTranslations {
 }
 
 $input=@'
+* [[United Provinces|United Provinces]]
 * [[Henry Morgan's raid on Porto Bello|Porto Bello]]
 * [[Henry Morgan's raid on Lake Maracaibo|Lake Maracaibo]]
 * [[Lake Nicaragua|Lake Nicaragua]]
@@ -90,6 +95,7 @@ $input=@'
 '@
 $output=Convert-WikipediaLinks -Text $input
 $expected=@'
+* [[جمهورية هولندا|المقاطعات المتحدة]]
 * [[غارة هنري مورغان على بورتوبيلو|بورتو بيلو]]
 * [[غارة هنري مورغان على بحيرة ماراكايبو|بحيرة ماراكايبو]]
 * [[بحيرة نيكاراغوا|بحيرة نيكاراغوا]]
@@ -129,6 +135,6 @@ if($outputNormalized -ne $expectedNormalized){
     exit 1
 }
 if($LinkStats.IllWD2 -ne 1){throw "Expected 1 Ill-WD2 link, got $($LinkStats.IllWD2)."}
-if($LinkStats.Converted -ne 23){throw "Expected 23 converted links, got $($LinkStats.Converted)."}
+if($LinkStats.Converted -ne 24){throw "Expected 24 converted links, got $($LinkStats.Converted)."}
 
 Write-Host 'Link display regression tests passed.' -ForegroundColor Green

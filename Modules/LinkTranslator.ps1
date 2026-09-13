@@ -355,12 +355,24 @@ function Convert-WikipediaLinks {
         if ([string]::IsNullOrEmpty($displayText)) { continue }
 
         $deterministicDisplay = Get-DeterministicArabicDisplay -Display $displayText -EnglishTitle $link.Target -ArabicTitle $arabicTitle -ArabicWikidataLabel $null
-        if (-not [string]::IsNullOrWhiteSpace($deterministicDisplay) -and $deterministicDisplay -ne $displayText) {
-            # Handled deterministically
-            continue
-        }
-        if (-not [string]::IsNullOrWhiteSpace($deterministicDisplay) -and $deterministicDisplay -match '[\u0600-\u06FF]') {
-            continue
+
+        $isFallbackToTitle = (
+            $deterministicDisplay -eq $arabicTitle -and
+            [string]::Equals(
+                $displayText.Trim(),
+                $link.Target.Trim(),
+                [StringComparison]::OrdinalIgnoreCase
+            )
+        )
+
+        if (-not $isFallbackToTitle) {
+            if (-not [string]::IsNullOrWhiteSpace($deterministicDisplay) -and $deterministicDisplay -ne $displayText) {
+                # Handled deterministically
+                continue
+            }
+            if (-not [string]::IsNullOrWhiteSpace($deterministicDisplay) -and $deterministicDisplay -match '[\u0600-\u06FF]') {
+                continue
+            }
         }
 
         # Protect placeholders
