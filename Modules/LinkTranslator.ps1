@@ -6,6 +6,218 @@
 $script:LinkStats=[ordered]@{Total=0;Converted=0;IllWD2=0;NoWikidata=0;NoArabic=0;Ignored=0;Protected=0;SectionLinks=0;DisplayTranslated=0}
 $script:UntranslatedLinks=@()
 
+# ============================================
+# LinkTranslator.ps1
+# ترجمة روابط ويكيبيديا باستخدام Wikidata
+# ============================================
+
+$script:LinkStats=[ordered]@{Total=0;Converted=0;IllWD2=0;NoWikidata=0;NoArabic=0;Ignored=0;Protected=0;SectionLinks=0;DisplayTranslated=0}
+
+$script:LinkDisplayTranslationCachePath = Join-Path $PSScriptRoot '..\Cache\LinkDisplayTranslationCache.json'
+
+function Get-LinkDisplayTranslationCache {
+    if (-not (Test-Path -LiteralPath $script:LinkDisplayTranslationCachePath)) { return @{} }
+    try {
+        $obj = Get-Content -LiteralPath $script:LinkDisplayTranslationCachePath -Raw -Encoding UTF8 | ConvertFrom-Json
+        $cache = @{}
+        foreach ($p in $obj.PSObject.Properties) { $cache[[string]$p.Name] = [string]$p.Value }
+        return $cache
+    } catch {
+        return @{}
+    }
+}
+
+function Save-LinkDisplayTranslationCache {
+    param([Parameter(Mandatory)][hashtable]$Cache)
+    try {
+        $dir = Split-Path -Parent $script:LinkDisplayTranslationCachePath
+        if (-not (Test-Path $dir)) { New-Item -ItemType Directory -Path $dir -Force | Out-Null }
+        $Cache | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath $script:LinkDisplayTranslationCachePath -Encoding UTF8
+    } catch {
+        Write-Warning "Could not save LinkDisplayTranslationCache.json: $($_.Exception.Message)"
+    }
+}
+
+function Get-LinkTranslatorSetting {
+    param([Parameter(Mandatory)][string]$Name,[string]$Default='')
+    $value = [Environment]::GetEnvironmentVariable($Name,'Process')
+    if ([string]::IsNullOrWhiteSpace($value)) { $value = [Environment]::GetEnvironmentVariable($Name,'User') }
+    if ([string]::IsNullOrWhiteSpace($value)) { $value = [Environment]::GetEnvironmentVariable($Name,'Machine') }
+    if ([string]::IsNullOrWhiteSpace($value)) { $value = $Default }
+    if ($null -ne $value) { $value = $value.Trim().Trim('"').Trim() }
+    return $value
+}
+
+function Invoke-GeminiLinkDisplayTranslations {
+    param([Parameter(Mandatory)][array]$Contexts)
+
+    $apiKey = Get-LinkTranslatorSetting -Name 'GEMINI_API_KEY'
+    if ([string]::IsNullOrWhiteSpace($apiKey)) { return @{} }
+
+    $model = Get-LinkTranslatorSetting -Name 'GEMINI_MODEL' 'gemini-1.5-flash-latest'
+
+    $pendingBatches = @()
+    $batchSizeText = Get-LinkTranslatorSetting -Name 'GEMINI_BATCH_SIZE' '10'
+    $batchSize = 10
+    if ([int]::TryParse($batchSizeText, [ref]$batchSize)) {
+        if ($batchSize -lt 1) { $batchSize = 1 }
+        if ($batchSize -gt 20) { $batchSize = 20 }
+    } else {
+        $batchSize = 10
+    }
+
+    $currentBatch = @()
+    foreach ($ctx in $Contexts) {
+        $currentBatch += $ctx
+        if ($currentBatch.Count -ge $batchSize) {
+            $pendingBatches += ,$currentBatch
+            $currentBatch = @()
+        }
+    }
+    if ($currentBatch.Count -gt 0) { $pendingBatches += ,$currentBatch }
+
+    $result = @{}
+    foreach ($batch in $pendingBatches) {
+        $promptObj = @()
+        foreach ($ctx in $batch) {
+            $promptObj += @{
+                EnglishTitle = $ctx.EnglishTitle
+                ArabicTitle = $ctx.ArabicTitle
+                EnglishDisplay = $ctx.EnglishDisplay
+                ArabicWikidataLabel = $ctx.ArabicWikidataLabel
+                SafeDisplay = $ctx.SafeDisplay
+                CacheKey = $ctx.CacheKey
+            }
+        }
+        $promptJson = $promptObj | ConvertTo-Json -Depth 5 -Compress
+
+        $prompt = "You are a professional Wikipedia translator. Translate these link display texts to Arabic. \nFollow these strict rules:\n1. Output MUST be valid JSON, where keys are exactly the CacheKey provided, and values are the translated Arabic strings.\n2. Context: You are given EnglishTitle and ArabicTitle of the page the link points to.\n3. If SafeDisplay contains placeholders like <WA_SAFE_1>, you MUST preserve them exactly. DO NOT translate the placeholders.\n4. Output MUST ONLY contain the JSON. No markdown, no extra text.\nInput: $promptJson"
+
+        $body = @{
+            contents = @(
+                @{
+                    parts = @(
+                        @{ text = $prompt }
+                    )
+                }
+            )
+            generationConfig = @{ temperature = 0.1 }
+        } | ConvertTo-Json -Depth 10
+
+        try {
+            $uri = "https://generativelanguage.googleapis.com/v1beta/models/$model:generateContent?key=$apiKey"
+            $response = Invoke-RestMethod -Uri $uri -Method Post -ContentType "application/json" -Body $body
+
+            $jsonText = $response.candidates[0].content.parts[0].text
+            $jsonText = $jsonText -replace '^```json\s*', '' -replace '\s*```$', ''
+
+            $batchResult = $jsonText | ConvertFrom-Json
+
+            foreach ($p in $batchResult.PSObject.Properties) {
+                $val = [string]$p.Value
+                if ($val -notmatch '[\u0600-\u06FF]') { continue }
+                $result[[string]$p.Name] = $val
+            }
+        } catch {
+            Write-Warning "Gemini API failure for link display translations: $($_.Exception.Message)"
+        }
+    }
+    return $result
+}
+
+$script:UntranslatedLinks=@()
+
+function New-ArabicWikipediaLink {
+    param([Parameter(Mandatory)][string]$ArabicTitle,[string]$Section,[string]$Display)
+    $target=$ArabicTitle.Trim()
+    if(-not [string]::IsNullOrWhiteSpace($Section)){$target += "#$Section"}
+    if([string]::IsNullOrEmpty($Display)){return "[[$target]]"}
+    return "[[$target|$Display]]"
+}
+function Add-UntranslatedLink {
+    param([Parameter(Mandatory)]$Link,[string]$QID,[Parameter(Mandatory)][string]$Reason)
+    $script:UntranslatedLinks += [PSCustomObject]@{Title=$Link.Target;QID=$QID;Section=$Link.Section;Display=$Link.Display;Reason=$Reason}
+}
+# ============================================
+
+function Get-DisplayTranslationMap {
+    if ($null -ne $script:DisplayTranslationMapCache) { return $script:DisplayTranslationMapCache }
+    $path = Join-Path $PSScriptRoot '..\Templates\DisplayTranslationMap.json'
+    if (-not (Test-Path -LiteralPath $path)) { $script:DisplayTranslationMapCache = @{}; return @{} }
+    try {
+        $obj = Get-Content -LiteralPath $path -Raw -Encoding UTF8 | ConvertFrom-Json
+        $map = @{}
+        foreach ($item in @($obj)) {
+            if ($null -ne $item -and -not [string]::IsNullOrWhiteSpace([string]$item.Source)) {
+                $map[[string]$item.Source] = [string]$item.Target
+            }
+        }
+        $script:DisplayTranslationMapCache = $map
+        return $map
+    } catch {
+        Write-Warning "Could not read DisplayTranslationMap.json: $($_.Exception.Message)"
+        $script:DisplayTranslationMapCache = @{}
+        return @{}
+    }
+}
+
+function Get-DeterministicArabicDisplay {
+    param(
+        [string]$Display,
+        [string]$EnglishTitle,
+        [string]$ArabicTitle,
+        [string]$ArabicWikidataLabel
+    )
+
+    if ([string]::IsNullOrWhiteSpace($Display)) { return $null }
+    $displayTrimmed = $Display.Trim()
+
+    $map = Get-DisplayTranslationMap
+    if ($map.ContainsKey($displayTrimmed) -and -not [string]::IsNullOrWhiteSpace([string]$map[$displayTrimmed])) {
+        return [string]$map[$displayTrimmed]
+    }
+
+    # If visible text exactly matches the English source title or a disambiguation base,
+    # use the resolved Arabic page title or Arabic Wikidata label.
+    if (-not [string]::IsNullOrWhiteSpace($EnglishTitle)) {
+        $engTrim = $EnglishTitle.Trim()
+
+        # Exact match
+        if ([string]::Equals($displayTrimmed, $engTrim, [StringComparison]::OrdinalIgnoreCase)) {
+            if (-not [string]::IsNullOrWhiteSpace($ArabicTitle)) { return $ArabicTitle.Trim() }
+            if (-not [string]::IsNullOrWhiteSpace($ArabicWikidataLabel) -and $ArabicWikidataLabel -match '[\u0600-\u06FF]') {
+                return $ArabicWikidataLabel.Trim()
+            }
+        }
+
+        # Disambiguation stripping match
+        $engParenIndex = $engTrim.IndexOf(' (')
+        if ($engParenIndex -gt 0) {
+            $engBase = $engTrim.Substring(0, $engParenIndex)
+            if ([string]::Equals($displayTrimmed, $engBase, [StringComparison]::OrdinalIgnoreCase)) {
+                if (-not [string]::IsNullOrWhiteSpace($ArabicTitle)) {
+                    $arParenIndex = $ArabicTitle.IndexOf(' (')
+                    if ($arParenIndex -gt 0) {
+                        return $ArabicTitle.Substring(0, $arParenIndex).Trim()
+                    }
+                    return $ArabicTitle.Trim()
+                }
+                if (-not [string]::IsNullOrWhiteSpace($ArabicWikidataLabel) -and $ArabicWikidataLabel -match '[\u0600-\u06FF]') {
+                    $wdParenIndex = $ArabicWikidataLabel.IndexOf(' (')
+                    if ($wdParenIndex -gt 0) {
+                        return $ArabicWikidataLabel.Substring(0, $wdParenIndex).Trim()
+                    }
+                    return $ArabicWikidataLabel.Trim()
+                }
+            }
+        }
+    }
+
+    # By default, preserve the original author's display text to avoid data loss.
+    return $displayTrimmed
+}
+
+
 function New-ArabicWikipediaLink {
     param([Parameter(Mandatory)][string]$ArabicTitle,[string]$Section,[string]$Display)
     $target=$ArabicTitle.Trim()
@@ -131,6 +343,122 @@ function Convert-WikipediaLinks {
         }
     }
 
+    # Gather missing displays for Gemini
+    $geminiContexts = @()
+    $geminiLinks = @()
+    foreach($link in $links){
+        if (-not $resolution.ContainsKey($link.Target)) { continue }
+        $arabicTitle = $resolution[$link.Target].ArabicTitle
+        if ([string]::IsNullOrWhiteSpace($arabicTitle)) { continue }
+
+        $displayText = [string]$link.Display
+        if ([string]::IsNullOrEmpty($displayText)) { continue }
+
+        $deterministicDisplay = Get-DeterministicArabicDisplay -Display $displayText -EnglishTitle $link.Target -ArabicTitle $arabicTitle -ArabicWikidataLabel $null
+        if (-not [string]::IsNullOrWhiteSpace($deterministicDisplay) -and $deterministicDisplay -ne $displayText) {
+            # Handled deterministically
+            continue
+        }
+        if (-not [string]::IsNullOrWhiteSpace($deterministicDisplay) -and $deterministicDisplay -match '[\u0600-\u06FF]') {
+            continue
+        }
+
+        # Protect placeholders
+        $dispTokens = Get-WikitextTokens -Text $displayText
+        $hasFindTemplateEnd = [bool](Get-Command Find-TemplateEnd -ErrorAction SilentlyContinue)
+        $hasFindWikitextParameterEnd = [bool](Get-Command Find-WikitextParameterEnd -ErrorAction SilentlyContinue)
+
+        $phId = 1
+        $phMap = @()
+        $sbPh = [System.Text.StringBuilder]::new()
+        $i = 0
+        while ($i -lt $displayText.Length) {
+            $t = $null
+            foreach ($tok in $dispTokens) {
+                if ($tok.Start -eq $i -and $tok.Type -ne 'Text') {
+                    $t = $tok; break
+                }
+            }
+            if ($t) {
+                $ph = "<WA_SAFE_$phId>"
+                [void]$sbPh.Append($ph)
+                $phMap += $displayText.Substring($t.Start, $t.End - $t.Start)
+                $phId++
+                $i = $t.End
+                continue
+            }
+
+            if ($hasFindWikitextParameterEnd -and $i + 2 -lt $displayText.Length -and
+                $displayText[$i] -eq '{' -and $displayText[$i + 1] -eq '{' -and $displayText[$i + 2] -eq '{') {
+                $end = Find-WikitextParameterEnd -Text $displayText -Start $i
+                if ($end -gt $i) {
+                    $ph = "<WA_SAFE_$phId>"
+                    [void]$sbPh.Append($ph)
+                    $phMap += $displayText.Substring($i, $end - $i)
+                    $phId++
+                    $i = $end
+                    continue
+                }
+            }
+
+            if ($hasFindTemplateEnd -and $i + 1 -lt $displayText.Length -and
+                $displayText[$i] -eq '{' -and $displayText[$i + 1] -eq '{') {
+                $end = Find-TemplateEnd -Text $displayText -Start $i
+                if ($end -gt $i) {
+                    $ph = "<WA_SAFE_$phId>"
+                    [void]$sbPh.Append($ph)
+                    $phMap += $displayText.Substring($i, $end - $i)
+                    $phId++
+                    $i = $end
+                    continue
+                }
+            }
+
+            [void]$sbPh.Append($displayText[$i])
+            $i++
+        }
+        $safeDisplay = $sbPh.ToString()
+
+        $textToTranslate = $safeDisplay -replace '<WA_SAFE_\d+>', ''
+        if ($textToTranslate -notmatch '[a-zA-Z]') {
+            continue
+        }
+
+        $cacheKey = "$($link.Target):::$displayText"
+        $geminiContexts += @{
+            EnglishTitle = $link.Target
+            ArabicTitle = $arabicTitle
+            EnglishDisplay = $displayText
+            ArabicWikidataLabel = $null
+            SafeDisplay = $safeDisplay
+            CacheKey = $cacheKey
+            PlaceholderMap = $phMap
+        }
+        $geminiLinks += $link
+    }
+
+    $geminiTranslations = @{}
+    if ($geminiContexts.Count -gt 0) {
+        $cache = Get-LinkDisplayTranslationCache
+        $needsApi = @()
+        foreach ($ctx in $geminiContexts) {
+            if ($cache.ContainsKey($ctx.CacheKey)) {
+                $geminiTranslations[$ctx.CacheKey] = $cache[$ctx.CacheKey]
+            } else {
+                $needsApi += $ctx
+            }
+        }
+        if ($needsApi.Count -gt 0) {
+            Write-Host "Invoking Gemini for $($needsApi.Count) link displays..." -ForegroundColor Magenta
+            $apiResults = Invoke-GeminiLinkDisplayTranslations -Contexts $needsApi
+            foreach ($k in $apiResults.Keys) {
+                $geminiTranslations[$k] = $apiResults[$k]
+                $cache[$k] = $apiResults[$k]
+            }
+            Save-LinkDisplayTranslationCache -Cache $cache
+        }
+    }
+
     $replacements=@{}
     foreach($link in $links){
         $title=$link.Target
@@ -198,6 +526,48 @@ function Convert-WikipediaLinks {
             -EnglishTitle ([string]$link.Target) `
             -ArabicTitle ([string]$arabicTitle) `
             -ArabicWikidataLabel $null
+
+        if (-not [string]::IsNullOrEmpty($link.Display)) {
+            $cacheKey = "$($link.Target):::$($link.Display)"
+            if ($geminiTranslations.ContainsKey($cacheKey)) {
+                $rawTrans = $geminiTranslations[$cacheKey]
+
+                $ctx = $null
+                foreach ($c in $geminiContexts) {
+                    if ($c.CacheKey -eq $cacheKey) { $ctx = $c; break }
+                }
+
+                if ($ctx -and $ctx.PlaceholderMap.Count -gt 0) {
+                    $map = $ctx.PlaceholderMap
+                    $valid = $true
+                    $pidMatches = [regex]::Matches($rawTrans, "<WA_SAFE_(\d+)>")
+                    $foundPids = @{}
+                    foreach ($m in $pidMatches) {
+                        $foundPids[[int]$m.Groups[1].Value]++
+                    }
+                    if ($foundPids.Count -ne $map.Count) {
+                        $valid = $false
+                    } else {
+                        for ($k = 1; $k -le $map.Count; $k++) {
+                            if (-not $foundPids.ContainsKey($k) -or $foundPids[$k] -ne 1) {
+                                $valid = $false; break
+                            }
+                        }
+                    }
+
+                    if ($valid) {
+                        for ($k = 1; $k -le $map.Count; $k++) {
+                            $rawTrans = $rawTrans.Replace("<WA_SAFE_$k>", $map[$k-1])
+                        }
+                        $arabicDisplay = $rawTrans
+                        $script:LinkStats.DisplayTranslated++
+                    }
+                } else {
+                    $arabicDisplay = $rawTrans
+                    $script:LinkStats.DisplayTranslated++
+                }
+            }
+        }
 
         $newLink=New-ArabicWikipediaLink -ArabicTitle $arabicTitle -Section $link.Section -Display $arabicDisplay
 

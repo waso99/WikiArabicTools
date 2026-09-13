@@ -2,7 +2,10 @@
 $root=Split-Path $PSScriptRoot -Parent
 . (Join-Path $root 'Modules\WikitextParser.ps1')
 . (Join-Path $root 'Modules\Wikidata.ps1')
+. (Join-Path $root 'Modules\TemplateTranslator.ps1')
+. (Join-Path $root 'Modules\TextTranslator.ps1')
 . (Join-Path $root 'Modules\LinkTranslator.ps1')
+
 function Resolve-WikipediaLinksBatch {
     param([Parameter(Mandatory)][string[]]$EnglishTitles)
     $result=@{}
@@ -18,6 +21,9 @@ function Resolve-WikipediaLinksBatch {
             'Target' {$ar='الهدف';$qid='Q-TARGET'}
             'plasma (physics)' {$ar='بلازما (فيزياء)';$qid='Q-PLASMA'}
             'Ottoman Turks' {$ar='أتراك عثمانيون';$qid='QOTTOMAN'}
+            'Spanish Empire' {$ar='الإمبراطورية الإسبانية';$qid='Q-SPANISHEMPIRE'}
+            'Spanish Language' {$ar='اللغة الإسبانية';$qid='Q-SPANISHLANGUAGE'}
+            'Article A' {$ar='مقالة أ';$qid='Q-ARTICLEA'}
         }
         $result[$title]=[PSCustomObject]@{QID=$qid;ArabicTitle=$ar}
     }
@@ -25,6 +31,36 @@ function Resolve-WikipediaLinksBatch {
 }
 function Get-ArabicWikidataLabelsBatch { param([Parameter(Mandatory)][string[]]$WikidataIds) $r=@{}; foreach($q in $WikidataIds){if($q -eq 'Q-RANGER'){$r[$q]='جوزيف بانيستر'}}; return $r }
 function Get-ArabicWikipediaDisambiguationBatch { param([Parameter(Mandatory)][string[]]$ArabicTitles) $r=@{}; foreach($t in $ArabicTitles){$r[$t]=($t -eq 'شارلستون (توضيح)')}; return $r }
+
+function Invoke-GeminiLinkDisplayTranslations {
+    param([Parameter(Mandatory)][array]$Contexts)
+    $result = @{}
+    foreach ($ctx in $Contexts) {
+        if ($ctx.EnglishTitle -eq 'Spanish Empire' -and $ctx.EnglishDisplay -eq 'Spanish') {
+            $result[$ctx.CacheKey] = 'الإسبانية'
+        }
+        elseif ($ctx.EnglishTitle -eq 'Spanish Language' -and $ctx.EnglishDisplay -eq 'Spanish') {
+            $result[$ctx.CacheKey] = 'الإسبانية'
+        }
+        elseif ($ctx.EnglishTitle -eq 'Article A' -and $ctx.EnglishDisplay -eq 'short display') {
+            $result[$ctx.CacheKey] = 'النص القصير'
+        }
+        elseif ($ctx.EnglishTitle -eq 'Article A' -and $ctx.EnglishDisplay -eq '{{lang|en|missing placeholder}}') {
+            $result[$ctx.CacheKey] = 'Missing'
+        }
+        elseif ($ctx.EnglishTitle -eq 'Article A' -and $ctx.EnglishDisplay -eq '{{lang|en|extra placeholder}}') {
+            $result[$ctx.CacheKey] = 'Extra <WA_SAFE_1> <WA_SAFE_2>'
+        }
+        elseif ($ctx.EnglishTitle -eq 'Article A' -and $ctx.EnglishDisplay -eq '{{lang|en|duplicate placeholder}}') {
+            $result[$ctx.CacheKey] = 'Duplicate <WA_SAFE_1> <WA_SAFE_1>'
+        }
+        elseif ($ctx.EnglishTitle -eq 'Target' -and $ctx.EnglishDisplay -eq 'Spanish {{lang|en|Empire}}') {
+            $result[$ctx.CacheKey] = 'إسباني <WA_SAFE_1>'
+        }
+    }
+    return $result
+}
+
 $input=@'
 * [[Henry Morgan's raid on Porto Bello|Porto Bello]]
 * [[Henry Morgan's raid on Lake Maracaibo|Lake Maracaibo]]
@@ -42,6 +78,15 @@ $input=@'
 * [[Target|{{lang|en|X}}]]
 * [[Ottoman Turks|Ottomans]]
 * [[Target]]
+* [[Spanish Empire|Spanish]]
+* [[Spanish Language|Spanish]]
+* [[Article A|short display]]
+* [[Article A|{{lang|en|missing placeholder}}]]
+* [[Article A|{{lang|en|extra placeholder}}]]
+* [[Article A|{{lang|en|duplicate placeholder}}]]
+* [[Target|12345]]
+* [[Target|<ref>citation</ref>]]
+* [[Target|Spanish {{lang|en|Empire}}]]
 '@
 $output=Convert-WikipediaLinks -Text $input
 $expected=@'
@@ -61,6 +106,15 @@ $expected=@'
 * [[الهدف|{{lang|en|X}}]]
 * [[أتراك عثمانيون|عثمانيون]]
 * [[الهدف]]
+* [[الإمبراطورية الإسبانية|الإسبانية]]
+* [[اللغة الإسبانية|الإسبانية]]
+* [[مقالة أ|النص القصير]]
+* [[مقالة أ|{{lang|en|missing placeholder}}]]
+* [[مقالة أ|{{lang|en|extra placeholder}}]]
+* [[مقالة أ|{{lang|en|duplicate placeholder}}]]
+* [[الهدف|12345]]
+* [[الهدف|<ref>citation</ref>]]
+* [[الهدف|إسباني {{lang|en|Empire}}]]
 '@
 # Normalize line endings so the regression test is platform-independent.
 $expectedNormalized = $expected -replace "`r`n", "`n"
@@ -75,6 +129,6 @@ if($outputNormalized -ne $expectedNormalized){
     exit 1
 }
 if($LinkStats.IllWD2 -ne 1){throw "Expected 1 Ill-WD2 link, got $($LinkStats.IllWD2)."}
-if($LinkStats.Converted -ne 14){throw "Expected 14 converted links, got $($LinkStats.Converted)."}
+if($LinkStats.Converted -ne 23){throw "Expected 23 converted links, got $($LinkStats.Converted)."}
 
 Write-Host 'Link display regression tests passed.' -ForegroundColor Green
