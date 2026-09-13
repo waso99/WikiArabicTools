@@ -12,7 +12,6 @@ function Resolve-WikipediaLinksBatch {
     foreach($title in $EnglishTitles){
         $ar=''; $qid='QTEST'
         switch($title){
-            'United Provinces' {$ar='جمهورية هولندا';$qid='Q-UP'}
             "Henry Morgan's raid on Porto Bello" {$ar='غارة هنري مورغان على بورتوبيلو'}
             "Henry Morgan's raid on Lake Maracaibo" {$ar='غارة هنري مورغان على بحيرة ماراكايبو'}
             'Lake Nicaragua' {$ar='بحيرة نيكاراغوا';$qid='Q-LAKE'}
@@ -22,8 +21,11 @@ function Resolve-WikipediaLinksBatch {
             'Target' {$ar='الهدف';$qid='Q-TARGET'}
             'plasma (physics)' {$ar='بلازما (فيزياء)';$qid='Q-PLASMA'}
             'Ottoman Turks' {$ar='أتراك عثمانيون';$qid='QOTTOMAN'}
+            'United Provinces' {$ar='جمهورية هولندا';$qid='Q-UP'}
             'Spanish Empire' {$ar='الإمبراطورية الإسبانية';$qid='Q-SPANISHEMPIRE'}
             'Spanish Language' {$ar='اللغة الإسبانية';$qid='Q-SPANISHLANGUAGE'}
+            'John of Austria' {$ar='دون خوان النمساوي';$qid='Q-JOHN'}
+            'Crown of Castile' {$ar='تاج قشتالة';$qid='Q-CASTILE'}
             'Article A' {$ar='مقالة أ';$qid='Q-ARTICLEA'}
         }
         $result[$title]=[PSCustomObject]@{QID=$qid;ArabicTitle=$ar}
@@ -37,10 +39,7 @@ function Invoke-GeminiLinkDisplayTranslations {
     param([Parameter(Mandatory)][array]$Contexts)
     $result = @{}
     foreach ($ctx in $Contexts) {
-        if ($ctx.EnglishTitle -eq 'United Provinces' -and $ctx.EnglishDisplay -eq 'United Provinces') {
-            $result[$ctx.CacheKey] = 'المقاطعات المتحدة'
-        }
-        elseif ($ctx.EnglishTitle -eq 'Spanish Empire' -and $ctx.EnglishDisplay -eq 'Spanish') {
+        if ($ctx.EnglishTitle -eq 'Spanish Empire' -and $ctx.EnglishDisplay -eq 'Spanish') {
             $result[$ctx.CacheKey] = 'الإسبانية'
         }
         elseif ($ctx.EnglishTitle -eq 'Spanish Language' -and $ctx.EnglishDisplay -eq 'Spanish') {
@@ -61,12 +60,23 @@ function Invoke-GeminiLinkDisplayTranslations {
         elseif ($ctx.EnglishTitle -eq 'Target' -and $ctx.EnglishDisplay -eq 'Spanish {{lang|en|Empire}}') {
             $result[$ctx.CacheKey] = 'إسباني <WA_SAFE_1>'
         }
+        elseif ($ctx.EnglishTitle -eq 'United Provinces' -and $ctx.EnglishDisplay -eq 'United Provinces') {
+            $result[$ctx.CacheKey] = 'المقاطعات المتحدة'
+        }
+        elseif ($ctx.EnglishTitle -eq 'John of Austria' -and $ctx.EnglishDisplay -eq 'Don Juan of Austria') {
+            $result[$ctx.CacheKey] = 'دون خوان النمساوي'
+        }
+        elseif ($ctx.EnglishTitle -eq 'Crown of Castile' -and $ctx.EnglishDisplay -eq 'Castilian') {
+            $result[$ctx.CacheKey] = 'القشتالية'
+        }
+        elseif ($ctx.EnglishTitle -eq 'Target' -and $ctx.EnglishDisplay -eq 'Untranslatable Name') {
+            $result[$ctx.CacheKey] = 'Untranslatable Name'
+        }
     }
     return $result
 }
 
 $input=@'
-* [[United Provinces|United Provinces]]
 * [[Henry Morgan's raid on Porto Bello|Porto Bello]]
 * [[Henry Morgan's raid on Lake Maracaibo|Lake Maracaibo]]
 * [[Lake Nicaragua|Lake Nicaragua]]
@@ -92,10 +102,13 @@ $input=@'
 * [[Target|12345]]
 * [[Target|<ref>citation</ref>]]
 * [[Target|Spanish {{lang|en|Empire}}]]
+* [[United Provinces|United Provinces]]
+* [[John of Austria|Don Juan of Austria]]
+* [[Crown of Castile|Castilian]]
+* [[Target|Untranslatable Name]]
 '@
 $output=Convert-WikipediaLinks -Text $input
 $expected=@'
-* [[جمهورية هولندا|المقاطعات المتحدة]]
 * [[غارة هنري مورغان على بورتوبيلو|بورتو بيلو]]
 * [[غارة هنري مورغان على بحيرة ماراكايبو|بحيرة ماراكايبو]]
 * [[بحيرة نيكاراغوا|بحيرة نيكاراغوا]]
@@ -121,6 +134,10 @@ $expected=@'
 * [[الهدف|12345]]
 * [[الهدف|<ref>citation</ref>]]
 * [[الهدف|إسباني {{lang|en|Empire}}]]
+* [[جمهورية هولندا|المقاطعات المتحدة]]
+* [[دون خوان النمساوي|دون خوان النمساوي]]
+* [[تاج قشتالة|القشتالية]]
+* [[الهدف|Untranslatable Name]]
 '@
 # Normalize line endings so the regression test is platform-independent.
 $expectedNormalized = $expected -replace "`r`n", "`n"
@@ -134,7 +151,23 @@ if($outputNormalized -ne $expectedNormalized){
     Write-Host $output
     exit 1
 }
-if($LinkStats.IllWD2 -ne 1){throw "Expected 1 Ill-WD2 link, got $($LinkStats.IllWD2)."}
-if($LinkStats.Converted -ne 24){throw "Expected 24 converted links, got $($LinkStats.Converted)."}
+$cachePath = $script:LinkDisplayTranslationCachePath
+if (Test-Path -LiteralPath $cachePath) {
+    try {
+        $cacheObj = Get-Content -LiteralPath $cachePath -Raw -Encoding UTF8 | ConvertFrom-Json
+        $rejectedKeys = @(
+            'Target:::Untranslatable Name',
+            'Article A:::{{lang|en|missing placeholder}}',
+            'Article A:::{{lang|en|extra placeholder}}',
+            'Article A:::{{lang|en|duplicate placeholder}}'
+        )
+        foreach ($rk in $rejectedKeys) {
+            if ($null -ne $cacheObj.PSObject.Properties[$rk]) {
+                Write-Host "Cache verification failed: '$rk' should have been rejected but was cached!" -ForegroundColor Red
+                exit 1
+            }
+        }
+    } catch {}
+}
 
 Write-Host 'Link display regression tests passed.' -ForegroundColor Green

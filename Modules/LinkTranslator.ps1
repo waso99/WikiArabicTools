@@ -91,7 +91,7 @@ function Invoke-GeminiLinkDisplayTranslations {
         }
         $promptJson = $promptObj | ConvertTo-Json -Depth 5 -Compress
 
-        $prompt = "You are a professional Wikipedia translator. Translate these link display texts to Arabic. \nFollow these strict rules:\n1. Output MUST be valid JSON, where keys are exactly the CacheKey provided, and values are the translated Arabic strings.\n2. Context: You are given EnglishTitle and ArabicTitle of the page the link points to.\n3. If SafeDisplay contains placeholders like <WA_SAFE_1>, you MUST preserve them exactly. DO NOT translate the placeholders.\n4. Output MUST ONLY contain the JSON. No markdown, no extra text.\nInput: $promptJson"
+        $prompt = "You are a professional Wikipedia translator. Your task is to translate/arabize ONLY the 'EnglishDisplay' text. \nFollow these strict rules:\n1. EnglishTitle and ArabicTitle are provided ONLY for semantic context. DO NOT automatically replace EnglishDisplay with ArabicTitle unless they truly mean the same thing.\n2. If EnglishDisplay is a proper name, transliterate it to Arabic (e.g. 'John' -> 'جون'). Translate adjectives and nouns (e.g. 'Castilian' -> 'القشتالية').\n3. The translated string MUST contain Arabic characters. DO NOT return the English string unchanged.\n4. If SafeDisplay contains placeholders like <WA_SAFE_1>, you MUST preserve them exactly in the Arabic text, with the exact same count.\n5. Output MUST be valid JSON, where keys are exactly the CacheKey provided, and values are the translated Arabic strings. No markdown, no extra text.\nInput: $promptJson"
 
         $body = @{
             contents = @(
@@ -463,11 +463,36 @@ function Convert-WikipediaLinks {
         if ($needsApi.Count -gt 0) {
             Write-Host "Invoking Gemini for $($needsApi.Count) link displays..." -ForegroundColor Magenta
             $apiResults = Invoke-GeminiLinkDisplayTranslations -Contexts $needsApi
-            foreach ($k in $apiResults.Keys) {
-                $geminiTranslations[$k] = $apiResults[$k]
-                $cache[$k] = $apiResults[$k]
+            $hasUpdates = $false
+            foreach ($ctx in $needsApi) {
+                $k = $ctx.CacheKey
+                if (-not $apiResults.ContainsKey($k)) { continue }
+                $rawTrans = [string]$apiResults[$k]
+                if ([string]::IsNullOrWhiteSpace($rawTrans)) { continue }
+                if ($rawTrans -notmatch '[\u0600-\u06FF]') { continue }
+                if ([string]::Equals($rawTrans, $ctx.EnglishDisplay, [StringComparison]::OrdinalIgnoreCase)) { continue }
+
+                $valid = $true
+                if ($ctx.PlaceholderMap.Count -gt 0) {
+                    $map = $ctx.PlaceholderMap
+                    $pidMatches = [regex]::Matches($rawTrans, "<WA_SAFE_(\d+)>")
+                    $foundPids = @{}
+                    foreach ($m in $pidMatches) { $foundPids[[int]$m.Groups[1].Value]++ }
+                    if ($foundPids.Count -ne $map.Count) {
+                        $valid = $false
+                    } else {
+                        for ($k_ph = 1; $k_ph -le $map.Count; $k_ph++) {
+                            if (-not $foundPids.ContainsKey($k_ph) -or $foundPids[$k_ph] -ne 1) { $valid = $false; break }
+                        }
+                    }
+                }
+                if ($valid) {
+                    $geminiTranslations[$k] = $rawTrans
+                    $cache[$k] = $rawTrans
+                    $hasUpdates = $true
+                }
             }
-            Save-LinkDisplayTranslationCache -Cache $cache
+            if ($hasUpdates) { Save-LinkDisplayTranslationCache -Cache $cache }
         }
     }
 
@@ -550,34 +575,12 @@ function Convert-WikipediaLinks {
                 }
 
                 if ($ctx -and $ctx.PlaceholderMap.Count -gt 0) {
-                    $map = $ctx.PlaceholderMap
-                    $valid = $true
-                    $pidMatches = [regex]::Matches($rawTrans, "<WA_SAFE_(\d+)>")
-                    $foundPids = @{}
-                    foreach ($m in $pidMatches) {
-                        $foundPids[[int]$m.Groups[1].Value]++
+                    for ($k = 1; $k -le $ctx.PlaceholderMap.Count; $k++) {
+                        $rawTrans = $rawTrans.Replace("<WA_SAFE_$k>", $ctx.PlaceholderMap[$k-1])
                     }
-                    if ($foundPids.Count -ne $map.Count) {
-                        $valid = $false
-                    } else {
-                        for ($k = 1; $k -le $map.Count; $k++) {
-                            if (-not $foundPids.ContainsKey($k) -or $foundPids[$k] -ne 1) {
-                                $valid = $false; break
-                            }
-                        }
-                    }
-
-                    if ($valid) {
-                        for ($k = 1; $k -le $map.Count; $k++) {
-                            $rawTrans = $rawTrans.Replace("<WA_SAFE_$k>", $map[$k-1])
-                        }
-                        $arabicDisplay = $rawTrans
-                        $script:LinkStats.DisplayTranslated++
-                    }
-                } else {
-                    $arabicDisplay = $rawTrans
-                    $script:LinkStats.DisplayTranslated++
                 }
+                $arabicDisplay = $rawTrans
+                $script:LinkStats.DisplayTranslated++
             }
         }
 
